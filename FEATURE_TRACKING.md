@@ -26,7 +26,7 @@ After a feature is fully implemented and verified, update its status to `Done` a
 | 06  | Public Layout                     | Medium | Done    | Shared public layout, navbar, footer, mobile menu, active nav states, CTA links, and theme-toggle placement completed.                                            |
 | 07  | Landing Page                      | Large  | Done    | Full public landing page with hero, trusted logos, feature highlights, analytics preview, benefits, testimonials, pricing preview, CTA, and animations completed. |
 | 08  | Features Page                     | Medium | Done    | Detailed public features page with hero, eight feature cards, workflow sections, capability highlights, CTA, and scroll animations completed.                     |
-| 09  | Pricing Page                      | Medium | Pending |                                                                                                                                                                   |
+| 09  | Pricing Page                      | Medium | Done    | Public pricing page with monthly/annual toggle, plan cards, comparison table, FAQ section, CTA, and scroll animations completed.                                  |
 | 10  | Auth Layout                       | Small  | Pending |                                                                                                                                                                   |
 | 11  | Login Page UI                     | Small  | Pending |                                                                                                                                                                   |
 | 12  | Register Page UI                  | Small  | Pending |                                                                                                                                                                   |
@@ -67,3 +67,4 @@ None.
 - Feature 06 - Public Layout: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and local route smoke tests for `/`, `/features`, `/pricing`, `/login`, `/register`, `/dashboard`, `/not-found`, and a missing route.
 - Feature 07 - Landing Page: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and local route smoke tests for `/`, `/features`, `/pricing`, `/login`, and `/dashboard`.
 - Feature 08 - Features Page: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and local route smoke tests for `/`, `/features`, `/pricing`, `/login`, and `/dashboard`.
+- Feature 09 - Pricing Page: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and local route smoke tests for `/`, `/features`, `/pricing`, `/login`, and `/dashboard`.
