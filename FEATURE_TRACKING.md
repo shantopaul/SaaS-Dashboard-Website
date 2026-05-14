@@ -28,8 +28,8 @@ After a feature is fully implemented and verified, update its status to `Done` a
 | 08  | Features Page                     | Medium | Done        | Detailed public features page with hero, eight feature cards, workflow sections, capability highlights, CTA, and scroll animations completed.                     |
 | 09  | Pricing Page                      | Medium | Done        | Public pricing page with monthly/annual toggle, plan cards, comparison table, FAQ section, CTA, and scroll animations completed.                                  |
 | 10  | Auth Layout                       | Small  | Done        | Created AuthLayout wrapper, integrated into AppRoutes, updated Login and Register with placeholders.                                                              |
-| 11  | Login Page UI                     | Small  | Done    | Built login form with react-hook-form, zod validation, eye toggle, remember me, and Google sign-in.                                 |
-| 12  | Register Page UI                  | Small  | Pending     |                                                                                                                                                                   |
+| 11  | Login Page UI                     | Small  | Done        | Built login form with react-hook-form, zod validation, eye toggle, remember me, and Google sign-in.                                                               |
+| 12  | Register Page UI                  | Small  | Done    | Built registration form with react-hook-form, zod password matching, and Terms validation.                                        |
 | 13  | Fake Authentication               | Medium | Pending     |                                                                                                                                                                   |
 | 14  | Theme System                      | Medium | Pending     |                                                                                                                                                                   |
 | 15  | Dashboard Layout                  | Medium | Pending     |                                                                                                                                                                   |
@@ -70,3 +70,4 @@ None.
 - Feature 09 - Pricing Page: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and local route smoke tests for `/`, `/features`, `/pricing`, `/login`, and `/dashboard`.
 - Feature 10 - Auth Layout: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and local route smoke tests for `/login` and `/register`.
 - Feature 11 - Login Page UI: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and checked form validation locally.
+- Feature 12 - Register Page UI: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and checked form validation locally.
