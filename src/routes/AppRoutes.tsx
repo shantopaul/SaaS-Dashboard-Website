@@ -12,7 +12,7 @@ import {
   RegisterPage,
   SettingsPage,
 } from "@/pages";
-import { AuthLayout, PublicLayout } from "@/components";
+import { AuthLayout, DashboardLayout, PublicLayout } from "@/components";
 import { ProtectedRoute } from "./ProtectedRoute";
 
 export function AppRoutes() {
@@ -31,11 +31,13 @@ export function AppRoutes() {
       </Route>
 
       <Route element={<ProtectedRoute />}>
-        <Route element={<DashboardPage />} path="/dashboard" />
-        <Route element={<AnalyticsPage />} path="/dashboard/analytics" />
-        <Route element={<BillingPage />} path="/dashboard/billing" />
-        <Route element={<SettingsPage />} path="/dashboard/settings" />
-        <Route element={<ProfilePage />} path="/dashboard/profile" />
+        <Route element={<DashboardLayout />}>
+          <Route element={<DashboardPage />} path="/dashboard" />
+          <Route element={<AnalyticsPage />} path="/dashboard/analytics" />
+          <Route element={<BillingPage />} path="/dashboard/billing" />
+          <Route element={<SettingsPage />} path="/dashboard/settings" />
+          <Route element={<ProfilePage />} path="/dashboard/profile" />
+        </Route>
       </Route>
 
       <Route element={<Navigate replace to="/not-found" />} path="*" />
