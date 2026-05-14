@@ -22,7 +22,7 @@ After a feature is fully implemented and verified, update its status to `Done` a
 | 02  | Design System Foundation          | Small  | Done    | Theme tokens, typography, spacing, radius, shadows, focus styles, and starter preview completed.                                                        |
 | 03  | Shared Data and Types             | Small  | Done    | Typed sample data for users, pricing, charts, tables, invoices, notifications, activities, FAQs, and navigation completed.                              |
 | 04  | Core Reusable Components          | Medium | Done    | Shared Button, Input, Textarea, Select, Card, Badge, Toggle, Dropdown, Modal, SearchInput, SectionHeader, Spinner, and EmptyState components completed. |
-| 05  | Routing System                    | Small  | Pending |                                                                                                                                                         |
+| 05  | Routing System                    | Small  | Done    | React Router setup, public routes, dashboard routes, protected-route placeholder, and not-found handling completed.                                     |
 | 06  | Public Layout                     | Medium | Pending |                                                                                                                                                         |
 | 07  | Landing Page                      | Large  | Pending |                                                                                                                                                         |
 | 08  | Features Page                     | Medium | Pending |                                                                                                                                                         |
@@ -63,3 +63,4 @@ None.
 - Feature 02 - Design System Foundation: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and local dev server HTTP 200 smoke test.
 - Feature 03 - Shared Data and Types: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and local dev server HTTP 200 smoke test.
 - Feature 04 - Core Reusable Components: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and local dev server HTTP 200 smoke test.
+- Feature 05 - Routing System: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and local route smoke tests for `/`, `/features`, `/login`, `/dashboard`, `/dashboard/analytics`, and a missing route.
