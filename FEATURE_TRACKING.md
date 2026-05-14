@@ -29,8 +29,8 @@ After a feature is fully implemented and verified, update its status to `Done` a
 | 09  | Pricing Page                      | Medium | Done        | Public pricing page with monthly/annual toggle, plan cards, comparison table, FAQ section, CTA, and scroll animations completed.                                  |
 | 10  | Auth Layout                       | Small  | Done        | Created AuthLayout wrapper, integrated into AppRoutes, updated Login and Register with placeholders.                                                              |
 | 11  | Login Page UI                     | Small  | Done        | Built login form with react-hook-form, zod validation, eye toggle, remember me, and Google sign-in.                                                               |
-| 12  | Register Page UI                  | Small  | Done    | Built registration form with react-hook-form, zod password matching, and Terms validation.                                        |
-| 13  | Fake Authentication               | Medium | Pending     |                                                                                                                                                                   |
+| 12  | Register Page UI                  | Small  | Done        | Built registration form with react-hook-form, zod password matching, and Terms validation.                                                                        |
+| 13  | Fake Authentication               | Medium | Done    | Implemented Zustand authStore with persistence, protected route guard, and integrated login/register actions.     |
 | 14  | Theme System                      | Medium | Pending     |                                                                                                                                                                   |
 | 15  | Dashboard Layout                  | Medium | Pending     |                                                                                                                                                                   |
 | 16  | Sidebar Navigation                | Medium | Pending     |                                                                                                                                                                   |
@@ -71,3 +71,4 @@ None.
 - Feature 10 - Auth Layout: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and local route smoke tests for `/login` and `/register`.
 - Feature 11 - Login Page UI: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and checked form validation locally.
 - Feature 12 - Register Page UI: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and checked form validation locally.
+- Feature 13 - Fake Authentication: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and local tests.

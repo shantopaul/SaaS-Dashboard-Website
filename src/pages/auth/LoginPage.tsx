@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Eye, EyeOff, Lock, Mail } from "lucide-react";
 import { Button } from "@/components/common/Button";
 import { Input } from "@/components/common/Input";
+import { useAuthStore } from "@/store";
 
 const loginSchema = z.object({
   email: z.string().min(1, "Email is required").email("Invalid email address"),
@@ -19,6 +20,9 @@ export function LoginPage() {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const location = useLocation();
+  const login = useAuthStore((state) => state.login);
 
   const {
     register,
@@ -37,10 +41,14 @@ export function LoginPage() {
     setIsSubmitting(true);
     // Simulate API call for fake auth integration
     await new Promise((resolve) => setTimeout(resolve, 800));
-    console.log("Login data:", data);
+
+    login(data.email);
+
     setIsSubmitting(false);
-    // Redirect to dashboard (will be handled by fake auth in Feature 13)
-    navigate("/dashboard");
+
+    // Redirect to requested page or dashboard
+    const from = location.state?.from?.pathname || "/dashboard";
+    navigate(from, { replace: true });
   };
 
   return (
