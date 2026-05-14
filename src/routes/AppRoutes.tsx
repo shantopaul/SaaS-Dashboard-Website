@@ -12,14 +12,19 @@ import {
   RegisterPage,
   SettingsPage,
 } from "@/pages";
+import { PublicLayout } from "@/components";
 import { ProtectedRoute } from "./ProtectedRoute";
 
 export function AppRoutes() {
   return (
     <Routes>
-      <Route element={<LandingPage />} path="/" />
-      <Route element={<FeaturesPage />} path="/features" />
-      <Route element={<PricingPage />} path="/pricing" />
+      <Route element={<PublicLayout />}>
+        <Route element={<LandingPage />} path="/" />
+        <Route element={<FeaturesPage />} path="/features" />
+        <Route element={<PricingPage />} path="/pricing" />
+        <Route element={<NotFoundPage />} path="/not-found" />
+      </Route>
+
       <Route element={<LoginPage />} path="/login" />
       <Route element={<RegisterPage />} path="/register" />
 
@@ -31,7 +36,6 @@ export function AppRoutes() {
         <Route element={<ProfilePage />} path="/dashboard/profile" />
       </Route>
 
-      <Route element={<NotFoundPage />} path="/not-found" />
       <Route element={<Navigate replace to="/not-found" />} path="*" />
     </Routes>
   );

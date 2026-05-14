@@ -8,6 +8,7 @@ export function NotFoundPage() {
       primaryHref="/"
       primaryLabel="Return home"
       title="Page not found"
+      withSurface={false}
     />
   );
 }

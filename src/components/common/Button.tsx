@@ -62,13 +62,15 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         type={type}
         {...props}
       >
-        {isLoading ? <LoadingSpinner size="sm" /> : leftIcon}
-        {size !== "icon" ? (
+        {size === "icon" ? (
           children
         ) : (
-          <span className="sr-only">{children}</span>
+          <>
+            {isLoading ? <LoadingSpinner size="sm" /> : leftIcon}
+            {children}
+            {!isLoading ? rightIcon : null}
+          </>
         )}
-        {!isLoading ? rightIcon : null}
       </button>
     );
   },

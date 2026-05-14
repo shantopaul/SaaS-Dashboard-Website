@@ -8,6 +8,7 @@ export function PricingPage() {
       primaryHref="/login"
       primaryLabel="Go to login route"
       title="Pricing Page"
+      withSurface={false}
     />
   );
 }

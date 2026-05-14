@@ -8,6 +8,7 @@ export function FeaturesPage() {
       primaryHref="/pricing"
       primaryLabel="View pricing route"
       title="Features Page"
+      withSurface={false}
     />
   );
 }
