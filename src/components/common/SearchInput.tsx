@@ -1,4 +1,5 @@
 import { forwardRef, type InputHTMLAttributes } from "react";
+import { Search } from "lucide-react";
 import { Input } from "./Input";
 
 interface SearchInputProps extends Omit<
@@ -14,7 +15,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
       <Input
         ref={ref}
         aria-label={label}
-        leftElement={<span aria-hidden="true">/</span>}
+        leftElement={<Search aria-hidden="true" className="size-4" />}
         placeholder={placeholder}
         type="search"
         {...props}
