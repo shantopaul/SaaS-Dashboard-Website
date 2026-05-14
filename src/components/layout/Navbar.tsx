@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Menu, Moon, Sun, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { publicNavigationItems } from "@/data";
 import { BrandLogo } from "./BrandLogo";
-import { Button } from "@/components/common";
+import { Button, ThemeToggle } from "@/components/common";
 import { cn } from "@/utils";
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
@@ -16,11 +16,6 @@ const navLinkClass = ({ isActive }: { isActive: boolean }) =>
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [darkPreview, setDarkPreview] = useState(false);
-
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", darkPreview);
-  }, [darkPreview]);
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/92 backdrop-blur-xl">
@@ -45,20 +40,7 @@ export function Navbar() {
           </nav>
 
           <div className="hidden items-center gap-2 md:flex">
-            <Button
-              aria-label={
-                darkPreview ? "Preview light theme" : "Preview dark theme"
-              }
-              onClick={() => setDarkPreview((current) => !current)}
-              size="icon"
-              variant="ghost"
-            >
-              {darkPreview ? (
-                <Sun aria-hidden="true" className="size-5" />
-              ) : (
-                <Moon aria-hidden="true" className="size-5" />
-              )}
-            </Button>
+            <ThemeToggle />
             <Link
               className="focus-ring inline-flex h-10 items-center justify-center rounded-md px-4 text-body-sm font-semibold text-foreground transition-colors hover:bg-secondary"
               to="/login"
@@ -74,20 +56,7 @@ export function Navbar() {
           </div>
 
           <div className="flex items-center gap-2 md:hidden">
-            <Button
-              aria-label={
-                darkPreview ? "Preview light theme" : "Preview dark theme"
-              }
-              onClick={() => setDarkPreview((current) => !current)}
-              size="icon"
-              variant="ghost"
-            >
-              {darkPreview ? (
-                <Sun aria-hidden="true" className="size-5" />
-              ) : (
-                <Moon aria-hidden="true" className="size-5" />
-              )}
-            </Button>
+            <ThemeToggle />
             <Button
               aria-expanded={mobileMenuOpen}
               aria-label="Toggle navigation menu"

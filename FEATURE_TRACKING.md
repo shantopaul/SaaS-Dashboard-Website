@@ -30,8 +30,8 @@ After a feature is fully implemented and verified, update its status to `Done` a
 | 10  | Auth Layout                       | Small  | Done        | Created AuthLayout wrapper, integrated into AppRoutes, updated Login and Register with placeholders.                                                              |
 | 11  | Login Page UI                     | Small  | Done        | Built login form with react-hook-form, zod validation, eye toggle, remember me, and Google sign-in.                                                               |
 | 12  | Register Page UI                  | Small  | Done        | Built registration form with react-hook-form, zod password matching, and Terms validation.                                                                        |
-| 13  | Fake Authentication               | Medium | Done    | Implemented Zustand authStore with persistence, protected route guard, and integrated login/register actions.     |
-| 14  | Theme System                      | Medium | Pending     |                                                                                                                                                                   |
+| 13  | Fake Authentication               | Medium | Done        | Implemented Zustand authStore with persistence, protected route guard, and integrated login/register actions.                                                     |
+| 14  | Theme System                      | Medium | Done    | Implemented global dark/light theme with Zustand store, persistence, ThemeProvider, and ThemeToggle in Nav/Auth layouts. |
 | 15  | Dashboard Layout                  | Medium | Pending     |                                                                                                                                                                   |
 | 16  | Sidebar Navigation                | Medium | Pending     |                                                                                                                                                                   |
 | 17  | Dashboard Header                  | Medium | Pending     |                                                                                                                                                                   |
@@ -72,3 +72,4 @@ None.
 - Feature 11 - Login Page UI: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and checked form validation locally.
 - Feature 12 - Register Page UI: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and checked form validation locally.
 - Feature 13 - Fake Authentication: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and local tests.
+- Feature 14 - Theme System: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and implemented dynamic ThemeProvider.

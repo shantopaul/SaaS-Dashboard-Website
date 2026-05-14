@@ -11,3 +11,4 @@ export * from "./SectionHeader";
 export * from "./Select";
 export * from "./Textarea";
 export * from "./Toggle";
+export * from "./ThemeToggle";
