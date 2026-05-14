@@ -1,13 +1,23 @@
+import { StatCard } from "@/components/dashboard";
+import { dashboardStats } from "@/data";
 import { PageShell } from "../PageShell";
 
 export function DashboardPage() {
   return (
-    <PageShell
-      badge="Protected Route"
-      description="This placeholder confirms the /dashboard route works. The dashboard overview will be built in Feature 20 after layout, stats, charts, and tables are ready."
-      primaryHref="/dashboard/analytics"
-      primaryLabel="View analytics route"
-      title="Dashboard Overview"
-    />
+    <div className="flex flex-col gap-6">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {dashboardStats.map((stat) => (
+          <StatCard key={stat.id} stat={stat} />
+        ))}
+      </div>
+
+      <PageShell
+        badge="Protected Route"
+        description="The dashboard overview will be fully built out in Feature 20."
+        primaryHref="/dashboard/analytics"
+        primaryLabel="View analytics route"
+        title="Dashboard Overview"
+      />
+    </div>
   );
 }
