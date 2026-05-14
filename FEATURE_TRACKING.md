@@ -32,8 +32,8 @@ After a feature is fully implemented and verified, update its status to `Done` a
 | 12  | Register Page UI                  | Small  | Done        | Built registration form with react-hook-form, zod password matching, and Terms validation.                                                                        |
 | 13  | Fake Authentication               | Medium | Done        | Implemented Zustand authStore with persistence, protected route guard, and integrated login/register actions.                                                     |
 | 14  | Theme System                      | Medium | Done        | Implemented global dark/light theme with Zustand store, persistence, ThemeProvider, and ThemeToggle in Nav/Auth layouts.                                          |
-| 15  | Dashboard Layout                  | Medium | Done    | Created structural shell with DashboardLayout, basic Sidebar, basic DashboardHeader, and responsive content area. |
-| 16  | Sidebar Navigation                | Medium | Pending     |                                                                                                                                                                   |
+| 15  | Dashboard Layout                  | Medium | Done        | Created structural shell with DashboardLayout, basic Sidebar, basic DashboardHeader, and responsive content area.                                                 |
+| 16  | Sidebar Navigation                | Medium | Done    | Implemented detailed Sidebar with NavLink, icons, logout button, and mobile state handling using layoutStore.     |
 | 17  | Dashboard Header                  | Medium | Pending     |                                                                                                                                                                   |
 | 18  | Dashboard Overview Stats          | Small  | Pending     |                                                                                                                                                                   |
 | 19  | Chart Components                  | Medium | Pending     |                                                                                                                                                                   |
@@ -74,3 +74,4 @@ None.
 - Feature 13 - Fake Authentication: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and local tests.
 - Feature 14 - Theme System: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and implemented dynamic ThemeProvider.
 - Feature 15 - Dashboard Layout: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and successfully wrapped protected routes.
+- Feature 16 - Sidebar Navigation: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and checked active routes and mobile toggle.
