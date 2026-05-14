@@ -12,7 +12,7 @@ import {
   RegisterPage,
   SettingsPage,
 } from "@/pages";
-import { PublicLayout } from "@/components";
+import { AuthLayout, PublicLayout } from "@/components";
 import { ProtectedRoute } from "./ProtectedRoute";
 
 export function AppRoutes() {
@@ -25,8 +25,10 @@ export function AppRoutes() {
         <Route element={<NotFoundPage />} path="/not-found" />
       </Route>
 
-      <Route element={<LoginPage />} path="/login" />
-      <Route element={<RegisterPage />} path="/register" />
+      <Route element={<AuthLayout />}>
+        <Route element={<LoginPage />} path="/login" />
+        <Route element={<RegisterPage />} path="/register" />
+      </Route>
 
       <Route element={<ProtectedRoute />}>
         <Route element={<DashboardPage />} path="/dashboard" />
