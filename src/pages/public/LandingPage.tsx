@@ -59,9 +59,9 @@ const featureIconMap: Record<string, LucideIcon> = {
 };
 
 const benefitItems = [
-  "Track product, revenue, and customer momentum from one interface.",
-  "Give teams a polished dashboard pattern they can understand quickly.",
-  "Use consistent public and dashboard foundations for faster feature delivery.",
+  "Track revenue, customers, and product performance from a single, unified view.",
+  "Give stakeholders clean, scannable reports they can act on immediately.",
+  "Move faster with a consistent design system across public pages and the full dashboard.",
 ];
 
 const fadeUp = {
@@ -94,13 +94,13 @@ export function LandingPage() {
             transition={{ duration: 0.55, ease: "easeOut" }}
             variants={fadeUp}
           >
-            <Badge variant="info">Modern SaaS dashboard website</Badge>
+            <Badge variant="info">Built for modern SaaS teams</Badge>
             <h1 className="mt-6 text-display-md sm:text-display-lg">
-              FlowPilot SaaS Dashboard
+              The analytics dashboard your team will actually use
             </h1>
             <p className="mx-auto mt-5 max-w-3xl text-body-lg">
-              Track performance, monitor revenue, manage customers, and make
-              better business decisions from one beautiful dashboard.
+              Track performance, manage customers, monitor revenue, and make
+              smarter decisions — all from one beautifully designed dashboard.
             </p>
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
               <Link
@@ -155,9 +155,9 @@ export function LandingPage() {
       <motion.section className="py-18" {...sectionMotion}>
         <div className="container-shell">
           <SectionHeader
-            description="FlowPilot brings the most important business signals into one reusable, polished SaaS interface."
+            description="Everything your team needs to monitor growth, manage customers, and close the loop on revenue — in one interface."
             eyebrow="Feature highlights"
-            title="Everything a modern team needs to understand growth"
+            title="Built for the metrics that actually move your business"
           />
           <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {highlightedFeatures.map((feature) => {
@@ -219,9 +219,9 @@ export function LandingPage() {
       <motion.section className="py-18" {...sectionMotion}>
         <div className="container-shell">
           <SectionHeader
-            description="The interface is designed for teams that need to scan, compare, and act without fighting the UI."
+            description="Every surface — from the metrics grid to the billing table — is designed to reduce decision time, not add to it."
             eyebrow="Benefits"
-            title="A dashboard experience built for repeated work"
+            title="A dashboard your whole team will trust"
           />
           <div className="mt-10 grid gap-4 lg:grid-cols-3">
             {[
@@ -267,9 +267,9 @@ export function LandingPage() {
       >
         <div className="container-shell">
           <SectionHeader
-            description="Short, realistic feedback makes the SaaS story feel grounded and client-facing."
+            description="Real teams. Real outcomes. Here is what they said after switching to a FlowPilot-style workflow."
             eyebrow="Testimonials"
-            title="Loved by teams that care about clean reporting"
+            title="Trusted by teams that care about clean data"
           />
           <div className="mt-10 grid gap-4 lg:grid-cols-3">
             {testimonials.map((testimonial) => (
@@ -296,14 +296,13 @@ export function LandingPage() {
       <motion.section className="py-18" {...sectionMotion}>
         <div className="container-shell grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <Badge variant="warning">Pricing preview</Badge>
+            <Badge variant="warning">Simple, transparent pricing</Badge>
             <h2 className="mt-5 text-heading-xl">
-              Start small, then grow into deeper analytics.
+              Start small. Scale when you're ready.
             </h2>
             <p className="mt-4 text-body-lg">
-              The full pricing page comes later, but the landing page gives a
-              quick path into the recommended plan and the complete pricing
-              route.
+              Choose the plan that fits where your team is today. Upgrade any
+              time as your reporting needs grow.
             </p>
             <Link
               className="focus-ring mt-7 inline-flex h-11 items-center justify-center gap-2 rounded-lg border border-border bg-background px-5 text-body-sm font-semibold text-foreground transition-colors hover:bg-secondary"
@@ -361,11 +360,11 @@ export function LandingPage() {
       >
         <div className="container-shell text-center">
           <h2 className="mx-auto max-w-3xl text-heading-xl text-primary-foreground">
-            Ready to grow your business with smarter analytics?
+            Ready to get clear on your numbers?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-body-lg text-primary-foreground/78">
-            Start your free trial today and explore the dashboard foundation
-            built for modern SaaS teams.
+            Start your free trial and give your team a dashboard they will
+            actually open every morning.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <Link

@@ -7,14 +7,15 @@ export const pricingPlans: PricingPlan[] = [
     price: "$19",
     billingCycle: "per month",
     description:
-      "Best for individuals and small teams launching their first dashboard.",
+      "The right starting point for solo founders and small teams exploring their first analytics workflow.",
     features: [
-      "Basic analytics",
-      "5 team members",
+      "Core analytics dashboard",
+      "Up to 5 team members",
       "Email support",
-      "Core reports",
+      "Standard reports",
+      "Billing history",
     ],
-    ctaLabel: "Start Starter",
+    ctaLabel: "Get started free",
   },
   {
     id: "professional",
@@ -22,15 +23,16 @@ export const pricingPlans: PricingPlan[] = [
     price: "$49",
     billingCycle: "per month",
     description:
-      "Best for growing businesses that need deeper analytics and reports.",
+      "Built for growing teams that need full analytics depth, more collaboration, and faster reporting cycles.",
     features: [
-      "Advanced analytics",
+      "Advanced analytics & forecasting",
       "Unlimited projects",
-      "25 team members",
-      "Priority support",
-      "Billing reports",
+      "Up to 25 team members",
+      "Priority email & chat support",
+      "Full billing reports",
+      "Custom notification rules",
     ],
-    ctaLabel: "Start Professional",
+    ctaLabel: "Start free trial",
     isPopular: true,
   },
   {
@@ -39,22 +41,23 @@ export const pricingPlans: PricingPlan[] = [
     price: "Custom",
     billingCycle: "tailored plan",
     description:
-      "Best for larger companies with custom security and integration needs.",
+      "Designed for larger organisations that need dedicated support, custom integrations, and SLA guarantees.",
     features: [
       "Dedicated account manager",
-      "Custom integrations",
-      "Advanced security",
+      "Custom integrations & API access",
+      "Advanced security & SSO",
       "Unlimited team members",
-      "24/7 support",
+      "24/7 priority support",
+      "Custom data retention policies",
     ],
-    ctaLabel: "Contact Sales",
+    ctaLabel: "Talk to sales",
   },
 ];
 
 export const pricingComparisonRows: PricingComparisonRow[] = [
   {
     feature: "Analytics dashboards",
-    starter: "Basic",
+    starter: "Standard",
     professional: "Advanced",
     enterprise: "Custom",
   },
@@ -81,5 +84,11 @@ export const pricingComparisonRows: PricingComparisonRow[] = [
     starter: "Email",
     professional: "Priority",
     enterprise: "24/7",
+  },
+  {
+    feature: "Custom data retention",
+    starter: false,
+    professional: false,
+    enterprise: true,
   },
 ];
