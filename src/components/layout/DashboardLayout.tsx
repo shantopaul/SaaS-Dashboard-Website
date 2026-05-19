@@ -4,7 +4,7 @@ import { DashboardHeader } from "./DashboardHeader";
 
 export function DashboardLayout() {
   return (
-    <div className="flex min-h-screen w-full bg-muted/40">
+    <div className="flex h-screen w-full overflow-hidden bg-muted/40">
       {/* Skip-to-content link: visible on focus, hidden otherwise */}
       <a
         className="sr-only focus:not-sr-only focus:absolute focus:left-1/2 focus:top-4 focus:-translate-x-1/2 focus:z-[300] focus:block focus:rounded-lg focus:border focus:border-primary/20 focus:bg-background/95 focus:px-4 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-primary focus:shadow-xl focus:backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-primary"
