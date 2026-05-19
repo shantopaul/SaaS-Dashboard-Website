@@ -7,7 +7,7 @@ export function PublicLayout() {
     <div className="app-surface flex min-h-screen flex-col">
       {/* Skip-to-content for keyboard/AT users */}
       <a
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:inline-block focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-primary-foreground focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-ring"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-1/2 focus:top-4 focus:-translate-x-1/2 focus:z-[300] focus:block focus:rounded-lg focus:border focus:border-primary/20 focus:bg-background/95 focus:px-4 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-primary focus:shadow-xl focus:backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-primary"
         href="#page-content"
       >
         Skip to main content
