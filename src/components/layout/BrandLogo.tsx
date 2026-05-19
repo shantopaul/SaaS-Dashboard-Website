@@ -1,3 +1,4 @@
+import { useId } from "react";
 import { Link } from "react-router-dom";
 import { cn } from "@/utils";
 
@@ -6,6 +7,9 @@ interface BrandLogoProps {
 }
 
 export function BrandLogo({ className }: BrandLogoProps) {
+  const rawId = useId();
+  const gradId = `logo-grad-${rawId.replace(/:/g, "")}`;
+
   return (
     <Link
       className={cn(
@@ -23,7 +27,7 @@ export function BrandLogo({ className }: BrandLogoProps) {
         >
           <defs>
             <linearGradient
-              id="logo-grad"
+              id={gradId}
               x1="0"
               y1="0"
               x2="24"
@@ -37,9 +41,9 @@ export function BrandLogo({ className }: BrandLogoProps) {
           {/* Dynamic delta wing / compass guide */}
           <path
             d="M12 3L2 21L12 17L22 21L12 3Z"
-            fill="url(#logo-grad)"
+            fill={`url(#${gradId})`}
             fillOpacity="0.15"
-            stroke="url(#logo-grad)"
+            stroke={`url(#${gradId})`}
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -47,13 +51,13 @@ export function BrandLogo({ className }: BrandLogoProps) {
           {/* Internal fluid data flow pathway */}
           <path
             d="M12 7L6 17.5H18L12 7Z"
-            stroke="url(#logo-grad)"
+            stroke={`url(#${gradId})`}
             strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           {/* Glowing central pilot coordinate */}
-          <circle cx="12" cy="13.5" r="2.2" fill="url(#logo-grad)" />
+          <circle cx="12" cy="13.5" r="2.2" fill={`url(#${gradId})`} />
         </svg>
       </span>
       <span className="leading-none select-none">
