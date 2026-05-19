@@ -14,6 +14,8 @@ export function DashboardLayout() {
       </a>
 
       <Sidebar />
+      {/* Desktop Sidebar Spacer */}
+      <div className="hidden w-64 shrink-0 md:block" />
 
       <div className="flex flex-1 flex-col min-w-0">
         <div className="flex flex-1 flex-col px-0 sm:px-4 md:px-6 sm:py-4">
