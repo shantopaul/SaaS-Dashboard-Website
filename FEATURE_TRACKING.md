@@ -43,8 +43,8 @@ After a feature is fully implemented and verified, update its status to `Done` a
 | 23  | Notifications UI                  | Medium | Done        | Added notification dropdown with unread badge, mark-all-read behavior, and global toast provider wired to auth and notification actions.                          |
 | 24  | Search Experience                 | Medium | Done        | Added responsive dashboard search with local results for pages, customers, invoices, transactions, and reports, including empty state and keyboard handling.      |
 | 25  | Billing Page                      | Medium | Done        | Built /dashboard/billing with current plan card, seat usage bar, credit card visual, billing history table, upgrade plan section, and UI-only toast feedback.     |
-| 26  | Settings Page                     | Large  | Done        | Built /dashboard/settings with general fields, 5 notification toggles, 2FA/login-alert toggles, session timeout, change-password form, and live theme switcher. |
-| 27  | Profile Page                      | Medium | Pending     |                                                                                                                                                                   |
+| 26  | Settings Page                     | Large  | Done        | Built /dashboard/settings with general fields, 5 notification toggles, 2FA/login-alert toggles, session timeout, change-password form, and live theme switcher.   |
+| 27  | Profile Page                      | Medium | Done        | Built /dashboard/profile with initials avatar, personal info form, account details panel, and password update with validation and loading states.                  |
 | 28  | Responsive Pass                   | Large  | Pending     |                                                                                                                                                                   |
 | 29  | Animation and Interaction Polish  | Medium | Pending     |                                                                                                                                                                   |
 | 30  | Accessibility and UX Pass         | Medium | Pending     |                                                                                                                                                                   |
@@ -85,3 +85,4 @@ None.
 - Feature 24 - Search Experience: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and a local `/dashboard` HTTP 200 smoke test.
 - Feature 25 - Billing Page: Done. Verified with `npm run format`, `npm run lint`, `npm run build`, and local `/dashboard/billing` HTTP 200 smoke test.
 - Feature 26 - Settings Page: Done. Verified with `npm run format`, `npm run lint`, `npm run build`, and local `/dashboard/settings` HTTP 200 smoke test.
+- Feature 27 - Profile Page: Done. Verified with `npm run format`, `npm run lint`, `npm run build`, and local `/dashboard/profile` HTTP 200 smoke test.
