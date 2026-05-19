@@ -37,7 +37,7 @@ After a feature is fully implemented and verified, update its status to `Done` a
 | 17  | Dashboard Header                  | Medium | Done    | Built responsive DashboardHeader with dynamic page title, SearchInput, notifications, ThemeToggle, and User menu Dropdown.                                        |
 | 18  | Dashboard Overview Stats          | Small  | Done    | Created StatCard component mapping through dashboardStats to display KPI grid on DashboardPage.                                                                   |
 | 19  | Chart Components                  | Medium | Done    | Added Recharts-based chart card wrapper plus revenue line, sales bar, user growth area, and traffic source donut charts using centralized data and theme tokens.  |
-| 20  | Dashboard Overview Page           | Large  | Pending |                                                                                                                                                                   |
+| 20  | Dashboard Overview Page           | Large  | Done    | Completed dashboard overview with intro context, KPI cards, revenue and sales charts, recent customers table, and recent activity feed.                           |
 | 21  | Table System                      | Medium | Pending |                                                                                                                                                                   |
 | 22  | Analytics Page                    | Large  | Pending |                                                                                                                                                                   |
 | 23  | Notifications UI                  | Medium | Pending |                                                                                                                                                                   |
@@ -78,3 +78,4 @@ None.
 - Feature 17 - Dashboard Header: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and checked Dropdown and SearchInput integrations.
 - Feature 18 - Dashboard Overview Stats: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and checked KPI cards.
 - Feature 19 - Chart Components: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and a local `/dashboard` HTTP 200 smoke test. In-app browser visual verification was blocked by `ERR_BLOCKED_BY_CLIENT`.
+- Feature 20 - Dashboard Overview Page: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and a local `/dashboard` HTTP 200 smoke test.

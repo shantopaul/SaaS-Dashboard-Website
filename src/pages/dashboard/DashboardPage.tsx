@@ -1,25 +1,37 @@
 import {
   ChartCard,
   MonthlySalesBarChart,
+  RecentActivityFeed,
+  RecentCustomersTable,
   RevenueLineChart,
   StatCard,
-  TrafficSourceDonutChart,
-  UserGrowthAreaChart,
 } from "@/components/dashboard";
 import { dashboardStats } from "@/data";
 
 export function DashboardPage() {
   return (
     <div className="flex flex-col gap-6">
+      <section className="flex flex-col gap-2">
+        <p className="text-body-sm font-medium text-muted-foreground">
+          Welcome back. Here is how FlowPilot is performing this month.
+        </p>
+        <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+          <h2 className="text-heading-lg">Overview</h2>
+          <p className="text-body-sm text-muted-foreground">
+            Updated with July revenue, sales, and customer activity.
+          </p>
+        </div>
+      </section>
+
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {dashboardStats.map((stat) => (
           <StatCard key={stat.id} stat={stat} />
         ))}
       </div>
 
-      <div className="grid gap-6 xl:grid-cols-2">
+      <section className="grid gap-6 xl:grid-cols-5">
         <ChartCard
-          className="xl:col-span-2"
+          className="xl:col-span-3"
           description="Actual revenue compared with forecast across the current fiscal period."
           title="Revenue Trend"
         >
@@ -32,22 +44,12 @@ export function DashboardPage() {
         >
           <MonthlySalesBarChart />
         </ChartCard>
+      </section>
 
-        <ChartCard
-          description="Active user base growth across the last seven months."
-          title="User Growth"
-        >
-          <UserGrowthAreaChart />
-        </ChartCard>
-
-        <ChartCard
-          className="xl:col-span-2"
-          description="Visitor acquisition share across primary marketing channels."
-          title="Traffic Sources"
-        >
-          <TrafficSourceDonutChart />
-        </ChartCard>
-      </div>
+      <section className="grid gap-6 xl:grid-cols-[minmax(0,1.35fr)_minmax(320px,0.65fr)]">
+        <RecentCustomersTable />
+        <RecentActivityFeed />
+      </section>
     </div>
   );
 }
