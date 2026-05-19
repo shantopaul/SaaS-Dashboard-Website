@@ -5,6 +5,7 @@ import { publicNavigationItems } from "@/data";
 import { BrandLogo } from "./BrandLogo";
 import { Button, ThemeToggle } from "@/components/common";
 import { cn } from "@/utils";
+import { useAuthStore } from "@/store";
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   cn(
@@ -16,6 +17,7 @@ const navLinkClass = ({ isActive }: { isActive: boolean }) =>
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { isAuthenticated } = useAuthStore();
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/92 backdrop-blur-xl">
@@ -41,18 +43,29 @@ export function Navbar() {
 
           <div className="hidden items-center gap-2 md:flex">
             <ThemeToggle />
-            <Link
-              className="focus-ring inline-flex h-10 items-center justify-center rounded-md px-4 text-body-sm font-semibold text-foreground transition-colors hover:bg-secondary"
-              to="/login"
-            >
-              Login
-            </Link>
-            <Link
-              className="focus-ring inline-flex h-10 items-center justify-center rounded-md bg-primary px-4 text-body-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
-              to="/register"
-            >
-              Get Started
-            </Link>
+            {isAuthenticated ? (
+              <Link
+                className="focus-ring inline-flex h-10 items-center justify-center rounded-md bg-primary px-4 text-body-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
+                to="/dashboard"
+              >
+                Go to Dashboard
+              </Link>
+            ) : (
+              <>
+                <Link
+                  className="focus-ring inline-flex h-10 items-center justify-center rounded-md px-4 text-body-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+                  to="/login"
+                >
+                  Login
+                </Link>
+                <Link
+                  className="focus-ring inline-flex h-10 items-center justify-center rounded-md bg-primary px-4 text-body-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
+                  to="/register"
+                >
+                  Get Started
+                </Link>
+              </>
+            )}
           </div>
 
           <div className="flex items-center gap-2 md:hidden">
@@ -89,20 +102,32 @@ export function Navbar() {
               ))}
             </nav>
             <div className="mt-4 grid gap-2 border-t border-border pt-4">
-              <Link
-                className="focus-ring inline-flex h-10 items-center justify-center rounded-md border border-border bg-background px-4 text-body-sm font-semibold text-foreground transition-colors hover:bg-secondary"
-                onClick={() => setMobileMenuOpen(false)}
-                to="/login"
-              >
-                Login
-              </Link>
-              <Link
-                className="focus-ring inline-flex h-10 items-center justify-center rounded-md bg-primary px-4 text-body-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
-                onClick={() => setMobileMenuOpen(false)}
-                to="/register"
-              >
-                Get Started
-              </Link>
+              {isAuthenticated ? (
+                <Link
+                  className="focus-ring inline-flex h-10 items-center justify-center rounded-md bg-primary px-4 text-body-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
+                  onClick={() => setMobileMenuOpen(false)}
+                  to="/dashboard"
+                >
+                  Go to Dashboard
+                </Link>
+              ) : (
+                <>
+                  <Link
+                    className="focus-ring inline-flex h-10 items-center justify-center rounded-md border border-border bg-background px-4 text-body-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+                    onClick={() => setMobileMenuOpen(false)}
+                    to="/login"
+                  >
+                    Login
+                  </Link>
+                  <Link
+                    className="focus-ring inline-flex h-10 items-center justify-center rounded-md bg-primary px-4 text-body-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
+                    onClick={() => setMobileMenuOpen(false)}
+                    to="/register"
+                  >
+                    Get Started
+                  </Link>
+                </>
+              )}
             </div>
           </div>
         ) : null}
