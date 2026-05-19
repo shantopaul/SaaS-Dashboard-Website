@@ -112,7 +112,7 @@ export function FeaturesPage() {
             variants={fadeUp}
           >
             <Badge variant="info">Product Features</Badge>
-            <h1 className="mt-5 max-w-3xl text-heading-xl sm:text-display-md">
+            <h1 className="mt-5 max-w-3xl text-3xl font-extrabold tracking-tight leading-[1.15] text-foreground sm:text-heading-xl md:text-display-md">
               Everything FlowPilot needs to feel like a real SaaS product.
             </h1>
             <p className="mt-5 max-w-2xl text-body-lg">
@@ -120,16 +120,16 @@ export function FeaturesPage() {
               revenue tracking, customer management, billing, reports, account
               security, and theme-ready interface foundations.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Link
-                className="focus-ring inline-flex h-11 items-center justify-center gap-2 rounded-lg bg-primary px-5 text-body-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
+                className="focus-ring inline-flex h-11 w-full sm:w-auto items-center justify-center gap-2 rounded-lg bg-primary px-5 text-body-sm font-semibold text-primary-foreground shadow-sm transition-all duration-300 hover:bg-primary/90 hover:scale-[1.02]"
                 to="/register"
               >
                 Start Free Trial
                 <ArrowRight aria-hidden="true" className="size-4" />
               </Link>
               <Link
-                className="focus-ring inline-flex h-11 items-center justify-center rounded-lg border border-border bg-background px-5 text-body-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+                className="focus-ring inline-flex h-11 w-full sm:w-auto items-center justify-center rounded-lg border border-border bg-background px-5 text-body-sm font-semibold text-foreground transition-all duration-300 hover:bg-secondary hover:scale-[1.02]"
                 to="/pricing"
               >
                 View Pricing
@@ -147,7 +147,10 @@ export function FeaturesPage() {
               const Icon = featureIconMap[feature.iconName] ?? Sparkles;
 
               return (
-                <Card key={feature.id}>
+                <Card
+                  className="transition-all duration-300 hover:scale-[1.02] hover:shadow-card-hover hover:border-primary/20"
+                  key={feature.id}
+                >
                   <CardHeader>
                     <div className="flex size-11 items-center justify-center rounded-lg bg-primary/10 text-primary">
                       <Icon aria-hidden="true" className="size-5" />
@@ -239,7 +242,7 @@ export function FeaturesPage() {
         <div className="container-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div>
             <Badge variant="default">Capability map</Badge>
-            <h2 className="mt-5 text-heading-xl">
+            <h2 className="mt-5 text-3xl font-extrabold tracking-tight leading-[1.15] text-foreground sm:text-heading-xl">
               A clear path from marketing pages to private dashboard features.
             </h2>
             <p className="mt-4 text-body-lg">
@@ -252,7 +255,7 @@ export function FeaturesPage() {
           <div className="grid gap-3 sm:grid-cols-2">
             {capabilityGroups.map((capability) => (
               <div
-                className="rounded-lg border border-border bg-secondary p-4 text-body-sm font-semibold text-foreground"
+                className="rounded-lg border border-border bg-secondary p-4 text-body-sm font-semibold text-foreground transition-all duration-300 hover:scale-[1.02] hover:shadow-card hover:bg-card"
                 key={capability}
               >
                 {capability}
