@@ -1,8 +1,23 @@
-import { Outlet } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 import { BrandLogo } from "./BrandLogo";
-import { ThemeToggle } from "@/components/common";
+import { ThemeToggle, LoadingSpinner } from "@/components/common";
+import { useAuthStore } from "@/store";
 
 export function AuthLayout() {
+  const { isAuthenticated, isLoading } = useAuthStore();
+
+  if (isLoading) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-muted/30">
+        <LoadingSpinner size="lg" />
+      </div>
+    );
+  }
+
+  if (isAuthenticated) {
+    return <Navigate replace to="/dashboard" />;
+  }
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-muted/30 p-3 sm:p-4 md:p-8">
       {/* Theme Toggle - Fixed top right */}
