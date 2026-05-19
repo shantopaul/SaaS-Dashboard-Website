@@ -5,5 +5,6 @@ export type * from "./content.types";
 export type * from "./invoice.types";
 export type * from "./notification.types";
 export type * from "./pricing.types";
+export type * from "./search.types";
 export type * from "./table.types";
 export type * from "./user.types";

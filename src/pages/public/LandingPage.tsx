@@ -5,6 +5,7 @@ import {
   ArrowRight,
   BarChart3,
   CheckCircle2,
+  ChevronDown,
   CreditCard,
   FileBarChart,
   LockKeyhole,
@@ -59,9 +60,9 @@ const featureIconMap: Record<string, LucideIcon> = {
 };
 
 const benefitItems = [
-  "Track product, revenue, and customer momentum from one interface.",
-  "Give teams a polished dashboard pattern they can understand quickly.",
-  "Use consistent public and dashboard foundations for faster feature delivery.",
+  "Track revenue, customers, and product performance from a single, unified view.",
+  "Give stakeholders clean, scannable reports they can act on immediately.",
+  "Move faster with a consistent design system across public pages and the full dashboard.",
 ];
 
 const fadeUp = {
@@ -85,51 +86,98 @@ export function LandingPage() {
   return (
     <>
       <section className="relative overflow-hidden border-b border-border">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_15%,hsl(var(--primary)/0.14),transparent_34%),linear-gradient(180deg,hsl(var(--background)),hsl(var(--secondary)/0.55))]" />
-        <div className="container-shell grid min-h-[calc(100vh-5rem)] content-center gap-10 py-16 lg:py-20">
+        {/* Futuristic Grid Pattern & Glowing Ambient Backdrops */}
+        <div className="absolute inset-0 -z-10 overflow-hidden bg-background">
+          {/* Main Primary Glow (centered top) */}
+          <div className="absolute left-1/2 top-0 h-[600px] w-[1000px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,hsl(var(--primary)/0.18)_0%,transparent_65%)] blur-[80px]" />
+          {/* Accent Glow (bottom-left) */}
+          <div className="absolute -left-20 bottom-10 h-[450px] w-[700px] rounded-full bg-[radial-gradient(circle,hsl(var(--accent)/0.12)_0%,transparent_65%)] blur-[70px]" />
+          {/* Secondary Soft Ambient Wave */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background" />
+          {/* High-tech Blueprint Grid Pattern */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border)/0.16)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.16)_1px,transparent_1px)] bg-[size:44px_44px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+        </div>
+
+        <div className="container-shell flex flex-col items-center justify-center gap-10 pt-20 pb-16 text-center">
           <motion.div
             animate="visible"
-            className="mx-auto max-w-4xl text-center"
+            className="mx-auto flex max-w-4xl flex-col items-center text-center"
             initial="hidden"
             transition={{ duration: 0.55, ease: "easeOut" }}
             variants={fadeUp}
           >
-            <Badge variant="info">Modern SaaS dashboard website</Badge>
-            <h1 className="mt-6 text-display-md sm:text-display-lg">
-              FlowPilot SaaS Dashboard
+            {/* Sleek Glowing Glassmorphic Pill */}
+            <div className="mx-auto mb-6 inline-flex items-center gap-2.5 rounded-full border border-primary/20 bg-primary/8 px-4 py-1.5 text-xs font-semibold text-primary shadow-sm backdrop-blur-md transition-all duration-300 hover:border-primary/30 hover:bg-primary/12">
+              <Sparkles
+                aria-hidden="true"
+                className="size-3.5 animate-pulse text-primary"
+              />
+              <span>Built for modern SaaS teams</span>
+            </div>
+
+            {/* Premium Dynamic Glowing Gradient Title */}
+            <h1 className="mt-6 text-3xl font-extrabold tracking-tight leading-[1.15] text-foreground pb-2 sm:text-display-md md:text-display-lg">
+              The analytics dashboard your team will{" "}
+              <span className="bg-gradient-to-r from-primary via-indigo-500 to-accent bg-clip-text text-transparent">
+                actually use
+              </span>
             </h1>
-            <p className="mx-auto mt-5 max-w-3xl text-body-lg">
-              Track performance, monitor revenue, manage customers, and make
-              better business decisions from one beautiful dashboard.
+
+            <p className="mx-auto mt-6 max-w-2xl text-body-lg text-muted-foreground">
+              Track performance, manage customers, monitor revenue, and make
+              smarter decisions — all from one beautifully designed dashboard.
             </p>
-            <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+
+            <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
               <Link
-                className="focus-ring inline-flex h-11 items-center justify-center gap-2 rounded-lg bg-primary px-5 text-body-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
+                className="focus-ring group inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-primary px-6 text-body-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary/95 hover:shadow-xl hover:shadow-primary/25 active:translate-y-0"
                 to="/register"
               >
                 Start Free Trial
-                <ArrowRight aria-hidden="true" className="size-4" />
+                <ArrowRight
+                  aria-hidden="true"
+                  className="size-4 transition-transform group-hover:translate-x-1"
+                />
               </Link>
               <Link
-                className="focus-ring inline-flex h-11 items-center justify-center rounded-lg border border-border bg-background px-5 text-body-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+                className="focus-ring inline-flex h-12 items-center justify-center rounded-lg border border-border bg-background/60 px-6 text-body-sm font-semibold text-foreground shadow-sm backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:bg-secondary hover:text-foreground active:translate-y-0"
                 to="/dashboard"
               >
                 View Demo
               </Link>
             </div>
+
+            {/* Centered Chevron Scroll Down Button directly below CTAs */}
+            <div className="mt-8 flex justify-center">
+              <button
+                onClick={() => {
+                  document
+                    .getElementById("trusted-brands-section")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="focus-ring group flex size-12 items-center justify-center rounded-full border border-border bg-background/60 shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:bg-background/80 hover:shadow-md"
+                aria-label="Scroll to next section"
+              >
+                <ChevronDown className="size-5 text-muted-foreground transition-colors group-hover:text-primary animate-bounce" />
+              </button>
+            </div>
           </motion.div>
 
           <motion.div
-            animate="visible"
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            className="relative w-full max-w-5xl mt-6 rounded-2xl border border-border/80 bg-background/60 p-2 shadow-2xl shadow-primary/8 backdrop-blur-md"
             initial={{ opacity: 0, y: 28, scale: 0.98 }}
             transition={{ delay: 0.12, duration: 0.65, ease: "easeOut" }}
           >
+            {/* Soft Glowing Ambient Halo behind the Dashboard Mockup */}
+            <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-primary/20 via-accent/20 to-primary/10 opacity-40 blur-xl -z-10" />
             <DashboardPreview />
           </motion.div>
         </div>
       </section>
 
       <motion.section
+        id="trusted-brands-section"
         className="border-b border-border bg-card/45 py-8"
         {...sectionMotion}
       >
@@ -155,9 +203,9 @@ export function LandingPage() {
       <motion.section className="py-18" {...sectionMotion}>
         <div className="container-shell">
           <SectionHeader
-            description="FlowPilot brings the most important business signals into one reusable, polished SaaS interface."
+            description="Everything your team needs to monitor growth, manage customers, and close the loop on revenue — in one interface."
             eyebrow="Feature highlights"
-            title="Everything a modern team needs to understand growth"
+            title="Built for the metrics that actually move your business"
           />
           <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {highlightedFeatures.map((feature) => {
@@ -219,9 +267,9 @@ export function LandingPage() {
       <motion.section className="py-18" {...sectionMotion}>
         <div className="container-shell">
           <SectionHeader
-            description="The interface is designed for teams that need to scan, compare, and act without fighting the UI."
+            description="Every surface — from the metrics grid to the billing table — is designed to reduce decision time, not add to it."
             eyebrow="Benefits"
-            title="A dashboard experience built for repeated work"
+            title="A dashboard your whole team will trust"
           />
           <div className="mt-10 grid gap-4 lg:grid-cols-3">
             {[
@@ -267,9 +315,9 @@ export function LandingPage() {
       >
         <div className="container-shell">
           <SectionHeader
-            description="Short, realistic feedback makes the SaaS story feel grounded and client-facing."
+            description="Real teams. Real outcomes. Here is what they said after switching to a FlowPilot-style workflow."
             eyebrow="Testimonials"
-            title="Loved by teams that care about clean reporting"
+            title="Trusted by teams that care about clean data"
           />
           <div className="mt-10 grid gap-4 lg:grid-cols-3">
             {testimonials.map((testimonial) => (
@@ -296,14 +344,13 @@ export function LandingPage() {
       <motion.section className="py-18" {...sectionMotion}>
         <div className="container-shell grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <Badge variant="warning">Pricing preview</Badge>
+            <Badge variant="warning">Simple, transparent pricing</Badge>
             <h2 className="mt-5 text-heading-xl">
-              Start small, then grow into deeper analytics.
+              Start small. Scale when you're ready.
             </h2>
             <p className="mt-4 text-body-lg">
-              The full pricing page comes later, but the landing page gives a
-              quick path into the recommended plan and the complete pricing
-              route.
+              Choose the plan that fits where your team is today. Upgrade any
+              time as your reporting needs grow.
             </p>
             <Link
               className="focus-ring mt-7 inline-flex h-11 items-center justify-center gap-2 rounded-lg border border-border bg-background px-5 text-body-sm font-semibold text-foreground transition-colors hover:bg-secondary"
@@ -356,26 +403,32 @@ export function LandingPage() {
       </motion.section>
 
       <motion.section
-        className="border-t border-border bg-primary py-18 text-primary-foreground"
+        className="relative overflow-hidden border-t border-border bg-gradient-to-r from-blue-600 to-indigo-700 dark:from-card/40 dark:to-background/60 py-20 text-white"
         {...sectionMotion}
       >
-        <div className="container-shell text-center">
-          <h2 className="mx-auto max-w-3xl text-heading-xl text-primary-foreground">
-            Ready to grow your business with smarter analytics?
+        {/* Soft glowing ambient lighting effect */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.15),transparent)] dark:bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.08),transparent)]" />
+
+        {/* Deep, glowing blue spotlight glow behind text - ONLY VISIBLE IN DARK MODE */}
+        <div className="hidden dark:block absolute left-1/2 top-1/2 size-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-tr from-primary/12 via-accent/8 to-transparent opacity-70 blur-3xl -z-10" />
+
+        <div className="container-shell relative z-10 text-center">
+          <h2 className="mx-auto max-w-3xl text-heading-xl font-extrabold tracking-tight text-white dark:text-foreground sm:text-display-md">
+            Ready to get clear on your numbers?
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-body-lg text-primary-foreground/78">
-            Start your free trial today and explore the dashboard foundation
-            built for modern SaaS teams.
+          <p className="mx-auto mt-4 max-w-2xl text-body-lg text-blue-100 dark:text-muted-foreground">
+            Start your free trial and give your team a dashboard they will
+            actually open every morning.
           </p>
-          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-col justify-center items-center gap-3.5 sm:flex-row">
             <Link
-              className="focus-ring inline-flex h-11 items-center justify-center rounded-lg bg-primary-foreground px-5 text-body-sm font-semibold text-primary transition-colors hover:bg-primary-foreground/90"
+              className="focus-ring inline-flex h-11 w-full sm:w-auto items-center justify-center rounded-lg bg-white dark:bg-primary px-6 text-body-sm font-bold text-blue-600 dark:text-primary-foreground shadow-md shadow-black/10 dark:shadow-primary/15 transition-all duration-300 hover:bg-slate-100 dark:hover:bg-primary/90 hover:scale-[1.02] hover:shadow-lg hover:shadow-black/15 dark:hover:shadow-primary/25"
               to="/register"
             >
               Start Free Trial
             </Link>
             <Link
-              className="focus-ring inline-flex h-11 items-center justify-center rounded-lg border border-primary-foreground/30 px-5 text-body-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
+              className="focus-ring inline-flex h-11 w-full sm:w-auto items-center justify-center rounded-lg border border-white/30 dark:border-border bg-transparent dark:bg-background px-6 text-body-sm font-semibold text-white dark:text-foreground transition-all duration-300 hover:bg-white/10 dark:hover:bg-secondary hover:scale-[1.02]"
               to="/dashboard"
             >
               View Demo
@@ -389,8 +442,8 @@ export function LandingPage() {
 
 function DashboardPreview() {
   return (
-    <div className="mx-auto w-full max-w-6xl rounded-xl border border-border bg-card p-3 shadow-card">
-      <div className="rounded-lg border border-border bg-background p-4">
+    <div className="mx-auto w-full max-w-6xl overflow-x-auto rounded-xl border border-border bg-card p-3 shadow-card">
+      <div className="min-w-[480px] rounded-lg border border-border bg-background p-4">
         <div className="mb-5 flex items-center justify-between gap-4 border-b border-border pb-4">
           <div>
             <p className="text-caption font-semibold uppercase tracking-[0.18em] text-muted-foreground">
@@ -401,7 +454,7 @@ function DashboardPreview() {
           <Badge variant="success">Live</Badge>
         </div>
 
-        <div className="grid gap-3 md:grid-cols-4">
+        <div className="grid gap-3 grid-cols-2 md:grid-cols-4">
           {dashboardStats.map((stat) => (
             <div
               className="rounded-lg border border-border bg-card p-4"

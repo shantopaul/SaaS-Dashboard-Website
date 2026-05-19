@@ -5,4 +5,6 @@ export * from "./Navbar";
 export * from "./PublicLayout";
 export * from "./DashboardLayout";
 export * from "./DashboardHeader";
+export * from "./DashboardSearch";
+export * from "./NotificationDropdown";
 export * from "./Sidebar";
