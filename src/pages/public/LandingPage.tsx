@@ -403,26 +403,32 @@ export function LandingPage() {
       </motion.section>
 
       <motion.section
-        className="border-t border-border bg-primary py-18 text-primary-foreground"
+        className="relative overflow-hidden border-t border-border bg-card py-20"
         {...sectionMotion}
       >
-        <div className="container-shell text-center">
-          <h2 className="mx-auto max-w-3xl text-heading-xl text-primary-foreground">
+        {/* Ambient subtle linear gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-card to-background opacity-50" />
+
+        {/* Soft glowing ambient spotlight halo behind text */}
+        <div className="absolute left-1/2 top-1/2 size-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-tr from-primary/10 via-accent/5 to-transparent opacity-60 blur-3xl -z-10" />
+
+        <div className="container-shell relative z-10 text-center">
+          <h2 className="mx-auto max-w-3xl text-heading-xl font-extrabold tracking-tight text-foreground sm:text-display-md">
             Ready to get clear on your numbers?
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-body-lg text-primary-foreground/78">
+          <p className="mx-auto mt-4 max-w-2xl text-body-lg text-muted-foreground">
             Start your free trial and give your team a dashboard they will
             actually open every morning.
           </p>
-          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-col justify-center items-center gap-3.5 sm:flex-row">
             <Link
-              className="focus-ring inline-flex h-11 items-center justify-center rounded-lg bg-primary-foreground px-5 text-body-sm font-semibold text-primary transition-colors hover:bg-primary-foreground/90"
+              className="focus-ring inline-flex h-11 w-full sm:w-auto items-center justify-center rounded-lg bg-primary px-6 text-body-sm font-semibold text-primary-foreground shadow-md shadow-primary/15 transition-all duration-300 hover:bg-primary/90 hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/25"
               to="/register"
             >
               Start Free Trial
             </Link>
             <Link
-              className="focus-ring inline-flex h-11 items-center justify-center rounded-lg border border-primary-foreground/30 px-5 text-body-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
+              className="focus-ring inline-flex h-11 w-full sm:w-auto items-center justify-center rounded-lg border border-border bg-background px-6 text-body-sm font-semibold text-foreground transition-all duration-300 hover:bg-secondary hover:scale-[1.02]"
               to="/dashboard"
             >
               View Demo
