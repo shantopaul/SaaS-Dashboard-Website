@@ -442,31 +442,35 @@ export function LandingPage() {
 
 function DashboardPreview() {
   return (
-    <div className="mx-auto w-full min-w-0 max-w-6xl overflow-x-auto rounded-xl border border-border bg-card p-3 shadow-card">
-      <div className="min-w-[480px] rounded-lg border border-border bg-background p-4">
-        <div className="mb-5 flex items-center justify-between gap-4 border-b border-border pb-4">
+    <div className="mx-auto w-full min-w-0 max-w-6xl rounded-xl border border-border bg-card p-2 sm:p-3 shadow-card">
+      <div className="w-full rounded-lg border border-border bg-background p-3 sm:p-4">
+        <div className="mb-4 flex items-center justify-between gap-4 border-b border-border pb-3 sm:pb-4">
           <div>
-            <p className="text-caption font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+            <p className="text-[10px] sm:text-caption font-semibold uppercase tracking-[0.18em] text-muted-foreground">
               Live overview
             </p>
-            <h2 className="mt-1 text-heading-md">Business command center</h2>
+            <h2 className="mt-1 text-sm sm:text-heading-md font-bold text-foreground">
+              Business command center
+            </h2>
           </div>
           <Badge variant="success">Live</Badge>
         </div>
 
-        <div className="grid gap-3 grid-cols-2 md:grid-cols-4">
+        <div className="grid gap-2 sm:gap-3 grid-cols-2 md:grid-cols-4">
           {dashboardStats.map((stat) => (
             <div
-              className="rounded-lg border border-border bg-card p-4"
+              className="rounded-lg border border-border bg-card p-2.5 sm:p-4"
               key={stat.id}
             >
-              <p className="text-caption font-semibold text-muted-foreground">
+              <p className="text-[10px] sm:text-caption font-semibold text-muted-foreground truncate">
                 {stat.title}
               </p>
-              <p className="mt-2 text-heading-md">{stat.value}</p>
+              <p className="mt-1 sm:mt-2 text-sm sm:text-heading-md font-bold text-foreground">
+                {stat.value}
+              </p>
               <p
                 className={cn(
-                  "mt-2 text-caption font-semibold",
+                  "mt-1 sm:mt-2 text-[10px] sm:text-caption font-semibold",
                   stat.trend === "up" ? "text-success" : "text-destructive",
                 )}
               >
@@ -477,22 +481,27 @@ function DashboardPreview() {
         </div>
 
         <div className="mt-3 grid gap-3 lg:grid-cols-[1.4fr_0.8fr]">
-          <div className="rounded-lg border border-border bg-card p-4">
-            <div className="mb-4 flex items-center justify-between">
-              <p className="text-body-sm font-semibold">Revenue growth</p>
-              <TrendingUp aria-hidden="true" className="size-5 text-success" />
+          <div className="rounded-lg border border-border bg-card p-3 sm:p-4">
+            <div className="mb-3 sm:mb-4 flex items-center justify-between">
+              <p className="text-xs sm:text-body-sm font-semibold">
+                Revenue growth
+              </p>
+              <TrendingUp
+                aria-hidden="true"
+                className="size-4 sm:size-5 text-success"
+              />
             </div>
-            <div className="flex h-44 items-end gap-2">
+            <div className="flex h-36 sm:h-44 items-end gap-1.5 sm:gap-2">
               {revenueData.map((item) => (
                 <div
-                  className="flex flex-1 flex-col items-center gap-2"
+                  className="flex flex-1 flex-col items-center gap-1.5 sm:gap-2"
                   key={item.month}
                 >
                   <div
-                    className="w-full rounded-t-md bg-primary"
+                    className="w-full rounded-t bg-primary"
                     style={{ height: `${Math.max(18, item.revenue / 900)}%` }}
                   />
-                  <span className="text-caption text-muted-foreground">
+                  <span className="text-[10px] sm:text-caption text-muted-foreground">
                     {item.month}
                   </span>
                 </div>
@@ -500,26 +509,32 @@ function DashboardPreview() {
             </div>
           </div>
 
-          <div className="rounded-lg border border-border bg-card p-4">
-            <div className="mb-4 flex items-center justify-between">
-              <p className="text-body-sm font-semibold">Recent customers</p>
-              <UsersRound aria-hidden="true" className="size-5 text-primary" />
+          <div className="rounded-lg border border-border bg-card p-3 sm:p-4">
+            <div className="mb-3 sm:mb-4 flex items-center justify-between">
+              <p className="text-xs sm:text-body-sm font-semibold">
+                Recent customers
+              </p>
+              <UsersRound
+                aria-hidden="true"
+                className="size-4 sm:size-5 text-primary"
+              />
             </div>
-            <div className="grid gap-3">
+            <div className="grid gap-2 sm:gap-3">
               {recentCustomers.slice(0, 4).map((customer) => (
                 <div
-                  className="flex items-center justify-between gap-3"
+                  className="flex items-center justify-between gap-2 sm:gap-3"
                   key={customer.id}
                 >
-                  <div>
-                    <p className="text-body-sm font-semibold text-foreground">
+                  <div className="min-w-0 flex-1">
+                    <p className="truncate text-xs sm:text-body-sm font-semibold text-foreground">
                       {customer.company}
                     </p>
-                    <p className="text-caption text-muted-foreground">
+                    <p className="truncate text-[10px] sm:text-caption text-muted-foreground">
                       {customer.plan}
                     </p>
                   </div>
                   <Badge
+                    className="text-[10px] sm:text-xs"
                     variant={customer.status === "Active" ? "success" : "muted"}
                   >
                     {customer.status}
