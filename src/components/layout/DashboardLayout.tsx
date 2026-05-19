@@ -4,7 +4,7 @@ import { DashboardHeader } from "./DashboardHeader";
 
 export function DashboardLayout() {
   return (
-    <div className="flex min-h-screen w-full bg-muted/40">
+    <div className="flex h-screen w-full overflow-hidden bg-muted/40">
       <Sidebar />
       <div className="flex flex-1 flex-col sm:gap-4 sm:py-4 sm:pl-14 md:pl-0">
         <div className="flex flex-1 flex-col sm:px-4 md:px-8">
