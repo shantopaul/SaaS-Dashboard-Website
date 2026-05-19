@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from "framer-motion";
 import { NavLink, useNavigate } from "react-router-dom";
 import {
   ChartNoAxesCombined,
@@ -102,19 +103,33 @@ export function Sidebar() {
       </aside>
 
       {/* Mobile Sidebar Overlay */}
-      {isSidebarOpen ? (
-        <div className="fixed inset-0 z-50 md:hidden">
-          {/* Backdrop */}
-          <div
-            className="absolute inset-0 bg-background/80 backdrop-blur-sm transition-opacity"
-            onClick={closeSidebar}
-          />
-          {/* Drawer */}
-          <aside className="absolute inset-y-0 left-0 flex w-72 max-w-[80vw] flex-col bg-card shadow-xl border-r border-border">
-            {sidebarContent}
-          </aside>
-        </div>
-      ) : null}
+      <AnimatePresence>
+        {isSidebarOpen ? (
+          <motion.div
+            animate={{ opacity: 1 }}
+            className="fixed inset-0 z-50 md:hidden"
+            exit={{ opacity: 0 }}
+            initial={{ opacity: 0 }}
+            transition={{ duration: 0.18, ease: "easeOut" }}
+          >
+            {/* Backdrop */}
+            <div
+              className="absolute inset-0 bg-background/80 backdrop-blur-sm"
+              onClick={closeSidebar}
+            />
+            {/* Drawer */}
+            <motion.aside
+              animate={{ x: 0 }}
+              className="absolute inset-y-0 left-0 flex w-72 max-w-[80vw] flex-col border-r border-border bg-card shadow-xl"
+              exit={{ x: "-100%" }}
+              initial={{ x: "-100%" }}
+              transition={{ duration: 0.22, ease: "easeOut" }}
+            >
+              {sidebarContent}
+            </motion.aside>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
     </>
   );
 }

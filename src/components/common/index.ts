@@ -6,6 +6,7 @@ export * from "./EmptyState";
 export * from "./Input";
 export * from "./LoadingSpinner";
 export * from "./Modal";
+export * from "./PageMotion";
 export * from "./SearchInput";
 export * from "./SectionHeader";
 export * from "./Select";

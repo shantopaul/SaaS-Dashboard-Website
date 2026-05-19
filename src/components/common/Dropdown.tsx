@@ -1,4 +1,5 @@
 import { type ReactNode, useEffect, useRef, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/utils";
 
 interface DropdownProps {
@@ -53,17 +54,24 @@ export function Dropdown({
         <span className="sr-only">{triggerLabel}</span>
         {trigger}
       </button>
-      {open ? (
-        <div
-          className={cn(
-            "absolute z-50 mt-2 min-w-56 rounded-lg border border-border bg-popover p-2 text-popover-foreground shadow-card",
-            align === "end" ? "right-0" : "left-0",
-          )}
-          role="menu"
-        >
-          {children}
-        </div>
-      ) : null}
+
+      <AnimatePresence>
+        {open ? (
+          <motion.div
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            className={cn(
+              "absolute z-50 mt-2 min-w-56 rounded-lg border border-border bg-popover p-2 text-popover-foreground shadow-card",
+              align === "end" ? "right-0" : "left-0",
+            )}
+            exit={{ opacity: 0, scale: 0.95, y: -4 }}
+            initial={{ opacity: 0, scale: 0.95, y: -6 }}
+            role="menu"
+            transition={{ duration: 0.14, ease: "easeOut" }}
+          >
+            {children}
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
     </div>
   );
 }
