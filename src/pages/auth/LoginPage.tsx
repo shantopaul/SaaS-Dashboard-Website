@@ -42,7 +42,7 @@ export function LoginPage() {
   const onSubmit = async (data: LoginFormData) => {
     setIsSubmitting(true);
     try {
-      await login(data.email, data.password);
+      await login(data.email, data.password, data.rememberMe);
       showToast({
         description: "Welcome back to your FlowPilot dashboard.",
         title: "Logged in successfully",
