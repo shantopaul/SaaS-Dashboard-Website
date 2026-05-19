@@ -1,11 +1,7 @@
 import { Menu } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import {
-  Button,
-  Dropdown,
-  SearchInput,
-  ThemeToggle,
-} from "@/components/common";
+import { Button, Dropdown, ThemeToggle } from "@/components/common";
+import { DashboardSearch } from "./DashboardSearch";
 import { NotificationDropdown } from "./NotificationDropdown";
 import { useAuthStore, useLayoutStore, useToastStore } from "@/store";
 import { dashboardNavigationItems } from "@/data";
@@ -51,9 +47,10 @@ export function DashboardHeader() {
       </div>
 
       <div className="flex flex-1 items-center justify-end gap-2 sm:gap-4">
-        <div className="hidden w-full max-w-sm sm:block">
-          <SearchInput className="bg-background" />
+        <div className="hidden w-full max-w-sm md:block">
+          <DashboardSearch />
         </div>
+        <DashboardSearch className="md:hidden" compact />
 
         <NotificationDropdown />
 

@@ -7,6 +7,7 @@ export * from "./invoiceData";
 export * from "./navigationData";
 export * from "./notificationData";
 export * from "./pricingData";
+export * from "./searchData";
 export * from "./statsData";
 export * from "./testimonialData";
 export * from "./userData";
