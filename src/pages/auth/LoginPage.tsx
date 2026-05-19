@@ -23,6 +23,7 @@ export function LoginPage() {
 
   const location = useLocation();
   const login = useAuthStore((state) => state.login);
+  const loginWithGoogle = useAuthStore((state) => state.loginWithGoogle);
   const showToast = useToastStore((state) => state.showToast);
 
   const {
@@ -40,21 +41,47 @@ export function LoginPage() {
 
   const onSubmit = async (data: LoginFormData) => {
     setIsSubmitting(true);
-    // Simulate API call for fake auth integration
-    await new Promise((resolve) => setTimeout(resolve, 800));
+    try {
+      await login(data.email, data.password);
+      showToast({
+        description: "Welcome back to your FlowPilot dashboard.",
+        title: "Logged in successfully",
+        variant: "success",
+      });
 
-    login(data.email);
-    showToast({
-      description: "Welcome back to your FlowPilot dashboard.",
-      title: "Logged in successfully",
-      variant: "success",
-    });
+      // Redirect to requested page or dashboard
+      const from = location.state?.from?.pathname || "/dashboard";
+      navigate(from, { replace: true });
+    } catch (err: unknown) {
+      const error = err as Error;
+      showToast({
+        description: error.message || "Invalid credentials. Please try again.",
+        title: "Login failed",
+        variant: "danger",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
-    setIsSubmitting(false);
-
-    // Redirect to requested page or dashboard
-    const from = location.state?.from?.pathname || "/dashboard";
-    navigate(from, { replace: true });
+  const handleGoogleSignIn = async () => {
+    try {
+      await loginWithGoogle();
+      showToast({
+        description: "Welcome back to your FlowPilot dashboard.",
+        title: "Logged in successfully",
+        variant: "success",
+      });
+      const from = location.state?.from?.pathname || "/dashboard";
+      navigate(from, { replace: true });
+    } catch (err: unknown) {
+      const error = err as Error;
+      showToast({
+        description: error.message || "Google authentication failed.",
+        title: "Google Auth Error",
+        variant: "danger",
+      });
+    }
   };
 
   return (
@@ -147,6 +174,7 @@ export function LoginPage() {
       <Button
         aria-label="Sign in with Google"
         className="w-full"
+        onClick={handleGoogleSignIn}
         type="button"
         variant="outline"
       >

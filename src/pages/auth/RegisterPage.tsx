@@ -41,6 +41,7 @@ export function RegisterPage() {
 
   const location = useLocation();
   const registerAction = useAuthStore((state) => state.register);
+  const loginWithGoogle = useAuthStore((state) => state.loginWithGoogle);
   const showToast = useToastStore((state) => state.showToast);
 
   const {
@@ -60,21 +61,47 @@ export function RegisterPage() {
 
   const onSubmit = async (data: RegisterFormData) => {
     setIsSubmitting(true);
-    // Simulate API call for fake auth integration
-    await new Promise((resolve) => setTimeout(resolve, 800));
+    try {
+      await registerAction(data.email, data.fullName, data.password);
+      showToast({
+        description: "Your workspace is ready to explore.",
+        title: "Account created",
+        variant: "success",
+      });
 
-    registerAction(data.email, data.fullName);
-    showToast({
-      description: "Your workspace is ready to explore.",
-      title: "Account created",
-      variant: "success",
-    });
+      // Redirect to requested page or dashboard
+      const from = location.state?.from?.pathname || "/dashboard";
+      navigate(from, { replace: true });
+    } catch (err: unknown) {
+      const error = err as Error;
+      showToast({
+        description: error.message || "Failed to create account.",
+        title: "Sign up error",
+        variant: "danger",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
-    setIsSubmitting(false);
-
-    // Redirect to requested page or dashboard
-    const from = location.state?.from?.pathname || "/dashboard";
-    navigate(from, { replace: true });
+  const handleGoogleSignUp = async () => {
+    try {
+      await loginWithGoogle();
+      showToast({
+        description: "Welcome to FlowPilot workspace.",
+        title: "Signed in successfully",
+        variant: "success",
+      });
+      const from = location.state?.from?.pathname || "/dashboard";
+      navigate(from, { replace: true });
+    } catch (err: unknown) {
+      const error = err as Error;
+      showToast({
+        description: error.message || "Google authentication failed.",
+        title: "Google Auth Error",
+        variant: "danger",
+      });
+    }
   };
 
   return (
@@ -217,6 +244,7 @@ export function RegisterPage() {
       <Button
         aria-label="Sign up with Google"
         className="w-full"
+        onClick={handleGoogleSignUp}
         type="button"
         variant="outline"
       >
