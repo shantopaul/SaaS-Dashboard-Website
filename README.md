@@ -53,13 +53,25 @@ Designed and engineered with **React**, **TypeScript**, and **Tailwind CSS**, Fl
 
 ## 📸 Screenshots Gallery
 
-| Public Landing Page                                                                                 | Responsive Analytics Dashboard                                                                                   |
-| --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| ![Landing Page Placeholder](https://placehold.co/600x400/1e293b/ffffff?text=FlowPilot+Landing+Page) | ![Dashboard Overview Placeholder](https://placehold.co/600x400/1e293b/ffffff?text=FlowPilot+Analytics+Dashboard) |
+### 🌐 Public Pages
 
-| Billing & Team Seats Manager                                                                              | Account Settings & Theme Toggle                                                                          |
-| --------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| ![Billing Page Placeholder](https://placehold.co/600x400/1e293b/ffffff?text=FlowPilot+Billing+Management) | ![Settings Page Placeholder](https://placehold.co/600x400/1e293b/ffffff?text=FlowPilot+Account+Settings) |
+| Public Home Page (Light Mode) | Public Home Page (Dark Mode) |
+| --- | --- |
+| ![Home Page Light](screenshots/landing_light.png) | ![Home Page Dark](screenshots/landing_dark.png) |
+
+| Public Features Page (Light Mode) | Public Features Page (Dark Mode) |
+| --- | --- |
+| ![Features Page Light](screenshots/features_light.png) | ![Features Page Dark](screenshots/features_dark.png) |
+
+### 📊 Dashboard & Settings
+
+| Responsive Analytics Dashboard | Billing & Team Seats Manager |
+| --- | --- |
+| ![Dashboard Overview Placeholder](https://placehold.co/600x400/1e293b/ffffff?text=FlowPilot+Analytics+Dashboard) | ![Billing Page Placeholder](https://placehold.co/600x400/1e293b/ffffff?text=FlowPilot+Billing+Management) |
+
+| Account Settings & Theme Toggle | |
+| --- | --- |
+| ![Settings Page Placeholder](https://placehold.co/600x400/1e293b/ffffff?text=FlowPilot+Account+Settings) | |
 
 ---
 
