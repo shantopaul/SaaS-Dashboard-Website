@@ -116,7 +116,7 @@ export function LandingPage() {
             </div>
 
             {/* Premium Dynamic Glowing Gradient Title */}
-            <h1 className="mt-6 text-display-md font-extrabold tracking-tight text-foreground pb-2 sm:text-display-lg">
+            <h1 className="mt-6 text-3xl font-extrabold tracking-tight leading-[1.15] text-foreground pb-2 sm:text-display-md md:text-display-lg">
               The analytics dashboard your team will{" "}
               <span className="bg-gradient-to-r from-primary via-indigo-500 to-accent bg-clip-text text-transparent">
                 actually use
