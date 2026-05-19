@@ -403,29 +403,32 @@ export function LandingPage() {
       </motion.section>
 
       <motion.section
-        className="relative overflow-hidden border-t border-border bg-gradient-to-r from-blue-600 to-indigo-700 dark:from-blue-950 dark:to-indigo-950 py-20 text-white"
+        className="relative overflow-hidden border-t border-border bg-gradient-to-r from-blue-600 to-indigo-700 dark:from-card/40 dark:to-background/60 py-20 text-white"
         {...sectionMotion}
       >
         {/* Soft glowing ambient lighting effect */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.15),transparent)] dark:bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.1),transparent)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.15),transparent)] dark:bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.08),transparent)]" />
+
+        {/* Deep, glowing blue spotlight glow behind text - ONLY VISIBLE IN DARK MODE */}
+        <div className="hidden dark:block absolute left-1/2 top-1/2 size-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-tr from-primary/12 via-accent/8 to-transparent opacity-70 blur-3xl -z-10" />
 
         <div className="container-shell relative z-10 text-center">
-          <h2 className="mx-auto max-w-3xl text-heading-xl font-extrabold tracking-tight text-white sm:text-display-md">
+          <h2 className="mx-auto max-w-3xl text-heading-xl font-extrabold tracking-tight text-white dark:text-foreground sm:text-display-md">
             Ready to get clear on your numbers?
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-body-lg text-blue-100 dark:text-slate-300">
+          <p className="mx-auto mt-4 max-w-2xl text-body-lg text-blue-100 dark:text-muted-foreground">
             Start your free trial and give your team a dashboard they will
             actually open every morning.
           </p>
           <div className="mt-8 flex flex-col justify-center items-center gap-3.5 sm:flex-row">
             <Link
-              className="focus-ring inline-flex h-11 w-full sm:w-auto items-center justify-center rounded-lg bg-white px-6 text-body-sm font-bold text-blue-600 shadow-md shadow-black/10 transition-all duration-300 hover:bg-slate-100 hover:scale-[1.02] hover:shadow-lg"
+              className="focus-ring inline-flex h-11 w-full sm:w-auto items-center justify-center rounded-lg bg-white dark:bg-primary px-6 text-body-sm font-bold text-blue-600 dark:text-primary-foreground shadow-md shadow-black/10 dark:shadow-primary/15 transition-all duration-300 hover:bg-slate-100 dark:hover:bg-primary/90 hover:scale-[1.02] hover:shadow-lg hover:shadow-black/15 dark:hover:shadow-primary/25"
               to="/register"
             >
               Start Free Trial
             </Link>
             <Link
-              className="focus-ring inline-flex h-11 w-full sm:w-auto items-center justify-center rounded-lg border border-white/30 bg-transparent px-6 text-body-sm font-semibold text-white transition-all duration-300 hover:bg-white/10 hover:scale-[1.02]"
+              className="focus-ring inline-flex h-11 w-full sm:w-auto items-center justify-center rounded-lg border border-white/30 dark:border-border bg-transparent dark:bg-background px-6 text-body-sm font-semibold text-white dark:text-foreground transition-all duration-300 hover:bg-white/10 dark:hover:bg-secondary hover:scale-[1.02]"
               to="/dashboard"
             >
               View Demo
