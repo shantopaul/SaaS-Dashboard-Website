@@ -27,6 +27,7 @@ import {
   SectionHeader,
 } from "@/components";
 import { featureItems } from "@/data";
+import { cn } from "@/utils";
 
 const featureIconMap: Record<string, LucideIcon> = {
   Activity,
@@ -39,6 +40,44 @@ const featureIconMap: Record<string, LucideIcon> = {
   TrendingUp,
   UsersRound,
 };
+
+const heroFeatureHighlights = [
+  {
+    title: "Live analytics dashboard",
+    description: "Real-time operational charts to monitor key product metrics.",
+    icon: Activity,
+    colorClass:
+      "bg-violet-500/10 text-violet-600 dark:text-violet-400 border-violet-500/20",
+    hoverBorder: "hover:border-violet-500/30 dark:hover:border-violet-500/20",
+  },
+  {
+    title: "Revenue & MRR tracking",
+    description:
+      "Track sales pipelines, subscription metrics, and lifetime values.",
+    icon: TrendingUp,
+    colorClass:
+      "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20",
+    hoverBorder: "hover:border-emerald-500/30 dark:hover:border-emerald-500/20",
+  },
+  {
+    title: "Full customer visibility",
+    description:
+      "Understand detailed customer profiles, histories, and churn rates.",
+    icon: UsersRound,
+    colorClass:
+      "bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border-indigo-500/20",
+    hoverBorder: "hover:border-indigo-500/30 dark:hover:border-indigo-500/20",
+  },
+  {
+    title: "Shared team workspace",
+    description:
+      "Enable multi-seat invites, shared roles, and joint analytics panels.",
+    icon: MessageSquare,
+    colorClass:
+      "bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20",
+    hoverBorder: "hover:border-rose-500/30 dark:hover:border-rose-500/20",
+  },
+];
 
 const detailedSections = [
   {
@@ -112,7 +151,7 @@ export function FeaturesPage() {
             variants={fadeUp}
           >
             <Badge variant="info">Product Features</Badge>
-            <h1 className="mt-5 max-w-3xl text-heading-xl sm:text-display-md">
+            <h1 className="mt-5 max-w-3xl text-3xl font-extrabold tracking-tight leading-[1.15] text-foreground sm:text-heading-xl md:text-display-md">
               Everything FlowPilot needs to feel like a real SaaS product.
             </h1>
             <p className="mt-5 max-w-2xl text-body-lg">
@@ -120,16 +159,16 @@ export function FeaturesPage() {
               revenue tracking, customer management, billing, reports, account
               security, and theme-ready interface foundations.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Link
-                className="focus-ring inline-flex h-11 items-center justify-center gap-2 rounded-lg bg-primary px-5 text-body-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
+                className="focus-ring inline-flex h-11 w-full sm:w-auto items-center justify-center gap-2 rounded-lg bg-primary px-5 text-body-sm font-semibold text-primary-foreground shadow-sm transition-all duration-300 hover:bg-primary/90 hover:scale-[1.02]"
                 to="/register"
               >
                 Start Free Trial
                 <ArrowRight aria-hidden="true" className="size-4" />
               </Link>
               <Link
-                className="focus-ring inline-flex h-11 items-center justify-center rounded-lg border border-border bg-background px-5 text-body-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+                className="focus-ring inline-flex h-11 w-full sm:w-auto items-center justify-center rounded-lg border border-border bg-background px-5 text-body-sm font-semibold text-foreground transition-all duration-300 hover:bg-secondary hover:scale-[1.02]"
                 to="/pricing"
               >
                 View Pricing
@@ -138,22 +177,40 @@ export function FeaturesPage() {
           </motion.div>
 
           <motion.div
-            animate="visible"
+            animate={{ opacity: 1, y: 0 }}
             className="grid gap-3 sm:grid-cols-2"
             initial={{ opacity: 0, y: 26 }}
             transition={{ delay: 0.12, duration: 0.6, ease: "easeOut" }}
           >
-            {featureItems.slice(0, 4).map((feature) => {
-              const Icon = featureIconMap[feature.iconName] ?? Sparkles;
+            {heroFeatureHighlights.map((feature) => {
+              const Icon = feature.icon;
 
               return (
-                <Card key={feature.id}>
-                  <CardHeader>
-                    <div className="flex size-11 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <Card
+                  className={cn(
+                    "transition-all duration-300 hover:scale-[1.02] hover:shadow-card-hover border-border/80 bg-card/60 backdrop-blur-sm",
+                    feature.hoverBorder,
+                  )}
+                  key={feature.title}
+                >
+                  <CardHeader className="pb-2">
+                    <div
+                      className={cn(
+                        "flex size-11 items-center justify-center rounded-lg border",
+                        feature.colorClass,
+                      )}
+                    >
                       <Icon aria-hidden="true" className="size-5" />
                     </div>
-                    <CardTitle className="pt-4">{feature.title}</CardTitle>
+                    <CardTitle className="pt-4 text-heading-md font-extrabold tracking-tight text-foreground">
+                      {feature.title}
+                    </CardTitle>
                   </CardHeader>
+                  <CardContent>
+                    <p className="text-body-sm text-muted-foreground leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </CardContent>
                 </Card>
               );
             })}
@@ -239,7 +296,7 @@ export function FeaturesPage() {
         <div className="container-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div>
             <Badge variant="default">Capability map</Badge>
-            <h2 className="mt-5 text-heading-xl">
+            <h2 className="mt-5 text-3xl font-extrabold tracking-tight leading-[1.15] text-foreground sm:text-heading-xl">
               A clear path from marketing pages to private dashboard features.
             </h2>
             <p className="mt-4 text-body-lg">
@@ -252,7 +309,7 @@ export function FeaturesPage() {
           <div className="grid gap-3 sm:grid-cols-2">
             {capabilityGroups.map((capability) => (
               <div
-                className="rounded-lg border border-border bg-secondary p-4 text-body-sm font-semibold text-foreground"
+                className="rounded-lg border border-border bg-secondary p-4 text-body-sm font-semibold text-foreground transition-all duration-300 hover:scale-[1.02] hover:shadow-card hover:bg-card"
                 key={capability}
               >
                 {capability}
@@ -263,30 +320,36 @@ export function FeaturesPage() {
       </motion.section>
 
       <motion.section
-        className="border-t border-border bg-primary py-18 text-primary-foreground"
+        className="relative overflow-hidden border-t border-border bg-gradient-to-r from-blue-600 to-indigo-700 dark:from-card/40 dark:to-background/60 py-20 text-white"
         {...sectionMotion}
       >
-        <div className="container-shell text-center">
-          <Badge className="bg-primary-foreground/12 text-primary-foreground ring-primary-foreground/20">
+        {/* Soft glowing ambient lighting effect */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.15),transparent)] dark:bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.08),transparent)]" />
+
+        {/* Deep, glowing blue spotlight glow behind text - ONLY VISIBLE IN DARK MODE */}
+        <div className="hidden dark:block absolute left-1/2 top-1/2 size-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-tr from-primary/12 via-accent/8 to-transparent opacity-70 blur-3xl -z-10" />
+
+        <div className="container-shell relative z-10 text-center">
+          <Badge className="bg-white/12 text-white border-none dark:bg-primary/10 dark:text-primary dark:border dark:border-primary/20">
             Ready for the next step
           </Badge>
-          <h2 className="mx-auto mt-5 max-w-3xl text-heading-xl text-primary-foreground">
+          <h2 className="mx-auto mt-5 max-w-3xl text-heading-xl font-extrabold tracking-tight text-white dark:text-foreground sm:text-display-md">
             See how these features become pricing, auth, and dashboard
             workflows.
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-body-lg text-primary-foreground/78">
+          <p className="mx-auto mt-4 max-w-2xl text-body-lg text-blue-100 dark:text-muted-foreground">
             Continue through the public experience or jump into the demo route
             to preview the protected dashboard shell.
           </p>
-          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-col justify-center items-center gap-3.5 sm:flex-row">
             <Link
-              className="focus-ring inline-flex h-11 items-center justify-center rounded-lg bg-primary-foreground px-5 text-body-sm font-semibold text-primary transition-colors hover:bg-primary-foreground/90"
+              className="focus-ring inline-flex h-11 w-full sm:w-auto items-center justify-center rounded-lg bg-white dark:bg-primary px-6 text-body-sm font-bold text-blue-600 dark:text-primary-foreground shadow-md shadow-black/10 dark:shadow-primary/15 transition-all duration-300 hover:bg-slate-100 dark:hover:bg-primary/90 hover:scale-[1.02] hover:shadow-lg hover:shadow-black/15 dark:hover:shadow-primary/25"
               to="/pricing"
             >
               View Pricing
             </Link>
             <Link
-              className="focus-ring inline-flex h-11 items-center justify-center rounded-lg border border-primary-foreground/30 px-5 text-body-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
+              className="focus-ring inline-flex h-11 w-full sm:w-auto items-center justify-center rounded-lg border border-white/30 dark:border-border bg-transparent dark:bg-background px-6 text-body-sm font-semibold text-white dark:text-foreground transition-all duration-300 hover:bg-white/10 dark:hover:bg-secondary hover:scale-[1.02]"
               to="/dashboard"
             >
               View Dashboard Demo

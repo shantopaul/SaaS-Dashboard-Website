@@ -65,7 +65,7 @@ export function BrandLogo({ className }: BrandLogoProps) {
             Pilot
           </span>
         </span>
-        <span className="block mt-1 text-[9px] font-bold uppercase tracking-[0.22em] text-muted-foreground">
+        <span className="hidden sm:block mt-1 text-[9px] font-bold uppercase tracking-[0.22em] text-muted-foreground">
           SaaS Analytics
         </span>
       </span>
