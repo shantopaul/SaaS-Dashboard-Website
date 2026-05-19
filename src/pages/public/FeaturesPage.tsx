@@ -263,30 +263,36 @@ export function FeaturesPage() {
       </motion.section>
 
       <motion.section
-        className="border-t border-border bg-primary py-18 text-primary-foreground"
+        className="relative overflow-hidden border-t border-border bg-gradient-to-r from-blue-600 to-indigo-700 dark:from-card/40 dark:to-background/60 py-20 text-white"
         {...sectionMotion}
       >
-        <div className="container-shell text-center">
-          <Badge className="bg-primary-foreground/12 text-primary-foreground ring-primary-foreground/20">
+        {/* Soft glowing ambient lighting effect */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.15),transparent)] dark:bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.08),transparent)]" />
+
+        {/* Deep, glowing blue spotlight glow behind text - ONLY VISIBLE IN DARK MODE */}
+        <div className="hidden dark:block absolute left-1/2 top-1/2 size-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-tr from-primary/12 via-accent/8 to-transparent opacity-70 blur-3xl -z-10" />
+
+        <div className="container-shell relative z-10 text-center">
+          <Badge className="bg-white/12 text-white border-none dark:bg-primary/10 dark:text-primary dark:border dark:border-primary/20">
             Ready for the next step
           </Badge>
-          <h2 className="mx-auto mt-5 max-w-3xl text-heading-xl text-primary-foreground">
+          <h2 className="mx-auto mt-5 max-w-3xl text-heading-xl font-extrabold tracking-tight text-white dark:text-foreground sm:text-display-md">
             See how these features become pricing, auth, and dashboard
             workflows.
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-body-lg text-primary-foreground/78">
+          <p className="mx-auto mt-4 max-w-2xl text-body-lg text-blue-100 dark:text-muted-foreground">
             Continue through the public experience or jump into the demo route
             to preview the protected dashboard shell.
           </p>
-          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-col justify-center items-center gap-3.5 sm:flex-row">
             <Link
-              className="focus-ring inline-flex h-11 items-center justify-center rounded-lg bg-primary-foreground px-5 text-body-sm font-semibold text-primary transition-colors hover:bg-primary-foreground/90"
+              className="focus-ring inline-flex h-11 w-full sm:w-auto items-center justify-center rounded-lg bg-white dark:bg-primary px-6 text-body-sm font-bold text-blue-600 dark:text-primary-foreground shadow-md shadow-black/10 dark:shadow-primary/15 transition-all duration-300 hover:bg-slate-100 dark:hover:bg-primary/90 hover:scale-[1.02] hover:shadow-lg hover:shadow-black/15 dark:hover:shadow-primary/25"
               to="/pricing"
             >
               View Pricing
             </Link>
             <Link
-              className="focus-ring inline-flex h-11 items-center justify-center rounded-lg border border-primary-foreground/30 px-5 text-body-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
+              className="focus-ring inline-flex h-11 w-full sm:w-auto items-center justify-center rounded-lg border border-white/30 dark:border-border bg-transparent dark:bg-background px-6 text-body-sm font-semibold text-white dark:text-foreground transition-all duration-300 hover:bg-white/10 dark:hover:bg-secondary hover:scale-[1.02]"
               to="/dashboard"
             >
               View Dashboard Demo

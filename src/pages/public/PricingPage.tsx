@@ -390,21 +390,27 @@ export function PricingPage() {
       </motion.section>
 
       <motion.section
-        className="border-t border-border bg-primary py-16 text-primary-foreground"
+        className="relative overflow-hidden border-t border-border bg-gradient-to-r from-blue-600 to-indigo-700 dark:from-card/40 dark:to-background/60 py-16 text-white"
         {...sectionMotion}
       >
-        <div className="container-shell flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+        {/* Soft glowing ambient lighting effect */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.15),transparent)] dark:bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.08),transparent)]" />
+
+        {/* Deep, glowing blue spotlight glow - ONLY VISIBLE IN DARK MODE */}
+        <div className="hidden dark:block absolute right-1/4 top-1/2 size-[500px] -translate-y-1/2 rounded-full bg-gradient-to-tr from-primary/12 via-accent/8 to-transparent opacity-75 blur-3xl -z-10" />
+
+        <div className="container-shell relative z-10 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-md bg-primary-foreground/10 px-3 py-1 text-caption font-semibold">
+            <div className="inline-flex items-center gap-2 rounded-md bg-white/12 text-white border-none dark:bg-primary/10 dark:text-primary dark:border dark:border-primary/20 px-3 py-1 text-caption font-semibold">
               <Minus aria-hidden="true" className="size-4" />
               No setup delay
             </div>
-            <h2 className="mt-5 max-w-2xl text-heading-xl">
+            <h2 className="mt-5 max-w-2xl text-heading-xl font-extrabold tracking-tight text-white dark:text-foreground">
               Start with the right plan and grow into the full dashboard.
             </h2>
           </div>
           <Link
-            className="focus-ring inline-flex h-11 items-center justify-center gap-2 rounded-lg bg-background px-5 text-body-sm font-semibold text-foreground shadow-sm transition-colors hover:bg-secondary"
+            className="focus-ring inline-flex h-11 shrink-0 items-center justify-center gap-2 rounded-lg bg-white dark:bg-primary px-5 text-body-sm font-bold text-blue-600 dark:text-primary-foreground shadow-md shadow-black/10 dark:shadow-primary/15 transition-all duration-300 hover:bg-slate-100 dark:hover:bg-primary/90 hover:scale-[1.02] hover:shadow-lg hover:shadow-black/15 dark:hover:shadow-primary/25"
             to="/register"
           >
             Create Workspace
