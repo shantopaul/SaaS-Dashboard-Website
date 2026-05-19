@@ -85,7 +85,18 @@ export function LandingPage() {
   return (
     <>
       <section className="relative overflow-hidden border-b border-border">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_15%,hsl(var(--primary)/0.14),transparent_34%),linear-gradient(180deg,hsl(var(--background)),hsl(var(--secondary)/0.55))]" />
+        {/* Futuristic Grid Pattern & Glowing Ambient Backdrops */}
+        <div className="absolute inset-0 -z-10 overflow-hidden bg-background">
+          {/* Main Primary Glow (centered top) */}
+          <div className="absolute left-1/2 top-0 h-[600px] w-[1000px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,hsl(var(--primary)/0.18)_0%,transparent_65%)] blur-[80px]" />
+          {/* Accent Glow (bottom-left) */}
+          <div className="absolute -left-20 bottom-10 h-[450px] w-[700px] rounded-full bg-[radial-gradient(circle,hsl(var(--accent)/0.12)_0%,transparent_65%)] blur-[70px]" />
+          {/* Secondary Soft Ambient Wave */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background" />
+          {/* High-tech Blueprint Grid Pattern */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border)/0.16)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.16)_1px,transparent_1px)] bg-[size:44px_44px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+        </div>
+
         <div className="container-shell grid min-h-[calc(100vh-5rem)] content-center gap-10 py-16 lg:py-20">
           <motion.div
             animate="visible"
@@ -94,24 +105,38 @@ export function LandingPage() {
             transition={{ duration: 0.55, ease: "easeOut" }}
             variants={fadeUp}
           >
-            <Badge variant="info">Built for modern SaaS teams</Badge>
-            <h1 className="mt-6 text-display-md sm:text-display-lg">
+            {/* Sleek Glowing Glassmorphic Pill */}
+            <div className="mx-auto mb-6 inline-flex items-center gap-2.5 rounded-full border border-primary/20 bg-primary/8 px-4 py-1.5 text-xs font-semibold text-primary shadow-sm backdrop-blur-md transition-all duration-300 hover:border-primary/30 hover:bg-primary/12">
+              <Sparkles
+                aria-hidden="true"
+                className="size-3.5 animate-pulse text-primary"
+              />
+              <span>Built for modern SaaS teams</span>
+            </div>
+
+            {/* Premium Metallic Gradient Title */}
+            <h1 className="mt-6 bg-gradient-to-br from-foreground via-foreground/90 to-primary/85 bg-clip-text text-display-md font-extrabold tracking-tight text-transparent pb-1.5 sm:text-display-lg">
               The analytics dashboard your team will actually use
             </h1>
-            <p className="mx-auto mt-5 max-w-3xl text-body-lg">
+
+            <p className="mx-auto mt-6 max-w-2xl text-body-lg text-muted-foreground">
               Track performance, manage customers, monitor revenue, and make
               smarter decisions — all from one beautifully designed dashboard.
             </p>
-            <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+
+            <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
               <Link
-                className="focus-ring inline-flex h-11 items-center justify-center gap-2 rounded-lg bg-primary px-5 text-body-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
+                className="focus-ring group inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-primary px-6 text-body-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary/95 hover:shadow-xl hover:shadow-primary/25 active:translate-y-0"
                 to="/register"
               >
                 Start Free Trial
-                <ArrowRight aria-hidden="true" className="size-4" />
+                <ArrowRight
+                  aria-hidden="true"
+                  className="size-4 transition-transform group-hover:translate-x-1"
+                />
               </Link>
               <Link
-                className="focus-ring inline-flex h-11 items-center justify-center rounded-lg border border-border bg-background px-5 text-body-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+                className="focus-ring inline-flex h-12 items-center justify-center rounded-lg border border-border bg-background/60 px-6 text-body-sm font-semibold text-foreground shadow-sm backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:bg-secondary hover:text-foreground active:translate-y-0"
                 to="/dashboard"
               >
                 View Demo
