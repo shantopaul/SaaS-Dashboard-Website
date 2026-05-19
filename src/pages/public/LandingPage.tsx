@@ -98,7 +98,7 @@ export function LandingPage() {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border)/0.16)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.16)_1px,transparent_1px)] bg-[size:44px_44px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
         </div>
 
-        <div className="container-shell flex flex-col items-center justify-center min-h-[calc(100vh-5rem)] gap-12 pt-28 pb-20 text-center">
+        <div className="container-shell flex flex-col items-center justify-center gap-10 pt-20 pb-16 text-center">
           <motion.div
             animate="visible"
             className="mx-auto flex max-w-4xl flex-col items-center text-center"
@@ -150,9 +150,12 @@ export function LandingPage() {
 
           <motion.div
             animate="visible"
+            className="relative w-full max-w-5xl mt-6 rounded-2xl border border-border/80 bg-background/60 p-2 shadow-2xl shadow-primary/8 backdrop-blur-md"
             initial={{ opacity: 0, y: 28, scale: 0.98 }}
             transition={{ delay: 0.12, duration: 0.65, ease: "easeOut" }}
           >
+            {/* Soft Glowing Ambient Halo behind the Dashboard Mockup */}
+            <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-primary/20 via-accent/20 to-primary/10 opacity-40 blur-xl -z-10" />
             <DashboardPreview />
           </motion.div>
 
