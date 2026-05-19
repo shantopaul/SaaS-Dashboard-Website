@@ -303,7 +303,6 @@ export function ProfilePage() {
       {/* ── Account details ── */}
       <ProfileSection title="Account Details">
         <div className="divide-y divide-border">
-          <DetailRow icon={User} label="Account ID" value={seed.id} />
           <DetailRow
             icon={CalendarDays}
             label="Member since"
