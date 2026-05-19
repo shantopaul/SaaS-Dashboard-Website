@@ -46,8 +46,8 @@ After a feature is fully implemented and verified, update its status to `Done` a
 | 26  | Settings Page                     | Large  | Done        | Built /dashboard/settings with general fields, 5 notification toggles, 2FA/login-alert toggles, session timeout, change-password form, and live theme switcher.   |
 | 27  | Profile Page                      | Medium | Done        | Built /dashboard/profile with initials avatar, personal info form, account details panel, and password update with validation and loading states.                 |
 | 28  | Responsive Pass                   | Large  | Done        | Fixed overflow-x on html/body, dashboard layout padding, header title on mobile, auth card overflow, landing preview grid, and DashboardSearch compact mode.      |
-| 29  | Animation and Interaction Polish  | Medium | Done        | Added PageMotion/FadeUpItem stagger entrance, animated dropdown/toast/sidebar, button press-scale, and prefers-reduced-motion safety net.                          |
-| 30  | Accessibility and UX Pass         | Medium | Pending     |                                                                                                                                                                   |
+| 29  | Animation and Interaction Polish  | Medium | Done        | Added PageMotion/FadeUpItem stagger entrance, animated dropdown/toast/sidebar, button press-scale, and prefers-reduced-motion safety net.                         |
+| 30  | Accessibility and UX Pass         | Medium | Done        | Skip links, ARIA landmarks, menuitem roles, aria-current nav, modal labelledby, Toggle aria-label, form noValidate+aria-label, SVG aria-hidden.                  |
 | 31  | Content and Copy Polish           | Small  | Pending     |                                                                                                                                                                   |
 | 32  | README and Delivery Documentation | Small  | Pending     |                                                                                                                                                                   |
 | 33  | Deployment Preparation            | Medium | Pending     |                                                                                                                                                                   |
@@ -88,3 +88,4 @@ None.
 - Feature 27 - Profile Page: Done. Verified with `npm run format`, `npm run lint`, `npm run build`, and local `/dashboard/profile` HTTP 200 smoke test.
 - Feature 28 - Responsive Pass: Done. Verified with `npm run format`, `npm run lint`, `npm run build`. Fixed layout overflow, mobile header title, auth card clipping, and landing preview grid.
 - Feature 29 - Animation and Interaction Polish: Done. Added PageMotion stagger entrance, animated Dropdown/Toast/Sidebar, button press-scale, and prefers-reduced-motion media query.
+- Feature 30 - Accessibility and UX Pass: Done. Added skip links, ARIA landmarks, role=menuitem, aria-current on NavLink, Modal aria-labelledby, Toggle aria-label, form noValidate, SVG aria-hidden.

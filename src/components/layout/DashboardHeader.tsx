@@ -81,18 +81,20 @@ export function DashboardHeader() {
             </div>
             <div className="my-1 border-t border-border" />
             <Link
-              className="flex w-full cursor-pointer items-center rounded-md px-2 py-1.5 text-sm transition-colors hover:bg-secondary focus:bg-secondary focus:outline-none"
+              className="flex w-full cursor-pointer items-center rounded-md px-2 py-1.5 text-sm transition-colors hover:bg-secondary focus:bg-secondary focus-ring"
+              role="menuitem"
               to="/dashboard/profile"
             >
               Profile Settings
             </Link>
             <div className="my-1 border-t border-border" />
             <button
-              className="flex w-full cursor-pointer items-center rounded-md px-2 py-1.5 text-sm text-destructive transition-colors hover:bg-destructive/10 focus:bg-destructive/10 focus:outline-none"
+              className="flex w-full cursor-pointer items-center rounded-md px-2 py-1.5 text-sm text-destructive transition-colors hover:bg-destructive/10 focus:bg-destructive/10 focus-ring"
               onClick={handleLogout}
+              role="menuitem"
               type="button"
             >
-              Logout
+              Sign out
             </button>
           </Dropdown>
         ) : null}

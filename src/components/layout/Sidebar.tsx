@@ -39,14 +39,6 @@ export function Sidebar() {
     navigate("/login");
   };
 
-  const navLinkClass = ({ isActive }: { isActive: boolean }) =>
-    cn(
-      "focus-ring flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
-      isActive
-        ? "bg-primary text-primary-foreground"
-        : "text-muted-foreground hover:bg-secondary hover:text-foreground",
-    );
-
   const sidebarContent = (
     <>
       <div className="flex h-16 shrink-0 items-center justify-between px-4 sm:px-6">
@@ -68,14 +60,30 @@ export function Sidebar() {
             const Icon = iconMap[item.iconName as keyof typeof iconMap];
             return (
               <NavLink
-                className={navLinkClass}
+                className={({ isActive }) =>
+                  cn(
+                    "focus-ring flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                    isActive
+                      ? "bg-primary text-primary-foreground"
+                      : "text-muted-foreground hover:bg-secondary hover:text-foreground",
+                  )
+                }
                 end={item.href === "/dashboard"}
                 key={item.href}
                 onClick={closeSidebar}
                 to={item.href}
               >
-                {Icon ? <Icon className="size-5 shrink-0" /> : null}
-                {item.label}
+                {({ isActive }) => (
+                  <>
+                    {Icon ? (
+                      <Icon aria-hidden="true" className="size-5 shrink-0" />
+                    ) : null}
+                    <span>{item.label}</span>
+                    {isActive ? (
+                      <span className="sr-only">(current page)</span>
+                    ) : null}
+                  </>
+                )}
               </NavLink>
             );
           })}
@@ -87,8 +95,8 @@ export function Sidebar() {
             onClick={handleLogout}
             type="button"
           >
-            <LogOut className="size-5 shrink-0" />
-            Logout
+            <LogOut aria-hidden="true" className="size-5 shrink-0" />
+            Sign out
           </button>
         </div>
       </div>
