@@ -35,9 +35,32 @@ const annualPriceByPlan: Record<string, string> = {
 };
 
 const pricingHighlights = [
-  "Cancel anytime from billing settings",
-  "Upgrade when your team grows",
-  "No hidden platform fees",
+  {
+    title: "Cancel anytime",
+    description: "Manage your billing easily directly from your settings.",
+    icon: CircleDollarSign,
+    colorClass:
+      "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20",
+    hoverBorder: "hover:border-emerald-500/30 dark:hover:border-emerald-500/20",
+  },
+  {
+    title: "Scale dynamically",
+    description:
+      "Seamlessly add team seats and unlock features as your operation grows.",
+    icon: BadgeCheck,
+    colorClass:
+      "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20",
+    hoverBorder: "hover:border-blue-500/30 dark:hover:border-blue-500/20",
+  },
+  {
+    title: "Zero hidden fees",
+    description:
+      "Flat monthly pricing with absolutely no platform cuts or surprises.",
+    icon: ShieldCheck,
+    colorClass:
+      "bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20",
+    hoverBorder: "hover:border-amber-500/30 dark:hover:border-amber-500/20",
+  },
 ];
 
 const planAccent: Record<string, string> = {
@@ -152,23 +175,35 @@ export function PricingPage() {
             initial={{ opacity: 0, y: 26 }}
             transition={{ delay: 0.12, duration: 0.6, ease: "easeOut" }}
           >
-            {pricingHighlights.map((highlight, index) => {
-              const icons = [CircleDollarSign, BadgeCheck, ShieldCheck];
-              const Icon = icons[index] ?? Sparkles;
+            {pricingHighlights.map((highlight) => {
+              const Icon = highlight.icon;
 
               return (
                 <Card
-                  className="transition-all duration-300 hover:scale-[1.02] hover:shadow-card-hover hover:border-primary/20"
-                  key={highlight}
+                  className={cn(
+                    "transition-all duration-300 hover:scale-[1.02] hover:shadow-card-hover border-border/80 bg-card/60 backdrop-blur-sm",
+                    highlight.hoverBorder,
+                  )}
+                  key={highlight.title}
                 >
-                  <CardHeader>
-                    <div className="flex size-11 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <CardHeader className="pb-2">
+                    <div
+                      className={cn(
+                        "flex size-11 items-center justify-center rounded-lg border",
+                        highlight.colorClass,
+                      )}
+                    >
                       <Icon aria-hidden="true" className="size-5" />
                     </div>
-                    <CardTitle className="pt-4 text-body-lg font-bold">
-                      {highlight}
+                    <CardTitle className="pt-4 text-heading-md font-extrabold tracking-tight text-foreground">
+                      {highlight.title}
                     </CardTitle>
                   </CardHeader>
+                  <CardContent>
+                    <p className="text-body-sm text-muted-foreground leading-relaxed">
+                      {highlight.description}
+                    </p>
+                  </CardContent>
                 </Card>
               );
             })}
