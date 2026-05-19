@@ -85,12 +85,14 @@ html {
   min-width: 320px;
   scroll-behavior: smooth;
   background: hsl(var(--background));
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
   background: hsl(var(--background));
   color: hsl(var(--foreground));
 }

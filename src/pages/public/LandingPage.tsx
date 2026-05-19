@@ -389,8 +389,8 @@ export function LandingPage() {
 
 function DashboardPreview() {
   return (
-    <div className="mx-auto w-full max-w-6xl rounded-xl border border-border bg-card p-3 shadow-card">
-      <div className="rounded-lg border border-border bg-background p-4">
+    <div className="mx-auto w-full max-w-6xl overflow-x-auto rounded-xl border border-border bg-card p-3 shadow-card">
+      <div className="min-w-[480px] rounded-lg border border-border bg-background p-4">
         <div className="mb-5 flex items-center justify-between gap-4 border-b border-border pb-4">
           <div>
             <p className="text-caption font-semibold uppercase tracking-[0.18em] text-muted-foreground">
@@ -401,7 +401,7 @@ function DashboardPreview() {
           <Badge variant="success">Live</Badge>
         </div>
 
-        <div className="grid gap-3 md:grid-cols-4">
+        <div className="grid gap-3 grid-cols-2 md:grid-cols-4">
           {dashboardStats.map((stat) => (
             <div
               className="rounded-lg border border-border bg-card p-4"
