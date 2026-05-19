@@ -55,13 +55,17 @@ Designed and engineered with **React**, **TypeScript**, and **Tailwind CSS**, Fl
 
 ### 🌐 Public Pages
 
-| Public Home Page (Light Mode) | Public Home Page (Dark Mode) |
-| --- | --- |
-| ![Home Page Light](screenshots/landing_light.png) | ![Home Page Dark](screenshots/landing_dark.png) |
+#### Public Home Page (Light Mode)
+![Home Page Light](screenshots/landing_light.png)
 
-| Public Features Page (Light Mode) | Public Features Page (Dark Mode) |
-| --- | --- |
-| ![Features Page Light](screenshots/features_light.png) | ![Features Page Dark](screenshots/features_dark.png) |
+#### Public Home Page (Dark Mode)
+![Home Page Dark](screenshots/landing_dark.png)
+
+#### Public Features Page (Light Mode)
+![Features Page Light](screenshots/features_light.png)
+
+#### Public Features Page (Dark Mode)
+![Features Page Dark](screenshots/features_dark.png)
 
 ### 📊 Dashboard & Settings
 
