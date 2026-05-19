@@ -91,7 +91,7 @@ export function Sidebar() {
   return (
     <>
       {/* Desktop Sidebar */}
-      <aside className="hidden h-screen sticky top-0 w-64 flex-col border-r border-border bg-card md:flex">
+      <aside className="hidden fixed top-0 left-0 z-20 h-screen w-64 flex-col border-r border-border bg-card md:flex">
         {sidebarContent}
       </aside>
 
