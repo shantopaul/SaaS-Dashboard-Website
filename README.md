@@ -73,6 +73,20 @@ Designed and engineered with **React**, **TypeScript**, and **Tailwind CSS**, Fl
 #### Public Pricing Page (Dark Mode)
 ![Pricing Page Dark](screenshots/PricingPage/pricing_dark.jpg)
 
+### 🔐 Authentication Pages
+
+#### Login Page (Light Mode)
+![Login Page Light](screenshots/LoginPage/login_light.jpg)
+
+#### Login Page (Dark Mode)
+![Login Page Dark](screenshots/LoginPage/login_dark.jpg)
+
+#### Register Page (Light Mode)
+![Register Page Light](screenshots/RegisterPage/register_light.jpg)
+
+#### Register Page (Dark Mode)
+![Register Page Dark](screenshots/RegisterPage/register_dark.jpg)
+
 ### 📊 Dashboard & Settings
 
 | Responsive Analytics Dashboard | Billing & Team Seats Manager |
