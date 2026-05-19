@@ -5,6 +5,7 @@ import {
   ArrowRight,
   BarChart3,
   CheckCircle2,
+  ChevronDown,
   CreditCard,
   FileBarChart,
   LockKeyhole,
@@ -154,10 +155,26 @@ export function LandingPage() {
           >
             <DashboardPreview />
           </motion.div>
+
+          {/* Centered Chevron Scroll Down Button */}
+          <div className="mt-8 flex justify-center">
+            <button
+              onClick={() => {
+                document
+                  .getElementById("trusted-brands-section")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="focus-ring group flex size-12 items-center justify-center rounded-full border border-border bg-background/60 shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:bg-background/80 hover:shadow-md"
+              aria-label="Scroll to next section"
+            >
+              <ChevronDown className="size-5 text-muted-foreground transition-colors group-hover:text-primary animate-bounce" />
+            </button>
+          </div>
         </div>
       </section>
 
       <motion.section
+        id="trusted-brands-section"
         className="border-b border-border bg-card/45 py-8"
         {...sectionMotion}
       >
