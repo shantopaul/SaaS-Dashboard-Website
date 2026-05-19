@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import { ThemeProvider } from "@/providers";
+import { ThemeProvider, ToastProvider } from "@/providers";
 import { AppRoutes } from "@/routes";
 
 function App() {
@@ -7,6 +7,7 @@ function App() {
     <ThemeProvider>
       <BrowserRouter>
         <AppRoutes />
+        <ToastProvider />
       </BrowserRouter>
     </ThemeProvider>
   );

@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { BrandLogo } from "./BrandLogo";
 import { dashboardNavigationItems } from "@/data";
-import { useAuthStore, useLayoutStore } from "@/store";
+import { useAuthStore, useLayoutStore, useToastStore } from "@/store";
 import { cn } from "@/utils";
 import { Button } from "@/components/common";
 
@@ -25,10 +25,16 @@ const iconMap = {
 export function Sidebar() {
   const { logout } = useAuthStore();
   const { isSidebarOpen, closeSidebar } = useLayoutStore();
+  const showToast = useToastStore((state) => state.showToast);
   const navigate = useNavigate();
 
   const handleLogout = () => {
     logout();
+    showToast({
+      description: "You have been signed out of FlowPilot.",
+      title: "Logged out",
+      variant: "info",
+    });
     navigate("/login");
   };
 

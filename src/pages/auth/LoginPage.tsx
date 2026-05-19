@@ -6,7 +6,7 @@ import { z } from "zod";
 import { Eye, EyeOff, Lock, Mail } from "lucide-react";
 import { Button } from "@/components/common/Button";
 import { Input } from "@/components/common/Input";
-import { useAuthStore } from "@/store";
+import { useAuthStore, useToastStore } from "@/store";
 
 const loginSchema = z.object({
   email: z.string().min(1, "Email is required").email("Invalid email address"),
@@ -23,6 +23,7 @@ export function LoginPage() {
 
   const location = useLocation();
   const login = useAuthStore((state) => state.login);
+  const showToast = useToastStore((state) => state.showToast);
 
   const {
     register,
@@ -43,6 +44,11 @@ export function LoginPage() {
     await new Promise((resolve) => setTimeout(resolve, 800));
 
     login(data.email);
+    showToast({
+      description: "Welcome back to your FlowPilot dashboard.",
+      title: "Logged in successfully",
+      variant: "success",
+    });
 
     setIsSubmitting(false);
 

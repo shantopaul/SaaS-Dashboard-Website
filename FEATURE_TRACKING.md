@@ -40,7 +40,7 @@ After a feature is fully implemented and verified, update its status to `Done` a
 | 20  | Dashboard Overview Page           | Large  | Done    | Completed dashboard overview with intro context, KPI cards, revenue and sales charts, recent customers table, and recent activity feed.                           |
 | 21  | Table System                      | Medium | Done    | Added reusable DataTable primitives plus customer, invoice, transaction, and activity table adapters with badges, actions, search, and mobile card rows.          |
 | 22  | Analytics Page                    | Large  | Done    | Built analytics page with range filters, summary cards, revenue and user growth charts, traffic source chart, conversion funnel, and device breakdown.            |
-| 23  | Notifications UI                  | Medium | Pending |                                                                                                                                                                   |
+| 23  | Notifications UI                  | Medium | Done    | Added notification dropdown with unread badge, mark-all-read behavior, and global toast provider wired to auth and notification actions.                          |
 | 24  | Search Experience                 | Medium | Pending |                                                                                                                                                                   |
 | 25  | Billing Page                      | Medium | Pending |                                                                                                                                                                   |
 | 26  | Settings Page                     | Large  | Pending |                                                                                                                                                                   |
@@ -81,3 +81,4 @@ None.
 - Feature 20 - Dashboard Overview Page: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and a local `/dashboard` HTTP 200 smoke test.
 - Feature 21 - Table System: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and a local `/dashboard` HTTP 200 smoke test.
 - Feature 22 - Analytics Page: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and a local `/dashboard/analytics` HTTP 200 smoke test.
+- Feature 23 - Notifications UI: Done. Verified with `npm run format:check`, `npm run lint`, `npm run build`, and a local `/dashboard` HTTP 200 smoke test.

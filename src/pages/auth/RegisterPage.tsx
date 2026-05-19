@@ -6,7 +6,7 @@ import { z } from "zod";
 import { Eye, EyeOff, Lock, Mail, User } from "lucide-react";
 import { Button } from "@/components/common/Button";
 import { Input } from "@/components/common/Input";
-import { useAuthStore } from "@/store";
+import { useAuthStore, useToastStore } from "@/store";
 
 const registerSchema = z
   .object({
@@ -41,6 +41,7 @@ export function RegisterPage() {
 
   const location = useLocation();
   const registerAction = useAuthStore((state) => state.register);
+  const showToast = useToastStore((state) => state.showToast);
 
   const {
     register,
@@ -63,6 +64,11 @@ export function RegisterPage() {
     await new Promise((resolve) => setTimeout(resolve, 800));
 
     registerAction(data.email, data.fullName);
+    showToast({
+      description: "Your workspace is ready to explore.",
+      title: "Account created",
+      variant: "success",
+    });
 
     setIsSubmitting(false);
 

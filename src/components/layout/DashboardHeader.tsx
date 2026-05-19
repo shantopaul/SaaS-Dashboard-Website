@@ -1,4 +1,4 @@
-import { Bell, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import {
   Button,
@@ -6,12 +6,14 @@ import {
   SearchInput,
   ThemeToggle,
 } from "@/components/common";
-import { useAuthStore, useLayoutStore } from "@/store";
+import { NotificationDropdown } from "./NotificationDropdown";
+import { useAuthStore, useLayoutStore, useToastStore } from "@/store";
 import { dashboardNavigationItems } from "@/data";
 
 export function DashboardHeader() {
   const { openSidebar } = useLayoutStore();
   const { user, logout } = useAuthStore();
+  const showToast = useToastStore((state) => state.showToast);
   const location = useLocation();
 
   // Find the current page title based on the route
@@ -19,6 +21,15 @@ export function DashboardHeader() {
     (item) => item.href === location.pathname,
   );
   const pageTitle = currentNavItem ? currentNavItem.label : "Dashboard";
+
+  const handleLogout = () => {
+    logout();
+    showToast({
+      description: "You have been signed out of FlowPilot.",
+      title: "Logged out",
+      variant: "info",
+    });
+  };
 
   return (
     <header className="flex h-16 shrink-0 items-center justify-between gap-4 border-b border-border bg-card px-4 md:px-6">
@@ -44,16 +55,7 @@ export function DashboardHeader() {
           <SearchInput className="bg-background" />
         </div>
 
-        <Button
-          aria-label="View notifications"
-          className="relative text-muted-foreground hover:text-foreground"
-          size="icon"
-          variant="ghost"
-        >
-          <Bell className="size-5" />
-          {/* Notification dot */}
-          <span className="absolute right-2.5 top-2.5 size-2 rounded-full bg-destructive" />
-        </Button>
+        <NotificationDropdown />
 
         <ThemeToggle />
 
@@ -91,7 +93,7 @@ export function DashboardHeader() {
             <div className="my-1 border-t border-border" />
             <button
               className="flex w-full cursor-pointer items-center rounded-md px-2 py-1.5 text-sm text-destructive transition-colors hover:bg-destructive/10 focus:bg-destructive/10 focus:outline-none"
-              onClick={logout}
+              onClick={handleLogout}
               type="button"
             >
               Logout
