@@ -146,6 +146,21 @@ export function LandingPage() {
                 View Demo
               </Link>
             </div>
+
+            {/* Centered Chevron Scroll Down Button directly below CTAs */}
+            <div className="mt-8 flex justify-center">
+              <button
+                onClick={() => {
+                  document
+                    .getElementById("trusted-brands-section")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="focus-ring group flex size-12 items-center justify-center rounded-full border border-border bg-background/60 shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:bg-background/80 hover:shadow-md"
+                aria-label="Scroll to next section"
+              >
+                <ChevronDown className="size-5 text-muted-foreground transition-colors group-hover:text-primary animate-bounce" />
+              </button>
+            </div>
           </motion.div>
 
           <motion.div
@@ -158,21 +173,6 @@ export function LandingPage() {
             <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-primary/20 via-accent/20 to-primary/10 opacity-40 blur-xl -z-10" />
             <DashboardPreview />
           </motion.div>
-
-          {/* Centered Chevron Scroll Down Button */}
-          <div className="mt-8 flex justify-center">
-            <button
-              onClick={() => {
-                document
-                  .getElementById("trusted-brands-section")
-                  ?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="focus-ring group flex size-12 items-center justify-center rounded-full border border-border bg-background/60 shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:bg-background/80 hover:shadow-md"
-              aria-label="Scroll to next section"
-            >
-              <ChevronDown className="size-5 text-muted-foreground transition-colors group-hover:text-primary animate-bounce" />
-            </button>
-          </div>
         </div>
       </section>
 
