@@ -97,10 +97,10 @@ export function LandingPage() {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border)/0.16)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.16)_1px,transparent_1px)] bg-[size:44px_44px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
         </div>
 
-        <div className="container-shell grid min-h-[calc(100vh-5rem)] content-center gap-10 py-16 lg:py-20">
+        <div className="container-shell flex flex-col items-center justify-center min-h-[calc(100vh-5rem)] gap-12 pt-28 pb-20 text-center">
           <motion.div
             animate="visible"
-            className="mx-auto max-w-4xl text-center"
+            className="mx-auto flex max-w-4xl flex-col items-center text-center"
             initial="hidden"
             transition={{ duration: 0.55, ease: "easeOut" }}
             variants={fadeUp}
@@ -114,9 +114,12 @@ export function LandingPage() {
               <span>Built for modern SaaS teams</span>
             </div>
 
-            {/* Premium Metallic Gradient Title */}
-            <h1 className="mt-6 bg-gradient-to-br from-foreground via-foreground/90 to-primary/85 bg-clip-text text-display-md font-extrabold tracking-tight text-transparent pb-1.5 sm:text-display-lg">
-              The analytics dashboard your team will actually use
+            {/* Premium Dynamic Glowing Gradient Title */}
+            <h1 className="mt-6 text-display-md font-extrabold tracking-tight text-foreground pb-2 sm:text-display-lg">
+              The analytics dashboard your team will{" "}
+              <span className="bg-gradient-to-r from-primary via-indigo-500 to-accent bg-clip-text text-transparent">
+                actually use
+              </span>
             </h1>
 
             <p className="mx-auto mt-6 max-w-2xl text-body-lg text-muted-foreground">

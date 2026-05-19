@@ -7,7 +7,7 @@ export function DashboardLayout() {
     <div className="flex min-h-screen w-full bg-muted/40">
       {/* Skip-to-content link: visible on focus, hidden otherwise */}
       <a
-        className="focus-ring fixed left-4 top-4 z-[200] block -translate-y-[150%] rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-lg transition-transform focus:translate-y-0"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:inline-block focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-primary-foreground focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-ring"
         href="#main-content"
       >
         Skip to main content
