@@ -53,13 +53,35 @@ Designed and engineered with **React**, **TypeScript**, and **Tailwind CSS**, Fl
 
 ## 📸 Screenshots Gallery
 
-| Public Landing Page                                                                                 | Responsive Analytics Dashboard                                                                                   |
-| --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| ![Landing Page Placeholder](https://placehold.co/600x400/1e293b/ffffff?text=FlowPilot+Landing+Page) | ![Dashboard Overview Placeholder](https://placehold.co/600x400/1e293b/ffffff?text=FlowPilot+Analytics+Dashboard) |
+### 🌐 Public Pages
 
-| Billing & Team Seats Manager                                                                              | Account Settings & Theme Toggle                                                                          |
-| --------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| ![Billing Page Placeholder](https://placehold.co/600x400/1e293b/ffffff?text=FlowPilot+Billing+Management) | ![Settings Page Placeholder](https://placehold.co/600x400/1e293b/ffffff?text=FlowPilot+Account+Settings) |
+#### Public Home Page (Light Mode)
+![Home Page Light](screenshots/IandingPage/landing_light.jpg)
+
+#### Public Home Page (Dark Mode)
+![Home Page Dark](screenshots/IandingPage/landing_dark.jpg)
+
+#### Public Features Page (Light Mode)
+![Features Page Light](screenshots/FeaturesPage/features_light.jpg)
+
+#### Public Features Page (Dark Mode)
+![Features Page Dark](screenshots/FeaturesPage/features_dark.jpg)
+
+#### Public Pricing Page (Light Mode)
+![Pricing Page Light](screenshots/PricingPage/pricing_light.jpg)
+
+#### Public Pricing Page (Dark Mode)
+![Pricing Page Dark](screenshots/PricingPage/pricing_dark.jpg)
+
+### 📊 Dashboard & Settings
+
+| Responsive Analytics Dashboard | Billing & Team Seats Manager |
+| --- | --- |
+| ![Dashboard Overview Placeholder](https://placehold.co/600x400/1e293b/ffffff?text=FlowPilot+Analytics+Dashboard) | ![Billing Page Placeholder](https://placehold.co/600x400/1e293b/ffffff?text=FlowPilot+Billing+Management) |
+
+| Account Settings & Theme Toggle | |
+| --- | --- |
+| ![Settings Page Placeholder](https://placehold.co/600x400/1e293b/ffffff?text=FlowPilot+Account+Settings) | |
 
 ---
 
