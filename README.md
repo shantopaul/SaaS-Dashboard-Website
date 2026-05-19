@@ -92,29 +92,113 @@ FlowPilot is built following professional accessibility guidelines to be fully u
 
 ## 📂 Project Structure
 
+FlowPilot adheres to a strict, highly decoupled modular architecture built for clean separation of concerns, strong static typing, and high component reusability. Below is the comprehensive structural layout of all folders and core files in the project:
+
 ```text
 SaaS-Dashboard-Website/
-├── public/                 # Static brand assets
+├── public/                     # Static assets (favicons, brand graphics)
 ├── src/
-│   ├── components/         # Modular reusable components
-│   │   ├── common/         # Buttons, Inputs, Modals, Dropdowns, Toggles, PageMotion
-│   │   ├── dashboard/      # StatCards, ActivityFeeds, CustomersTables, Charts
-│   │   └── layout/         # Sidebars, Navbars, Footers, Page Layout wrappers
-│   ├── data/               # Realistic mocked databases (pricing, faq, statistics, invoices)
-│   ├── hooks/              # Custom utilities (useLocalStorage, useTheme)
-│   ├── pages/              # Primary route pages
-│   │   ├── auth/           # Login, Registration flows
-│   │   ├── dashboard/      # Dashboard Overview, Analytics, Billing, Settings, Profile
-│   │   └── public/         # Landing, Features, Pricing, Contact Pages
-│   ├── providers/          # ThemeProvider, ToastProvider
-│   ├── store/              # Zustand global state slices (auth, billing, notifications)
-│   ├── styles/             # Global CSS variables and tailwind baseline layers
-│   ├── types/              # Strong TypeScript type definitions
-│   └── utils/              # cn (classnames helper), data parsers
-├── index.html              # Main application entrypoint
-├── tailwind.config.js      # Custom theme, typography scales, HSL color tokens
-└── vite.config.ts          # Build optimization, path alias mapping
+│   ├── components/             # Reusable UI component modules
+│   │   ├── common/             # Pure presentational primitives & UI utilities
+│   │   │   ├── Badge.tsx       # Dynamic HSL status pill component
+│   │   │   ├── Button.tsx      # Standard button with variant scales and active state scale effects
+│   │   │   ├── Card.tsx        # Framed layout wrapper with header, content & footer boundaries
+│   │   │   ├── Dropdown.tsx    # Accessible listbox selector with full keyboard support
+│   │   │   ├── EmptyState.tsx  # Graphic-guided default screen fallback
+│   │   │   ├── Input.tsx       # Base input element with state rings and clear focus rings
+│   │   │   ├── LoadingSpinner.tsx # Micro-animated status indicators
+│   │   │   ├── Modal.tsx       # Accessible dialog drawer featuring keyboard focus traps
+│   │   │   ├── PageMotion.tsx  # Framer Motion orchestration wrapper for layout entrances
+│   │   │   ├── SearchInput.tsx # Icon-guided raw text capture
+│   │   │   ├── SectionHeader.tsx # Semantic eyebrow, title, and copy block provider
+│   │   │   ├── Select.tsx      # Custom focus-stable native dropdown overlay
+│   │   │   ├── Textarea.tsx    # Form field for multi-line inputs
+│   │   │   ├── ThemeToggle.tsx # High-contrast selector for Light vs. Dark modes
+│   │   │   └── Toggle.tsx      # Slide switch containing screen-reader announcements
+│   │   ├── dashboard/          # Specialized widgets for high-density pages
+│   │   │   ├── RecentActivityFeed.tsx # Micro-feed showing critical workspace milestones
+│   │   │   ├── RecentCustomersTable.tsx # Live snapshot showing newly onboarded teams
+│   │   │   └── StatCard.tsx    # Highlight panel for single metrics with target trends
+│   │   ├── layout/             # Structural frame managers
+│   │   │   ├── AuthLayout.tsx  # Center-aligned, glassmorphic layout for validation pages
+│   │   │   ├── BrandLogo.tsx   # Custom dynamic responsive SVG emblem
+│   │   │   ├── DashboardHeader.tsx # Global action strip (Search, Notifications, Profile)
+│   │   │   ├── DashboardLayout.tsx # Persistent sidebar + content viewport shell
+│   │   │   ├── DashboardSearch.tsx # Accessible search bar interface with index filtering
+│   │   │   ├── Footer.tsx      # Public footprint footer with social maps
+│   │   │   ├── Navbar.tsx      # Floating top navigation with responsive hamburger menu
+│   │   │   ├── NotificationDropdown.tsx # Interactive slide-out alert menu
+│   │   │   ├── PublicLayout.tsx # Page wrapper featuring semantic markers and skip links
+│   │   │   └── Sidebar.tsx     # Left-side persistent dashboard navigation drawer
+│   │   └── tables/             # Tabular layout controllers
+│   │       ├── ActivityTable.tsx # Extended audit trail representation
+│   │       ├── CustomerTable.tsx # Interactive customer cohort manager
+│   │       ├── DataTable.tsx   # Base engine for pagination, queries, sorting & results
+│   │       ├── InvoiceTable.tsx # Specialized billing search tables
+│   │       ├── TransactionTable.tsx # Ledger visualization component
+│   │       ├── tableFormat.ts  # Format string utilities
+│   │       └── tableUtils.tsx  # Column rendering wrappers
+│   ├── data/                   # Mocked transactional databases & assets
+│   │   ├── activityData.ts     # Realistic activity events list
+│   │   ├── chartData.ts        # Data points for analytics & growth tracking
+│   │   ├── customerData.ts     # Mock customer collection
+│   │   ├── faqData.ts          # Outcome-focused FAQ repository
+│   │   ├── featureData.ts      # Benefit-focused platform capabilities listing
+│   │   ├── invoiceData.ts      # Fictional invoice records database
+│   │   ├── navigationData.ts   # Navigation map arrays
+│   │   ├── notificationData.ts # Real-time alerts feed database
+│   │   ├── pricingData.ts      # Pricing plan cards comparison database
+│   │   ├── searchData.ts       # Central dictionary indexes for command search mapping
+│   │   ├── statsData.ts        # Top-level overview KPI metrics
+│   │   ├── testimonialData.ts  # Outcome-led client quotes list
+│   │   └── userData.ts         # User profiles containing custom owner variables
+│   ├── pages/                  # Top-level route modules
+│   │   ├── auth/               # Access management flows
+│   │   │   ├── LoginPage.tsx   # Secure interactive login form (RHF + Zod validated)
+│   │   │   └── RegisterPage.tsx # Standard account creation form
+│   │   ├── dashboard/          # Panel areas
+│   │   │   ├── AnalyticsPage.tsx # Chart aggregates and sales analysis dashboards
+│   │   │   ├── BillingPage.tsx # Invoices ledger, limits trackers, payment form
+│   │   │   ├── DashboardPage.tsx # Unified workspace command feed
+│   │   │   ├── ProfilePage.tsx # User biography settings, passwords, and user details
+│   │   │   └── SettingsPage.tsx # Platform features, 2FA, session toggles
+│   │   └── public/             # Marketing surfaces
+│   │       ├── FeaturesPage.tsx # Deep-dive details explaining core benefits
+│   │       ├── LandingPage.tsx # Polished conversion lander
+│   │       ├── NotFoundPage.tsx # Custom graphic 404 response page
+│   │       └── PricingPage.tsx # Tier comparisons
+│   ├── providers/              # Root React Context managers
+│   │   ├── ThemeProvider.tsx   # CSS variable theme provider
+│   │   └── ToastProvider.tsx   # Pop-up notifier container
+│   ├── routes/                 # Navigation architectures
+│   │   ├── AppRoutes.tsx       # Core React Router configuration
+│   │   └── ProtectedRoute.tsx  # Authentication verification boundary
+│   ├── store/                  # Global state management modules
+│   │   ├── authStore.ts        # User sessions & authentication state manager
+│   │   ├── layoutStore.ts      # Sidebar navigation & window sizing control states
+│   │   ├── notificationStore.ts # Alert unread counters & feed filters
+│   │   ├── themeStore.ts       # Global dark/light modes persistent switch state
+│   │   └── toastStore.ts       # Global notification queue state
+│   ├── styles/                 # Styling baselines
+│   │   └── globals.css         # Baseline global imports & color token systems
+│   ├── types/                  # Compile-time type models
+│   │   ├── activity.types.ts   # User audit trail formats
+│   │   ├── chart.types.ts      # Statistical metrics data points
+│   │   ├── common.types.ts     # Basic interface primitives
+│   │   ├── content.types.ts    # Public copy schema formats
+│   │   ├── invoice.types.ts    # Transaction details types
+│   │   ├── notification.types.ts # Unread alert indicators
+│   │   ├── pricing.types.ts    # Value metrics matrices
+│   │   ├── search.types.ts     # Command indexed data types
+│   │   ├── table.types.ts      # Core table layout models
+│   │   └── user.types.ts       # User account definitions
+│   └── utils/                  # Reusable stateless helpers
+│       └── cn.ts               # Tailored clsx & tailwind-merge configuration
+├── index.html                  # Core HTML5 landmark entrypoint
+├── tailwind.config.js          # Tailored style system maps, HSL channels, fonts
+└── vite.config.ts              # Bundling adjustments & dynamic optimization
 ```
+
 
 ---
 
