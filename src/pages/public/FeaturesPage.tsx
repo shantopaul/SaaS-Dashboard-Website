@@ -27,6 +27,7 @@ import {
   SectionHeader,
 } from "@/components";
 import { featureItems } from "@/data";
+import { cn } from "@/utils";
 
 const featureIconMap: Record<string, LucideIcon> = {
   Activity,
@@ -39,6 +40,44 @@ const featureIconMap: Record<string, LucideIcon> = {
   TrendingUp,
   UsersRound,
 };
+
+const heroFeatureHighlights = [
+  {
+    title: "Live analytics dashboard",
+    description: "Real-time operational charts to monitor key product metrics.",
+    icon: Activity,
+    colorClass:
+      "bg-violet-500/10 text-violet-600 dark:text-violet-400 border-violet-500/20",
+    hoverBorder: "hover:border-violet-500/30 dark:hover:border-violet-500/20",
+  },
+  {
+    title: "Revenue & MRR tracking",
+    description:
+      "Track sales pipelines, subscription metrics, and lifetime values.",
+    icon: TrendingUp,
+    colorClass:
+      "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20",
+    hoverBorder: "hover:border-emerald-500/30 dark:hover:border-emerald-500/20",
+  },
+  {
+    title: "Full customer visibility",
+    description:
+      "Understand detailed customer profiles, histories, and churn rates.",
+    icon: UsersRound,
+    colorClass:
+      "bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border-indigo-500/20",
+    hoverBorder: "hover:border-indigo-500/30 dark:hover:border-indigo-500/20",
+  },
+  {
+    title: "Shared team workspace",
+    description:
+      "Enable multi-seat invites, shared roles, and joint analytics panels.",
+    icon: MessageSquare,
+    colorClass:
+      "bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20",
+    hoverBorder: "hover:border-rose-500/30 dark:hover:border-rose-500/20",
+  },
+];
 
 const detailedSections = [
   {
@@ -143,20 +182,35 @@ export function FeaturesPage() {
             initial={{ opacity: 0, y: 26 }}
             transition={{ delay: 0.12, duration: 0.6, ease: "easeOut" }}
           >
-            {featureItems.slice(0, 4).map((feature) => {
-              const Icon = featureIconMap[feature.iconName] ?? Sparkles;
+            {heroFeatureHighlights.map((feature) => {
+              const Icon = feature.icon;
 
               return (
                 <Card
-                  className="transition-all duration-300 hover:scale-[1.02] hover:shadow-card-hover hover:border-primary/20"
-                  key={feature.id}
+                  className={cn(
+                    "transition-all duration-300 hover:scale-[1.02] hover:shadow-card-hover border-border/80 bg-card/60 backdrop-blur-sm",
+                    feature.hoverBorder,
+                  )}
+                  key={feature.title}
                 >
-                  <CardHeader>
-                    <div className="flex size-11 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <CardHeader className="pb-2">
+                    <div
+                      className={cn(
+                        "flex size-11 items-center justify-center rounded-lg border",
+                        feature.colorClass,
+                      )}
+                    >
                       <Icon aria-hidden="true" className="size-5" />
                     </div>
-                    <CardTitle className="pt-4">{feature.title}</CardTitle>
+                    <CardTitle className="pt-4 text-heading-md font-extrabold tracking-tight text-foreground">
+                      {feature.title}
+                    </CardTitle>
                   </CardHeader>
+                  <CardContent>
+                    <p className="text-body-sm text-muted-foreground leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </CardContent>
                 </Card>
               );
             })}
