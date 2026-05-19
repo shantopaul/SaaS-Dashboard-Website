@@ -165,7 +165,7 @@ export function LandingPage() {
 
           <motion.div
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            className="relative w-full max-w-5xl mt-6 rounded-2xl border border-border/80 bg-background/60 p-2 shadow-2xl shadow-primary/8 backdrop-blur-md"
+            className="relative w-full min-w-0 max-w-5xl mt-6 rounded-2xl border border-border/80 bg-background/60 p-2 shadow-2xl shadow-primary/8 backdrop-blur-md"
             initial={{ opacity: 0, y: 28, scale: 0.98 }}
             transition={{ delay: 0.12, duration: 0.65, ease: "easeOut" }}
           >
@@ -442,7 +442,7 @@ export function LandingPage() {
 
 function DashboardPreview() {
   return (
-    <div className="mx-auto w-full max-w-6xl overflow-x-auto rounded-xl border border-border bg-card p-3 shadow-card">
+    <div className="mx-auto w-full min-w-0 max-w-6xl overflow-x-auto rounded-xl border border-border bg-card p-3 shadow-card">
       <div className="min-w-[480px] rounded-lg border border-border bg-background p-4">
         <div className="mb-5 flex items-center justify-between gap-4 border-b border-border pb-4">
           <div>
