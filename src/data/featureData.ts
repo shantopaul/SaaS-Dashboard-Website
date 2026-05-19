@@ -3,58 +3,58 @@ import type { FeatureItem } from "@/types";
 export const featureItems: FeatureItem[] = [
   {
     id: "real-time-analytics",
-    title: "Real-time analytics",
+    title: "Live analytics dashboard",
     description:
-      "Monitor revenue, customers, conversions, and growth signals from one live dashboard.",
+      "See revenue, customer growth, conversions, and key business signals update in real time — no spreadsheets required.",
     iconName: "Activity",
   },
   {
     id: "revenue-tracking",
-    title: "Revenue tracking",
+    title: "Revenue & MRR tracking",
     description:
-      "Understand monthly recurring revenue, sales performance, and plan upgrades clearly.",
+      "Track monthly recurring revenue, plan upgrades, and sales performance with charts that make trends impossible to miss.",
     iconName: "TrendingUp",
   },
   {
     id: "customer-management",
-    title: "Customer management",
+    title: "Full customer visibility",
     description:
-      "Track customer status, plan details, recent activity, and lifecycle health.",
+      "Know which customers are active, which plans they hold, and where they are in their lifecycle — all from one table.",
     iconName: "UsersRound",
   },
   {
     id: "team-collaboration",
-    title: "Team collaboration",
+    title: "Shared team workspace",
     description:
-      "Give teams a shared workspace for reports, billing, settings, and account activity.",
+      "Give every team member access to the same reports, billing data, and settings so nothing gets siloed by role.",
     iconName: "MessagesSquare",
   },
   {
     id: "billing-automation",
-    title: "Billing automation",
+    title: "Billing & invoice management",
     description:
-      "Review invoices, payment methods, renewals, and subscription changes without friction.",
+      "Review invoices, manage payment methods, track renewals, and handle plan changes without leaving the dashboard.",
     iconName: "ReceiptText",
   },
   {
     id: "custom-reports",
-    title: "Custom reports",
+    title: "Exportable reports",
     description:
-      "Prepare clean summaries for traffic, revenue, acquisition, and product engagement.",
+      "Generate traffic, acquisition, revenue, and engagement summaries that are clean enough to share directly with clients.",
     iconName: "FileBarChart",
   },
   {
     id: "theme-ready",
-    title: "Dark and light dashboard",
+    title: "Light & dark mode built in",
     description:
-      "Use a professional visual system designed for readable light and dark interfaces.",
+      "Switch between polished light and dark interfaces instantly. Both modes are tuned for readability and contrast.",
     iconName: "SunMoon",
   },
   {
     id: "secure-account",
-    title: "Secure account management",
+    title: "Security & account control",
     description:
-      "Manage profile, security preferences, notification settings, and workspace access.",
+      "Manage 2FA, login alerts, session timeouts, and workspace access from a single, clearly structured settings page.",
     iconName: "ShieldCheck",
   },
 ];

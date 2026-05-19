@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from "framer-motion";
 import { NavLink, useNavigate } from "react-router-dom";
 import {
   ChartNoAxesCombined,
@@ -38,14 +39,6 @@ export function Sidebar() {
     navigate("/login");
   };
 
-  const navLinkClass = ({ isActive }: { isActive: boolean }) =>
-    cn(
-      "focus-ring flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
-      isActive
-        ? "bg-primary text-primary-foreground"
-        : "text-muted-foreground hover:bg-secondary hover:text-foreground",
-    );
-
   const sidebarContent = (
     <>
       <div className="flex h-16 shrink-0 items-center justify-between px-4 sm:px-6">
@@ -67,14 +60,30 @@ export function Sidebar() {
             const Icon = iconMap[item.iconName as keyof typeof iconMap];
             return (
               <NavLink
-                className={navLinkClass}
+                className={({ isActive }) =>
+                  cn(
+                    "focus-ring flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                    isActive
+                      ? "bg-primary text-primary-foreground"
+                      : "text-muted-foreground hover:bg-secondary hover:text-foreground",
+                  )
+                }
                 end={item.href === "/dashboard"}
                 key={item.href}
                 onClick={closeSidebar}
                 to={item.href}
               >
-                {Icon ? <Icon className="size-5 shrink-0" /> : null}
-                {item.label}
+                {({ isActive }) => (
+                  <>
+                    {Icon ? (
+                      <Icon aria-hidden="true" className="size-5 shrink-0" />
+                    ) : null}
+                    <span>{item.label}</span>
+                    {isActive ? (
+                      <span className="sr-only">(current page)</span>
+                    ) : null}
+                  </>
+                )}
               </NavLink>
             );
           })}
@@ -86,8 +95,8 @@ export function Sidebar() {
             onClick={handleLogout}
             type="button"
           >
-            <LogOut className="size-5 shrink-0" />
-            Logout
+            <LogOut aria-hidden="true" className="size-5 shrink-0" />
+            Sign out
           </button>
         </div>
       </div>
@@ -102,19 +111,33 @@ export function Sidebar() {
       </aside>
 
       {/* Mobile Sidebar Overlay */}
-      {isSidebarOpen ? (
-        <div className="fixed inset-0 z-50 md:hidden">
-          {/* Backdrop */}
-          <div
-            className="absolute inset-0 bg-background/80 backdrop-blur-sm transition-opacity"
-            onClick={closeSidebar}
-          />
-          {/* Drawer */}
-          <aside className="absolute inset-y-0 left-0 flex w-72 max-w-[80vw] flex-col bg-card shadow-xl border-r border-border">
-            {sidebarContent}
-          </aside>
-        </div>
-      ) : null}
+      <AnimatePresence>
+        {isSidebarOpen ? (
+          <motion.div
+            animate={{ opacity: 1 }}
+            className="fixed inset-0 z-50 md:hidden"
+            exit={{ opacity: 0 }}
+            initial={{ opacity: 0 }}
+            transition={{ duration: 0.18, ease: "easeOut" }}
+          >
+            {/* Backdrop */}
+            <div
+              className="absolute inset-0 bg-background/80 backdrop-blur-sm"
+              onClick={closeSidebar}
+            />
+            {/* Drawer */}
+            <motion.aside
+              animate={{ x: 0 }}
+              className="absolute inset-y-0 left-0 flex w-72 max-w-[80vw] flex-col border-r border-border bg-card shadow-xl"
+              exit={{ x: "-100%" }}
+              initial={{ x: "-100%" }}
+              transition={{ duration: 0.22, ease: "easeOut" }}
+            >
+              {sidebarContent}
+            </motion.aside>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
     </>
   );
 }

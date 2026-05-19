@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { Badge } from "@/components/common/Badge";
 import { Button } from "@/components/common/Button";
+import { FadeUpItem, PageMotion } from "@/components/common/PageMotion";
 import { useToastStore } from "@/store/toastStore";
 import {
   billingHistory,
@@ -427,40 +428,50 @@ function UpgradePlanSection() {
 
 export function BillingPage() {
   return (
-    <div className="flex flex-col gap-6">
+    <PageMotion>
       {/* Page header */}
-      <section>
-        <p className="mb-1 text-body-sm font-medium text-muted-foreground">
-          Manage your subscription, payment details, and billing history.
-        </p>
-        <h1 className="text-heading-lg">Billing</h1>
-      </section>
+      <FadeUpItem>
+        <section>
+          <p className="mb-1 text-body-sm font-medium text-muted-foreground">
+            Manage your subscription, payment details, and billing history.
+          </p>
+          <h1 className="text-heading-lg">Billing</h1>
+        </section>
+      </FadeUpItem>
 
       {/* Top two cards: current plan + payment method */}
-      <div className="grid gap-6 lg:grid-cols-2">
-        <CurrentPlanCard />
-        <PaymentMethodCard />
-      </div>
+      <FadeUpItem>
+        <div className="grid gap-6 lg:grid-cols-2">
+          <CurrentPlanCard />
+          <PaymentMethodCard />
+        </div>
+      </FadeUpItem>
 
       {/* Billing history table */}
-      <BillingHistoryTable />
+      <FadeUpItem>
+        <BillingHistoryTable />
+      </FadeUpItem>
 
       {/* Upgrade plan section */}
-      <UpgradePlanSection />
+      <FadeUpItem>
+        <UpgradePlanSection />
+      </FadeUpItem>
 
       {/* Security note */}
-      <div className="flex items-start gap-3 rounded-xl border border-border bg-muted/30 px-5 py-4 text-body-sm text-muted-foreground">
-        <AlertTriangle
-          className="mt-0.5 size-4 shrink-0 text-warning"
-          aria-hidden
-        />
-        <span>
-          All billing operations in this interface are{" "}
-          <span className="font-semibold text-foreground">UI-only</span>. No
-          actual charges or changes will be made. A live integration with a
-          payment provider such as Stripe would handle real transactions.
-        </span>
-      </div>
-    </div>
+      <FadeUpItem>
+        <div className="flex items-start gap-3 rounded-xl border border-border bg-muted/30 px-5 py-4 text-body-sm text-muted-foreground">
+          <AlertTriangle
+            className="mt-0.5 size-4 shrink-0 text-warning"
+            aria-hidden
+          />
+          <span>
+            All billing operations in this interface are{" "}
+            <span className="font-semibold text-foreground">UI-only</span>. No
+            actual charges or changes will be made. A live integration with a
+            payment provider such as Stripe would handle real transactions.
+          </span>
+        </div>
+      </FadeUpItem>
+    </PageMotion>
   );
 }

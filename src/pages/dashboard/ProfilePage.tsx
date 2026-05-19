@@ -15,6 +15,7 @@ import {
 import { Badge } from "@/components/common/Badge";
 import { Button } from "@/components/common/Button";
 import { Input } from "@/components/common/Input";
+import { FadeUpItem, PageMotion } from "@/components/common/PageMotion";
 import { Textarea } from "@/components/common/Textarea";
 import { useAuthStore } from "@/store/authStore";
 import { useToastStore } from "@/store/toastStore";
@@ -212,19 +213,23 @@ export function ProfilePage() {
   const memberSince = "May 2025";
 
   return (
-    <div className="flex flex-col gap-6">
+    <PageMotion>
       {/* Page header */}
-      <section>
-        <p className="mb-1 text-body-sm font-medium text-muted-foreground">
-          Manage your personal information, account details, and security.
-        </p>
-        <h1 className="text-heading-lg">Profile</h1>
-      </section>
+      <FadeUpItem>
+        <section>
+          <p className="mb-1 text-body-sm font-medium text-muted-foreground">
+            Manage your personal information, account details, and security.
+          </p>
+          <h1 className="text-heading-lg">Profile</h1>
+        </section>
+      </FadeUpItem>
 
       {/* ── Avatar + quick details card ── */}
-      <section className="rounded-xl border border-border bg-card p-6 shadow-sm">
-        <AvatarSection email={info.email} name={info.name} role={info.role} />
-      </section>
+      <FadeUpItem>
+        <section className="rounded-xl border border-border bg-card p-6 shadow-sm">
+          <AvatarSection email={info.email} name={info.name} role={info.role} />
+        </section>
+      </FadeUpItem>
 
       {/* ── Personal information form ── */}
       <ProfileSection title="Personal Information">
@@ -368,6 +373,6 @@ export function ProfilePage() {
           </Button>
         </div>
       </ProfileSection>
-    </div>
+    </PageMotion>
   );
 }

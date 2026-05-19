@@ -1,4 +1,11 @@
-import { FileBarChart, ReceiptText, TrendingUp, UserPlus } from "lucide-react";
+import {
+  FileBarChart,
+  ReceiptText,
+  RefreshCcw,
+  ShieldCheck,
+  TrendingUp,
+  UserPlus,
+} from "lucide-react";
 import {
   Card,
   CardContent,
@@ -12,6 +19,8 @@ import type { ActivityItem } from "@/types";
 const iconMap = {
   FileBarChart,
   ReceiptText,
+  RefreshCcw,
+  ShieldCheck,
   TrendingUp,
   UserPlus,
 };
@@ -39,7 +48,7 @@ export function RecentActivityFeed({
           Recent Activity
         </CardTitle>
         <CardDescription>
-          Important workspace events from the last few days.
+          Key workspace events from the last 48 hours.
         </CardDescription>
       </CardHeader>
       <CardContent>

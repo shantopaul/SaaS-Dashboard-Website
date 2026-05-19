@@ -16,11 +16,13 @@ export function Toggle({
   disabled,
   label,
   onCheckedChange,
+  // aria-label from spread props covers unlabelled usages
   ...props
 }: ToggleProps) {
   return (
     <button
       aria-checked={checked}
+      aria-label={label ?? (props["aria-label"] as string | undefined)}
       className={cn(
         "focus-ring inline-flex items-center gap-3 rounded-md text-left text-body-sm font-medium text-foreground disabled:pointer-events-none disabled:opacity-55",
         className,
@@ -36,6 +38,7 @@ export function Toggle({
           "relative inline-flex h-6 w-11 shrink-0 rounded-full border border-transparent transition-colors",
           checked ? "bg-primary" : "bg-muted",
         )}
+        aria-hidden="true"
       >
         <span
           className={cn(

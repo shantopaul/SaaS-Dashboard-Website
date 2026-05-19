@@ -41,6 +41,7 @@ export function RegisterPage() {
 
   const location = useLocation();
   const registerAction = useAuthStore((state) => state.register);
+  const loginWithGoogle = useAuthStore((state) => state.loginWithGoogle);
   const showToast = useToastStore((state) => state.showToast);
 
   const {
@@ -60,21 +61,47 @@ export function RegisterPage() {
 
   const onSubmit = async (data: RegisterFormData) => {
     setIsSubmitting(true);
-    // Simulate API call for fake auth integration
-    await new Promise((resolve) => setTimeout(resolve, 800));
+    try {
+      await registerAction(data.email, data.fullName, data.password);
+      showToast({
+        description: "Your workspace is ready to explore.",
+        title: "Account created",
+        variant: "success",
+      });
 
-    registerAction(data.email, data.fullName);
-    showToast({
-      description: "Your workspace is ready to explore.",
-      title: "Account created",
-      variant: "success",
-    });
+      // Redirect to requested page or dashboard
+      const from = location.state?.from?.pathname || "/dashboard";
+      navigate(from, { replace: true });
+    } catch (err: unknown) {
+      const error = err as Error;
+      showToast({
+        description: error.message || "Failed to create account.",
+        title: "Sign up error",
+        variant: "danger",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
-    setIsSubmitting(false);
-
-    // Redirect to requested page or dashboard
-    const from = location.state?.from?.pathname || "/dashboard";
-    navigate(from, { replace: true });
+  const handleGoogleSignUp = async () => {
+    try {
+      await loginWithGoogle();
+      showToast({
+        description: "Welcome to FlowPilot workspace.",
+        title: "Signed in successfully",
+        variant: "success",
+      });
+      const from = location.state?.from?.pathname || "/dashboard";
+      navigate(from, { replace: true });
+    } catch (err: unknown) {
+      const error = err as Error;
+      showToast({
+        description: error.message || "Google authentication failed.",
+        title: "Google Auth Error",
+        variant: "danger",
+      });
+    }
   };
 
   return (
@@ -88,7 +115,12 @@ export function RegisterPage() {
         </p>
       </div>
 
-      <form className="flex flex-col gap-5" onSubmit={handleSubmit(onSubmit)}>
+      <form
+        aria-label="Create a new account"
+        className="flex flex-col gap-5"
+        noValidate
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <Input
           error={errors.fullName?.message}
           label="Full name"
@@ -165,7 +197,7 @@ export function RegisterPage() {
         <div>
           <label className="flex items-start gap-2 text-body-sm text-muted-foreground cursor-pointer hover:text-foreground transition-colors mt-1">
             <input
-              className="mt-0.5 size-4 shrink-0 rounded border-input bg-background text-primary focus:ring-primary focus:ring-offset-background"
+              className="focus-ring mt-0.5 size-4 shrink-0 rounded border-input bg-background text-primary"
               type="checkbox"
               {...register("agreeTerms")}
             />
@@ -209,8 +241,19 @@ export function RegisterPage() {
         </div>
       </div>
 
-      <Button className="w-full" type="button" variant="outline">
-        <svg className="mr-2 size-4" viewBox="0 0 24 24">
+      <Button
+        aria-label="Sign up with Google"
+        className="w-full"
+        onClick={handleGoogleSignUp}
+        type="button"
+        variant="outline"
+      >
+        <svg
+          aria-hidden="true"
+          className="mr-2 size-4"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
           <path
             d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
             fill="#4285F4"

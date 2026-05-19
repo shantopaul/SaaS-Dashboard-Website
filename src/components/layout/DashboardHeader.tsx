@@ -28,8 +28,8 @@ export function DashboardHeader() {
   };
 
   return (
-    <header className="flex h-16 shrink-0 items-center justify-between gap-4 border-b border-border bg-card px-4 md:px-6">
-      <div className="flex items-center gap-4">
+    <header className="flex h-16 shrink-0 items-center justify-between gap-2 border-b border-border bg-card px-3 md:px-6">
+      <div className="flex min-w-0 items-center gap-2 md:gap-4">
         <div className="flex items-center gap-2 md:hidden">
           <Button
             aria-label="Open sidebar"
@@ -39,9 +39,8 @@ export function DashboardHeader() {
           >
             <Menu className="size-5" />
           </Button>
-          <span className="text-sm font-semibold sm:hidden">FlowPilot</span>
         </div>
-        <h1 className="hidden text-heading-md font-bold md:block">
+        <h1 className="truncate text-sm font-bold sm:text-base md:text-heading-md">
           {pageTitle}
         </h1>
       </div>
@@ -82,18 +81,20 @@ export function DashboardHeader() {
             </div>
             <div className="my-1 border-t border-border" />
             <Link
-              className="flex w-full cursor-pointer items-center rounded-md px-2 py-1.5 text-sm transition-colors hover:bg-secondary focus:bg-secondary focus:outline-none"
+              className="flex w-full cursor-pointer items-center rounded-md px-2 py-1.5 text-sm transition-colors hover:bg-secondary focus:bg-secondary focus-ring"
+              role="menuitem"
               to="/dashboard/profile"
             >
               Profile Settings
             </Link>
             <div className="my-1 border-t border-border" />
             <button
-              className="flex w-full cursor-pointer items-center rounded-md px-2 py-1.5 text-sm text-destructive transition-colors hover:bg-destructive/10 focus:bg-destructive/10 focus:outline-none"
+              className="flex w-full cursor-pointer items-center rounded-md px-2 py-1.5 text-sm text-destructive transition-colors hover:bg-destructive/10 focus:bg-destructive/10 focus-ring"
               onClick={handleLogout}
+              role="menuitem"
               type="button"
             >
-              Logout
+              Sign out
             </button>
           </Dropdown>
         ) : null}
