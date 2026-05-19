@@ -138,7 +138,7 @@ export function FeaturesPage() {
           </motion.div>
 
           <motion.div
-            animate="visible"
+            animate={{ opacity: 1, y: 0 }}
             className="grid gap-3 sm:grid-cols-2"
             initial={{ opacity: 0, y: 26 }}
             transition={{ delay: 0.12, duration: 0.6, ease: "easeOut" }}

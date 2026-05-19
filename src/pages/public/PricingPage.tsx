@@ -147,7 +147,7 @@ export function PricingPage() {
           </motion.div>
 
           <motion.div
-            animate="visible"
+            animate={{ opacity: 1, y: 0 }}
             className="grid gap-4 sm:grid-cols-3"
             initial={{ opacity: 0, y: 26 }}
             transition={{ delay: 0.12, duration: 0.6, ease: "easeOut" }}
@@ -157,7 +157,10 @@ export function PricingPage() {
               const Icon = icons[index] ?? Sparkles;
 
               return (
-                <Card key={highlight}>
+                <Card
+                  className="transition-all duration-300 hover:scale-[1.02] hover:shadow-card-hover hover:border-primary/20"
+                  key={highlight}
+                >
                   <CardHeader>
                     <div className="flex size-11 items-center justify-center rounded-lg bg-primary/10 text-primary">
                       <Icon aria-hidden="true" className="size-5" />
