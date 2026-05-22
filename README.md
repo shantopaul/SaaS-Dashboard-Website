@@ -8,46 +8,9 @@
 [![Zustand](https://img.shields.io/badge/Zustand-4.5-orange?style=flat-square)](#)
 [![Accessibility (a11y)](https://img.shields.io/badge/Accessibility-WCAG_2.1_AA-success?style=flat-square)](#)
 
-FlowPilot is a premium, high-performance SaaS dashboard designed for modern product and growth teams who need real-time data visibility without the friction. It combines a conversion-optimized marketing landing page, secure simulated authentication flows, and a dense, beautiful, responsive administration panel featuring high-fidelity interactive state management, custom client-facing copy, accessibility (a11y) safeguards, and fluid staggered animations.
+FlowPilot is a state-of-the-art, production-ready SaaS administration dashboard designed for modern product teams and high-growth organizations. It delivers a conversion-optimized marketing landing page, secure simulated authentication flows, and a high-density, beautifully styled analytics control center. Powered by lightweight global state management and custom responsive rendering, FlowPilot enables organizations to manage subscriptions, analyze traffic funnels, view financial ledger records, and coordinate team growth with zero friction.
 
-Designed and engineered with **React**, **TypeScript**, and **Tailwind CSS**, FlowPilot offers a pixel-perfect, premium look in both light and dark modes, backed by professional engineering practices like robust form validation, custom search indexes, global accessibility skip links, and instant UI responsiveness.
-
----
-
-## ⚡ Core Features
-
-### 💻 Marketing & Landing Pages
-
-- **Interactive Hero & Visual Previews**: Modern visual grid systems and real-time dashboard mini-previews to instantly demonstrate the platform value proposition to incoming visitors.
-- **Punchy Copy & Case Studies**: Entirely customized, outcome-oriented content, realistic FAQs, and high-fidelity client testimonials with metric-backed details.
-- **Interactive Pricing Matrix**: Standard vs. Professional vs. Enterprise comparisons with custom benefit listings and flexible action-oriented buttons.
-
-### 🛡️ Secure Auth Flows (Simulated)
-
-- **Register & Login Pages**: Handled by **React Hook Form** + **Zod** schema validations with instant error state announcements.
-- **Password Toggles**: Clean interactive show/hide password buttons to prevent input entry mistakes.
-- **State Persistence**: Uses **Zustand** stores for authenticated sessions, custom avatar generation, and instant, clean dashboard navigation.
-
-### 📊 Real-time Growth Analytics
-
-- **Interactive Metrics Grid**: Live data components displaying Total Revenue, Active Users, New Customers, and Trial-to-Paid conversions, complete with month-over-month trend directions.
-- **Custom Charts (Recharts-based)**:
-  - **Revenue Growth**: Visual forecasting tool that stacks monthly recurring revenue (MRR) alongside projected growth.
-  - **Monthly Sales**: Sleek sales trends comparison grids.
-  - **Traffic Funnel**: Deep funnel conversion analytics (Visitors → Signups → Trials → Paid).
-  - **Device Breakdown & Traffic Sources**: Radial and circular device session distribution tracking.
-
-### 💳 Billing & Account Settings
-
-- **Seat Allocation**: Dynamic team seat progress bars highlighting current consumption vs. contract boundaries (e.g. _14 of 25 seats used_).
-- **Payment Methods**: Add and edit card panels with instant local form validation and responsive credit card logo generation.
-- **Transaction & Invoice History**: Searchable payment entries with status chips (`Paid`, `Pending`, `Failed`) and instant client-facing invoices.
-- **Preferences Dashboard**: Light/Dark theme toggles, two-factor authentication controls, custom notification subscriptions, and team role managers.
-
-### 🔍 Command Search Experience
-
-- **Ctrl + K Command Bar**: A global, accessible search overlay indexing dashboard routes, specific customers, active invoices, payment transactions, and generated analytics reports.
-- **Interactive Navigation**: Instant keyword-based keyup searches directing keyboard users cleanly to target states.
+Engineered using **React 19**, **TypeScript**, and **Tailwind CSS**, the platform incorporates professional software engineering standards, including strict schema-driven form validation, semantic accessibility markers (WCAG 2.1 AA), persistent dark/light theme options, dynamic data visualizations, and robust search indexes.
 
 ---
 
@@ -185,30 +148,52 @@ Designed and engineered with **React**, **TypeScript**, and **Tailwind CSS**, Fl
 
 ---
 
-## ♿ Accessibility (a11y) Focus
+## ⚡ Core Features
 
-FlowPilot is built following professional accessibility guidelines to be fully usable by assistive technology and keyboard users:
+*   **Premium Marketing Landers & Dynamic Funnels**
+    *   **Conversion-Optimized Layouts**: Features modern hero areas, interactive product previews, and dynamic benefit showcases that enhance user conversion rates.
+    *   **Outcome-Driven Copywriting**: Structured copy, client testimonials, and a fully interactive, collapsible FAQ accordion to address user onboarding queries.
+    *   **Tiered Pricing Grid**: A responsive pricing card comparison matrix supporting variable seats and enterprise tier workflows.
+*   **Secure Simulated Access & Session Management**
+    *   **Zod-Validated Forms**: All registration and login forms leverage schema-driven validations with inline feedback and screen-reader status announcements.
+    *   **Context-Aware Auth State**: Uses lightweight client-side persistence for sessions, rendering personalized mock user environments and avatars.
+    *   **Security Conveniences**: Integrated visual password toggles to prevent typing errors and streamline the onboarding flow.
+*   **High-Density Interactive Analytics**
+    *   **MoM Trend Metrics**: Dynamic KPI cards displaying Month-over-Month (MoM) growth calculations for revenue, active users, trial conversions, and customer acquisition.
+    *   **Custom Recharts Implementations**: Fully animated, theme-aware area, bar, radial, and funnel charts representing revenue trajectories, device ratios, traffic funnels, and sales patterns.
+*   **Billing Ledger & Seat Allocator**
+    *   **Contract Limit Monitoring**: Interactive visualization displays seats consumed vs. contract limits to guide upgrade decisions.
+    *   **Interactive Payment Options**: Custom forms to add payment cards with client-side Luhn algorithm checks and responsive brand card identification (Visa, Mastercard, etc.).
+    *   **Ledger & Invoice Exporter**: Searchable history records with dynamic status badges (`Paid`, `Pending`, `Failed`) and printable receipt modal windows.
+*   **Accessible Command Center (Omni-Search)**
+    *   **Command Bar Trigger (`Ctrl + K`)**: Instant keyboard search shortcut rendering an overlay listing dashboard sections, customers, invoices, transactions, and analytics pages.
+    *   **Fuzzy Search Processing**: Dynamic keyup event filtering to direct keyboard users immediately to matching routes or platform records.
 
-- **Skip-to-Content Navigation**: Hidden skip links present on both public and dashboard layouts, immediately appearing on initial `Tab` keypress to target main content areas.
-- **Semantic Structure**: Semantic HTML5 tags (`<header>`, `<nav>`, `<main>`, `<footer/>`) are used strictly with consistent heading levels.
-- **Keyboard Navigation Support**: Escape keys close all modals, dropdowns, and sidebar overlays.
-- **Focus Management**: Modals feature keyboard focus traps that move focus to active control nodes on open and restore focus cleanly to the trigger button on dismiss.
-- **Screen Reader Richness**: Redundant vector graphics have `aria-hidden="true"`, buttons are explicitly named via `aria-label`, active states declare `aria-current="page"`, and custom error notifications utilize `aria-live`.
-- **Motion Safetynet**: Global support for the system-level `prefers-reduced-motion` media query, disabling all heavy translation and transition delays for users with motion sensitivities.
+---
+
+## ♿ Accessibility Focus
+
+FlowPilot is developed in compliance with **WCAG 2.1 AA** standards to ensure inclusivity and compatibility with assistive technologies:
+
+*   **Skip Navigation Controls**: Invisible skip links reside at the top of layouts, revealing on active focus (`Tab` keypress) to bypass repetitive navigation structures.
+*   **WAI-ARIA Landmark Integration**: Semantic elements (`<header>`, `<nav>`, `<main>`, `<footer/>`) are declared with proper headers to establish screen-reader hierarchy.
+*   **Interactive Keyboard Focus Traps**: Accessible modal windows trap focus when active, preventing keyboard users from interacting with covered layout segments, and cleanly restore focus to trigger components on dismissal.
+*   **Rich Screen-Reader Declarations**: Decorative vectors contain `aria-hidden="true"`, interactive controls are explicitly labeled via `aria-label`, active navigation links utilize `aria-current="page"`, and notifications report state changes dynamically using `aria-live`.
+*   **Reduced Motion Adaptation**: Support for the system-level `prefers-reduced-motion` media query automatically turns off translations, animations, and transitions for users with sensory sensitivities.
 
 ---
 
 ## 🛠️ Technical Stack
 
-- **Build Tooling & Bundler**: [Vite 6](https://vite.dev/)
-- **Frontend Library**: [React 19](https://react.dev/)
-- **Type System**: [TypeScript 5](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS 3](https://tailwindcss.com/)
-- **Animations**: [Framer Motion 11](https://www.framer.com/motion/)
-- **State Management**: [Zustand 4](https://github.com/pmndrs/zustand)
-- **Form Handling**: [React Hook Form](https://react-hook-form.com/) & [Zod Validation](https://zod.dev/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Routing**: [React Router DOM 6](https://reactrouter.com/)
+FlowPilot is built using a modern, scalable, and lightweight frontend stack:
+
+*   **Bundler & Builder**: [Vite 6](https://vite.dev/) for extremely fast Hot Module Replacement (HMR) and optimized Rollup production builds.
+*   **Frontend Engine**: [React 19](https://react.dev/) utilizing functional component trees, hooks, and clean layout abstraction boundaries.
+*   **Type Safety**: [TypeScript 5](https://www.typescriptlang.org/) for complete compile-time validation, static type contracts, and strict interface checking.
+*   **Utility Styling**: [Tailwind CSS 3](https://tailwindcss.com/) using utility classes, dark-mode selectors, and responsive grids.
+*   **Visual Transitions**: [Framer Motion 11](https://www.framer.com/motion/) for fluid entrance, exit, layout, and staggered list orchestrations.
+*   **State Management**: [Zustand 4](https://github.com/pmndrs/zustand) to provide reactive global store contexts with persistent storage synchronization.
+*   **Schema & Validation**: [React Hook Form](https://react-hook-form.com/) paired with [Zod](https://zod.dev/) for low-rerender schema-based validation.
 
 ---
 
@@ -398,15 +383,17 @@ npm run lint
 
 ---
 
-## 💡 Future Enhancements Roadmap
+## 🗺️ Future Enhancements Roadmap
 
-- **Bundle Code-Splitting**: Code-split larger vendor modules (e.g., Recharts) using dynamic imports and Rollup output chunking parameters to eliminate bundle size warning alerts.
-- **Persistent Backend Integration**: Swap mock stores with real REST or GraphQL APIs (e.g., Node.js/Express, Supabase, or Firebase) to handle persistent database structures.
-- **OAuth Providers**: Integrate real-world social authentication (Google OAuth, GitHub Auth) through secure JWT auth servers.
-- **PDF Invoice Exporters**: Add automated PDF rendering libraries to export dynamic user invoices directly from the Billing history grid.
+The following architectural milestones are planned for future development cycles:
+
+*   **Dynamic Bundle Partitioning**: Implement lazy-loaded code-splitting for vendor modules (like Recharts) using React suspense boundaries to optimize bundle size profiles.
+*   **Production Backend Integration**: Replace simulation layers with production-ready REST or GraphQL endpoints (e.g. Node.js/Express, Supabase, or Firebase) to handle server-side state.
+*   **Social Sign-On Providers**: Expand the authentication workflow by integrating OAuth 2.0 (Google, GitHub) for fast, secure logins.
+*   **PDF Report Exporter**: Add client-side PDF document generation to allow direct downloads of invoices and billing transaction reports.
 
 ---
 
 ## 📄 License
 
-This project is open-source and available under the [MIT License](LICENSE).
+FlowPilot is open-source software licensed under the [MIT License](LICENSE).
