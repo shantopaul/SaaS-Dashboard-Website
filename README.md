@@ -53,71 +53,123 @@ Designed and engineered with **React**, **TypeScript**, and **Tailwind CSS**, Fl
 
 ## 📸 Screenshots Gallery
 
-### 🌐 Public Pages
+### 🖥️ Desktop Version
 
-#### Public Home Page (Light Mode)
-![Home Page Light](screenshots/IandingPage/landing_light.jpg)
+#### 🌐 Public Pages
 
-#### Public Home Page (Dark Mode)
-![Home Page Dark](screenshots/IandingPage/landing_dark.jpg)
+##### Public Home Page (Light Mode)
+![Home Page Light](screenshots/Desktop/IandingPage/landing_light.jpg)
 
-#### Public Features Page (Light Mode)
-![Features Page Light](screenshots/FeaturesPage/features_light.jpg)
+##### Public Home Page (Dark Mode)
+![Home Page Dark](screenshots/Desktop/IandingPage/landing_dark.jpg)
 
-#### Public Features Page (Dark Mode)
-![Features Page Dark](screenshots/FeaturesPage/features_dark.jpg)
+##### Public Features Page (Light Mode)
+![Features Page Light](screenshots/Desktop/FeaturesPage/features_light.jpg)
 
-#### Public Pricing Page (Light Mode)
-![Pricing Page Light](screenshots/PricingPage/pricing_light.jpg)
+##### Public Features Page (Dark Mode)
+![Features Page Dark](screenshots/Desktop/FeaturesPage/features_dark.jpg)
 
-#### Public Pricing Page (Dark Mode)
-![Pricing Page Dark](screenshots/PricingPage/pricing_dark.jpg)
+##### Public Pricing Page (Light Mode)
+![Pricing Page Light](screenshots/Desktop/PricingPage/pricing_light.jpg)
 
-### 🔐 Authentication Pages
+##### Public Pricing Page (Dark Mode)
+![Pricing Page Dark](screenshots/Desktop/PricingPage/pricing_dark.jpg)
 
-#### Login Page (Light Mode)
-![Login Page Light](screenshots/LoginPage/login_light.jpg)
+#### 🔐 Authentication Pages
 
-#### Login Page (Dark Mode)
-![Login Page Dark](screenshots/LoginPage/login_dark.jpg)
+##### Login Page (Light Mode)
+![Login Page Light](screenshots/Desktop/LoginPage/login_light.jpg)
 
-#### Register Page (Light Mode)
-![Register Page Light](screenshots/RegisterPage/register_light.jpg)
+##### Login Page (Dark Mode)
+![Login Page Dark](screenshots/Desktop/LoginPage/login_dark.jpg)
 
-#### Register Page (Dark Mode)
-![Register Page Dark](screenshots/RegisterPage/register_dark.jpg)
+##### Register Page (Light Mode)
+![Register Page Light](screenshots/Desktop/RegisterPage/register_light.jpg)
 
-### 📊 Dashboard & Settings
+##### Register Page (Dark Mode)
+![Register Page Dark](screenshots/Desktop/RegisterPage/register_dark.jpg)
 
-#### Dashboard Overview (Light Mode)
-![Dashboard Overview Light](screenshots/DashboardPage/dashboard_light.jpg)
+#### 📊 Dashboard & Settings
 
-#### Dashboard Overview (Dark Mode)
-![Dashboard Overview Dark](screenshots/DashboardPage/dashboard_dark.jpg)
+##### Dashboard Overview (Light Mode)
+![Dashboard Overview Light](screenshots/Desktop/DashboardPage/dashboard_light.jpg)
 
-#### Analytics Insights (Light Mode)
-![Analytics Insights Light](screenshots/AnalyticsPage/analytics_light.jpg)
+##### Dashboard Overview (Dark Mode)
+![Dashboard Overview Dark](screenshots/Desktop/DashboardPage/dashboard_dark.jpg)
 
-#### Analytics Insights (Dark Mode)
-![Analytics Insights Dark](screenshots/AnalyticsPage/analytics_dark.jpg)
+##### Analytics Insights (Light Mode)
+![Analytics Insights Light](screenshots/Desktop/AnalyticsPage/analytics_light.jpg)
 
-#### Billing & Subscription (Light Mode)
-![Billing Subscription Light](screenshots/BillingPage/billing_light.jpg)
+##### Analytics Insights (Dark Mode)
+![Analytics Insights Dark](screenshots/Desktop/AnalyticsPage/analytics_dark.jpg)
 
-#### Billing & Subscription (Dark Mode)
-![Billing Subscription Dark](screenshots/BillingPage/billing_dark.jpg)
+##### Billing & Subscription (Light Mode)
+![Billing Subscription Light](screenshots/Desktop/BillingPage/billing_light.jpg)
 
-#### Account Settings (Light Mode)
-![Account Settings Light](screenshots/SettingsPage/settings_light.jpg)
+##### Billing & Subscription (Dark Mode)
+![Billing Subscription Dark](screenshots/Desktop/BillingPage/billing_dark.jpg)
 
-#### Account Settings (Dark Mode)
-![Account Settings Dark](screenshots/SettingsPage/settings_dark.jpg)
+##### Account Settings (Light Mode)
+![Account Settings Light](screenshots/Desktop/SettingsPage/settings_light.jpg)
 
-#### User Profile (Light Mode)
-![User Profile Light](screenshots/ProfilePage/profile_light.jpg)
+##### Account Settings (Dark Mode)
+![Account Settings Dark](screenshots/Desktop/SettingsPage/settings_dark.jpg)
 
-#### User Profile (Dark Mode)
-![User Profile Dark](screenshots/ProfilePage/profile_dark.jpg)
+##### User Profile (Light Mode)
+![User Profile Light](screenshots/Desktop/ProfilePage/profile_light.jpg)
+
+##### User Profile (Dark Mode)
+![User Profile Dark](screenshots/Desktop/ProfilePage/profile_dark.jpg)
+
+---
+
+### 📱 Mobile Version
+
+#### 🌐 Public Pages
+
+| Public Home Page (Light Mode) | Public Home Page (Dark Mode) |
+| --- | --- |
+| ![Home Page Light](screenshots/Mobile/IandingPage/landing_light.jpg) | ![Home Page Dark](screenshots/Mobile/IandingPage/landing_dark.jpg) |
+
+| Public Features Page (Light Mode) | Public Features Page (Dark Mode) |
+| --- | --- |
+| ![Features Page Light](screenshots/Mobile/FeaturesPage/features_light.jpg) | ![Features Page Dark](screenshots/Mobile/FeaturesPage/features_dark.jpg) |
+
+| Public Pricing Page (Light Mode) | Public Pricing Page (Dark Mode) |
+| --- | --- |
+| ![Pricing Page Light](screenshots/Mobile/PricingPage/pricing_light.jpg) | ![Pricing Page Dark](screenshots/Mobile/PricingPage/pricing_dark.jpg) |
+
+#### 🔐 Authentication Pages
+
+| Login Page (Light Mode) | Login Page (Dark Mode) |
+| --- | --- |
+| ![Login Page Light](screenshots/Mobile/LoginPage/login_light.jpg) | ![Login Page Dark](screenshots/Mobile/LoginPage/login_dark.jpg) |
+
+| Register Page (Light Mode) | Register Page (Dark Mode) |
+| --- | --- |
+| ![Register Page Light](screenshots/Mobile/RegisterPage/register_light.jpg) | ![Register Page Dark](screenshots/Mobile/RegisterPage/register_dark.jpg) |
+
+#### 📊 Dashboard & Settings
+
+| Dashboard Overview (Light Mode) | Dashboard Overview (Dark Mode) |
+| --- | --- |
+| ![Dashboard Overview Light](screenshots/Mobile/DashboardPage/dashboard_light.jpg) | ![Dashboard Overview Dark](screenshots/Mobile/DashboardPage/dashboard_dark.jpg) |
+
+| Analytics Insights (Light Mode) | Analytics Insights (Dark Mode) |
+| --- | --- |
+| ![Analytics Insights Light](screenshots/Mobile/AnalyticsPage/analytics_light.jpg) | ![Analytics Insights Dark](screenshots/Mobile/AnalyticsPage/analytics_dark.jpg) |
+
+| Billing & Subscription (Light Mode) | Billing & Subscription (Dark Mode) |
+| --- | --- |
+| ![Billing Subscription Light](screenshots/Mobile/BillingPage/billing_light.jpg) | ![Billing Subscription Dark](screenshots/Mobile/BillingPage/billing_dark.jpg) |
+
+| Account Settings (Light Mode) | Account Settings (Dark Mode) |
+| --- | --- |
+| ![Account Settings Light](screenshots/Mobile/SettingsPage/settings_light.jpg) | ![Account Settings Dark](screenshots/Mobile/SettingsPage/settings_dark.jpg) |
+
+| User Profile (Light Mode) | User Profile (Dark Mode) |
+| --- | --- |
+| ![User Profile Light](screenshots/Mobile/ProfilePage/profile_light.jpg) | ![User Profile Dark](screenshots/Mobile/ProfilePage/profile_dark.jpg) |
 
 ---
 
