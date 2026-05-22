@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   Bar,
   BarChart,
@@ -23,6 +24,19 @@ interface MonthlySalesBarChartProps {
 export function MonthlySalesBarChart({
   data = monthlySalesData,
 }: MonthlySalesBarChartProps) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const handle = requestAnimationFrame(() => {
+      setMounted(true);
+    });
+    return () => cancelAnimationFrame(handle);
+  }, []);
+
+  if (!mounted) {
+    return <div className="w-full h-full bg-transparent" />;
+  }
+
   return (
     <ResponsiveContainer width="100%" height="100%">
       <BarChart data={data} margin={chartMargins}>

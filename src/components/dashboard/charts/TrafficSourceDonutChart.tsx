@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   Cell,
   Legend,
@@ -17,6 +18,19 @@ interface TrafficSourceDonutChartProps {
 export function TrafficSourceDonutChart({
   data = trafficSourceData,
 }: TrafficSourceDonutChartProps) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const handle = requestAnimationFrame(() => {
+      setMounted(true);
+    });
+    return () => cancelAnimationFrame(handle);
+  }, []);
+
+  if (!mounted) {
+    return <div className="w-full h-full bg-transparent" />;
+  }
+
   return (
     <ResponsiveContainer width="100%" height="100%">
       <PieChart>
