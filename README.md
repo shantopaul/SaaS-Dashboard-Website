@@ -19,39 +19,51 @@ Engineered using **React 19**, **TypeScript**, and **Tailwind CSS**, the platfor
 ### 🌐 Public Pages
 
 #### 🏠 Home Page
+
 ##### Desktop Version (Light Mode)
+
 ![Home Page Desktop Light](screenshots/Desktop/IandingPage/landing_light.jpg)
 
 ##### Desktop Version (Dark Mode)
+
 ![Home Page Desktop Dark](screenshots/Desktop/IandingPage/landing_dark.jpg)
 
 ##### Mobile Version
-| Mobile Light Mode | Mobile Dark Mode |
-| --- | --- |
+
+| Mobile Light Mode                                                           | Mobile Dark Mode                                                          |
+| --------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
 | ![Home Page Mobile Light](screenshots/Mobile/IandingPage/landing_light.jpg) | ![Home Page Mobile Dark](screenshots/Mobile/IandingPage/landing_dark.jpg) |
 
 #### 📋 Features Page
+
 ##### Desktop Version (Light Mode)
+
 ![Features Page Desktop Light](screenshots/Desktop/FeaturesPage/features_light.jpg)
 
 ##### Desktop Version (Dark Mode)
+
 ![Features Page Desktop Dark](screenshots/Desktop/FeaturesPage/features_dark.jpg)
 
 ##### Mobile Version
-| Mobile Light Mode | Mobile Dark Mode |
-| --- | --- |
+
+| Mobile Light Mode                                                                 | Mobile Dark Mode                                                                |
+| --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | ![Features Page Mobile Light](screenshots/Mobile/FeaturesPage/features_light.jpg) | ![Features Page Mobile Dark](screenshots/Mobile/FeaturesPage/features_dark.jpg) |
 
 #### 💳 Pricing Page
+
 ##### Desktop Version (Light Mode)
+
 ![Pricing Page Desktop Light](screenshots/Desktop/PricingPage/pricing_light.jpg)
 
 ##### Desktop Version (Dark Mode)
+
 ![Pricing Page Desktop Dark](screenshots/Desktop/PricingPage/pricing_dark.jpg)
 
 ##### Mobile Version
-| Mobile Light Mode | Mobile Dark Mode |
-| --- | --- |
+
+| Mobile Light Mode                                                              | Mobile Dark Mode                                                             |
+| ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
 | ![Pricing Page Mobile Light](screenshots/Mobile/PricingPage/pricing_light.jpg) | ![Pricing Page Mobile Dark](screenshots/Mobile/PricingPage/pricing_dark.jpg) |
 
 ---
@@ -59,27 +71,35 @@ Engineered using **React 19**, **TypeScript**, and **Tailwind CSS**, the platfor
 ### 🔐 Authentication Pages
 
 #### 🔑 Login Page
+
 ##### Desktop Version (Light Mode)
+
 ![Login Page Desktop Light](screenshots/Desktop/LoginPage/login_light.jpg)
 
 ##### Desktop Version (Dark Mode)
+
 ![Login Page Desktop Dark](screenshots/Desktop/LoginPage/login_dark.jpg)
 
 ##### Mobile Version
-| Mobile Light Mode | Mobile Dark Mode |
-| --- | --- |
+
+| Mobile Light Mode                                                        | Mobile Dark Mode                                                       |
+| ------------------------------------------------------------------------ | ---------------------------------------------------------------------- |
 | ![Login Page Mobile Light](screenshots/Mobile/LoginPage/login_light.jpg) | ![Login Page Mobile Dark](screenshots/Mobile/LoginPage/login_dark.jpg) |
 
 #### 📝 Register Page
+
 ##### Desktop Version (Light Mode)
+
 ![Register Page Desktop Light](screenshots/Desktop/RegisterPage/register_light.jpg)
 
 ##### Desktop Version (Dark Mode)
+
 ![Register Page Desktop Dark](screenshots/Desktop/RegisterPage/register_dark.jpg)
 
 ##### Mobile Version
-| Mobile Light Mode | Mobile Dark Mode |
-| --- | --- |
+
+| Mobile Light Mode                                                                 | Mobile Dark Mode                                                                |
+| --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | ![Register Page Mobile Light](screenshots/Mobile/RegisterPage/register_light.jpg) | ![Register Page Mobile Dark](screenshots/Mobile/RegisterPage/register_dark.jpg) |
 
 ---
@@ -87,87 +107,107 @@ Engineered using **React 19**, **TypeScript**, and **Tailwind CSS**, the platfor
 ### 📊 Dashboard & Settings
 
 #### 📈 Dashboard Overview
+
 ##### Desktop Version (Light Mode)
+
 ![Dashboard Overview Desktop Light](screenshots/Desktop/DashboardPage/dashboard_light.jpg)
 
 ##### Desktop Version (Dark Mode)
+
 ![Dashboard Overview Desktop Dark](screenshots/Desktop/DashboardPage/dashboard_dark.jpg)
 
 ##### Mobile Version
-| Mobile Light Mode | Mobile Dark Mode |
-| --- | --- |
+
+| Mobile Light Mode                                                                        | Mobile Dark Mode                                                                       |
+| ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | ![Dashboard Overview Mobile Light](screenshots/Mobile/DashboardPage/dashboard_light.jpg) | ![Dashboard Overview Mobile Dark](screenshots/Mobile/DashboardPage/dashboard_dark.jpg) |
 
 #### 📊 Analytics Insights
+
 ##### Desktop Version (Light Mode)
+
 ![Analytics Insights Desktop Light](screenshots/Desktop/AnalyticsPage/analytics_light.jpg)
 
 ##### Desktop Version (Dark Mode)
+
 ![Analytics Insights Desktop Dark](screenshots/Desktop/AnalyticsPage/analytics_dark.jpg)
 
 ##### Mobile Version
-| Mobile Light Mode | Mobile Dark Mode |
-| --- | --- |
+
+| Mobile Light Mode                                                                        | Mobile Dark Mode                                                                       |
+| ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | ![Analytics Insights Mobile Light](screenshots/Mobile/AnalyticsPage/analytics_light.jpg) | ![Analytics Insights Mobile Dark](screenshots/Mobile/AnalyticsPage/analytics_dark.jpg) |
 
 #### 💳 Billing & Subscription
+
 ##### Desktop Version (Light Mode)
+
 ![Billing Subscription Desktop Light](screenshots/Desktop/BillingPage/billing_light.jpg)
 
 ##### Desktop Version (Dark Mode)
+
 ![Billing Subscription Desktop Dark](screenshots/Desktop/BillingPage/billing_dark.jpg)
 
 ##### Mobile Version
-| Mobile Light Mode | Mobile Dark Mode |
-| --- | --- |
+
+| Mobile Light Mode                                                                      | Mobile Dark Mode                                                                     |
+| -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | ![Billing Subscription Mobile Light](screenshots/Mobile/BillingPage/billing_light.jpg) | ![Billing Subscription Mobile Dark](screenshots/Mobile/BillingPage/billing_dark.jpg) |
 
 #### ⚙️ Account Settings
+
 ##### Desktop Version (Light Mode)
+
 ![Account Settings Desktop Light](screenshots/Desktop/SettingsPage/settings_light.jpg)
 
 ##### Desktop Version (Dark Mode)
+
 ![Account Settings Desktop Dark](screenshots/Desktop/SettingsPage/settings_dark.jpg)
 
 ##### Mobile Version
-| Mobile Light Mode | Mobile Dark Mode |
-| --- | --- |
+
+| Mobile Light Mode                                                                    | Mobile Dark Mode                                                                   |
+| ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
 | ![Account Settings Mobile Light](screenshots/Mobile/SettingsPage/settings_light.jpg) | ![Account Settings Mobile Dark](screenshots/Mobile/SettingsPage/settings_dark.jpg) |
 
 #### 👤 User Profile
+
 ##### Desktop Version (Light Mode)
+
 ![User Profile Desktop Light](screenshots/Desktop/ProfilePage/profile_light.jpg)
 
 ##### Desktop Version (Dark Mode)
+
 ![User Profile Desktop Dark](screenshots/Desktop/ProfilePage/profile_dark.jpg)
 
 ##### Mobile Version
-| Mobile Light Mode | Mobile Dark Mode |
-| --- | --- |
+
+| Mobile Light Mode                                                              | Mobile Dark Mode                                                             |
+| ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
 | ![User Profile Mobile Light](screenshots/Mobile/ProfilePage/profile_light.jpg) | ![User Profile Mobile Dark](screenshots/Mobile/ProfilePage/profile_dark.jpg) |
 
 ---
 
 ## ⚡ Core Features
 
-*   **Premium Marketing Landers & Dynamic Funnels**
-    *   **Conversion-Optimized Layouts**: Features modern hero areas, interactive product previews, and dynamic benefit showcases that enhance user conversion rates.
-    *   **Outcome-Driven Copywriting**: Structured copy, client testimonials, and a fully interactive, collapsible FAQ accordion to address user onboarding queries.
-    *   **Tiered Pricing Grid**: A responsive pricing card comparison matrix supporting variable seats and enterprise tier workflows.
-*   **Secure Simulated Access & Session Management**
-    *   **Zod-Validated Forms**: All registration and login forms leverage schema-driven validations with inline feedback and screen-reader status announcements.
-    *   **Context-Aware Auth State**: Uses lightweight client-side persistence for sessions, rendering personalized mock user environments and avatars.
-    *   **Security Conveniences**: Integrated visual password toggles to prevent typing errors and streamline the onboarding flow.
-*   **High-Density Interactive Analytics**
-    *   **MoM Trend Metrics**: Dynamic KPI cards displaying Month-over-Month (MoM) growth calculations for revenue, active users, trial conversions, and customer acquisition.
-    *   **Custom Recharts Implementations**: Fully animated, theme-aware area, bar, radial, and funnel charts representing revenue trajectories, device ratios, traffic funnels, and sales patterns.
-*   **Billing Ledger & Seat Allocator**
-    *   **Contract Limit Monitoring**: Interactive visualization displays seats consumed vs. contract limits to guide upgrade decisions.
-    *   **Interactive Payment Options**: Custom forms to add payment cards with client-side Luhn algorithm checks and responsive brand card identification (Visa, Mastercard, etc.).
-    *   **Ledger & Invoice Exporter**: Searchable history records with dynamic status badges (`Paid`, `Pending`, `Failed`) and printable receipt modal windows.
-*   **Accessible Command Center (Omni-Search)**
-    *   **Command Bar Trigger (`Ctrl + K`)**: Instant keyboard search shortcut rendering an overlay listing dashboard sections, customers, invoices, transactions, and analytics pages.
-    *   **Fuzzy Search Processing**: Dynamic keyup event filtering to direct keyboard users immediately to matching routes or platform records.
+- **Premium Marketing Landers & Dynamic Funnels**
+  - **Conversion-Optimized Layouts**: Features modern hero areas, interactive product previews, and dynamic benefit showcases that enhance user conversion rates.
+  - **Outcome-Driven Copywriting**: Structured copy, client testimonials, and a fully interactive, collapsible FAQ accordion to address user onboarding queries.
+  - **Tiered Pricing Grid**: A responsive pricing card comparison matrix supporting variable seats and enterprise tier workflows.
+- **Secure Simulated Access & Session Management**
+  - **Zod-Validated Forms**: All registration and login forms leverage schema-driven validations with inline feedback and screen-reader status announcements.
+  - **Context-Aware Auth State**: Uses lightweight client-side persistence for sessions, rendering personalized mock user environments and avatars.
+  - **Security Conveniences**: Integrated visual password toggles to prevent typing errors and streamline the onboarding flow.
+- **High-Density Interactive Analytics**
+  - **MoM Trend Metrics**: Dynamic KPI cards displaying Month-over-Month (MoM) growth calculations for revenue, active users, trial conversions, and customer acquisition.
+  - **Custom Recharts Implementations**: Fully animated, theme-aware area, bar, radial, and funnel charts representing revenue trajectories, device ratios, traffic funnels, and sales patterns.
+- **Billing Ledger & Seat Allocator**
+  - **Contract Limit Monitoring**: Interactive visualization displays seats consumed vs. contract limits to guide upgrade decisions.
+  - **Interactive Payment Options**: Custom forms to add payment cards with client-side Luhn algorithm checks and responsive brand card identification (Visa, Mastercard, etc.).
+  - **Ledger & Invoice Exporter**: Searchable history records with dynamic status badges (`Paid`, `Pending`, `Failed`) and printable receipt modal windows.
+- **Accessible Command Center (Omni-Search)**
+  - **Command Bar Trigger (`Ctrl + K`)**: Instant keyboard search shortcut rendering an overlay listing dashboard sections, customers, invoices, transactions, and analytics pages.
+  - **Fuzzy Search Processing**: Dynamic keyup event filtering to direct keyboard users immediately to matching routes or platform records.
 
 ---
 
@@ -175,11 +215,11 @@ Engineered using **React 19**, **TypeScript**, and **Tailwind CSS**, the platfor
 
 FlowPilot is developed in compliance with **WCAG 2.1 AA** standards to ensure inclusivity and compatibility with assistive technologies:
 
-*   **Skip Navigation Controls**: Invisible skip links reside at the top of layouts, revealing on active focus (`Tab` keypress) to bypass repetitive navigation structures.
-*   **WAI-ARIA Landmark Integration**: Semantic elements (`<header>`, `<nav>`, `<main>`, `<footer/>`) are declared with proper headers to establish screen-reader hierarchy.
-*   **Interactive Keyboard Focus Traps**: Accessible modal windows trap focus when active, preventing keyboard users from interacting with covered layout segments, and cleanly restore focus to trigger components on dismissal.
-*   **Rich Screen-Reader Declarations**: Decorative vectors contain `aria-hidden="true"`, interactive controls are explicitly labeled via `aria-label`, active navigation links utilize `aria-current="page"`, and notifications report state changes dynamically using `aria-live`.
-*   **Reduced Motion Adaptation**: Support for the system-level `prefers-reduced-motion` media query automatically turns off translations, animations, and transitions for users with sensory sensitivities.
+- **Skip Navigation Controls**: Invisible skip links reside at the top of layouts, revealing on active focus (`Tab` keypress) to bypass repetitive navigation structures.
+- **WAI-ARIA Landmark Integration**: Semantic elements (`<header>`, `<nav>`, `<main>`, `<footer/>`) are declared with proper headers to establish screen-reader hierarchy.
+- **Interactive Keyboard Focus Traps**: Accessible modal windows trap focus when active, preventing keyboard users from interacting with covered layout segments, and cleanly restore focus to trigger components on dismissal.
+- **Rich Screen-Reader Declarations**: Decorative vectors contain `aria-hidden="true"`, interactive controls are explicitly labeled via `aria-label`, active navigation links utilize `aria-current="page"`, and notifications report state changes dynamically using `aria-live`.
+- **Reduced Motion Adaptation**: Support for the system-level `prefers-reduced-motion` media query automatically turns off translations, animations, and transitions for users with sensory sensitivities.
 
 ---
 
@@ -187,13 +227,13 @@ FlowPilot is developed in compliance with **WCAG 2.1 AA** standards to ensure in
 
 FlowPilot is built using a modern, scalable, and lightweight frontend stack:
 
-*   **Bundler & Builder**: [Vite 6](https://vite.dev/) for extremely fast Hot Module Replacement (HMR) and optimized Rollup production builds.
-*   **Frontend Engine**: [React 19](https://react.dev/) utilizing functional component trees, hooks, and clean layout abstraction boundaries.
-*   **Type Safety**: [TypeScript 5](https://www.typescriptlang.org/) for complete compile-time validation, static type contracts, and strict interface checking.
-*   **Utility Styling**: [Tailwind CSS 3](https://tailwindcss.com/) using utility classes, dark-mode selectors, and responsive grids.
-*   **Visual Transitions**: [Framer Motion 11](https://www.framer.com/motion/) for fluid entrance, exit, layout, and staggered list orchestrations.
-*   **State Management**: [Zustand 4](https://github.com/pmndrs/zustand) to provide reactive global store contexts with persistent storage synchronization.
-*   **Schema & Validation**: [React Hook Form](https://react-hook-form.com/) paired with [Zod](https://zod.dev/) for low-rerender schema-based validation.
+- **Bundler & Builder**: [Vite 6](https://vite.dev/) for extremely fast Hot Module Replacement (HMR) and optimized Rollup production builds.
+- **Frontend Engine**: [React 19](https://react.dev/) utilizing functional component trees, hooks, and clean layout abstraction boundaries.
+- **Type Safety**: [TypeScript 5](https://www.typescriptlang.org/) for complete compile-time validation, static type contracts, and strict interface checking.
+- **Utility Styling**: [Tailwind CSS 3](https://tailwindcss.com/) using utility classes, dark-mode selectors, and responsive grids.
+- **Visual Transitions**: [Framer Motion 11](https://www.framer.com/motion/) for fluid entrance, exit, layout, and staggered list orchestrations.
+- **State Management**: [Zustand 4](https://github.com/pmndrs/zustand) to provide reactive global store contexts with persistent storage synchronization.
+- **Schema & Validation**: [React Hook Form](https://react-hook-form.com/) paired with [Zod](https://zod.dev/) for low-rerender schema-based validation.
 
 ---
 
@@ -327,11 +367,11 @@ SaaS-Dashboard-Website/
    npm install
    ```
 3. Configure environment variables:
-   * Create a local environment variables file by copying the template:
+   - Create a local environment variables file by copying the template:
      ```bash
      cp .env.example .env.local
      ```
-   * Open the `.env.local` file and populate it with your specific Firebase configurations.
+   - Open the `.env.local` file and populate it with your specific Firebase configurations.
 
 ### Running Locally
 
@@ -392,10 +432,10 @@ npm run lint
 
 The following architectural milestones are planned for future development cycles:
 
-*   **Dynamic Bundle Partitioning**: Implement lazy-loaded code-splitting for vendor modules (like Recharts) using React suspense boundaries to optimize bundle size profiles.
-*   **Production Backend Integration**: Replace simulation layers with production-ready REST or GraphQL endpoints (e.g. Node.js/Express, Supabase, or Firebase) to handle server-side state.
-*   **Social Sign-On Providers**: Expand the authentication workflow by integrating OAuth 2.0 (Google, GitHub) for fast, secure logins.
-*   **PDF Report Exporter**: Add client-side PDF document generation to allow direct downloads of invoices and billing transaction reports.
+- **Dynamic Bundle Partitioning**: Implement lazy-loaded code-splitting for vendor modules (like Recharts) using React suspense boundaries to optimize bundle size profiles.
+- **Production Backend Integration**: Replace simulation layers with production-ready REST or GraphQL endpoints (e.g. Node.js/Express, Supabase, or Firebase) to handle server-side state.
+- **Social Sign-On Providers**: Expand the authentication workflow by integrating OAuth 2.0 (Google, GitHub) for fast, secure logins.
+- **PDF Report Exporter**: Add client-side PDF document generation to allow direct downloads of invoices and billing transaction reports.
 
 ---
 
