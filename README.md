@@ -326,6 +326,12 @@ SaaS-Dashboard-Website/
    ```bash
    npm install
    ```
+3. Configure environment variables:
+   * Create a local environment variables file by copying the template:
+     ```bash
+     cp .env.example .env.local
+     ```
+   * Open the `.env.local` file and populate it with your specific Firebase configurations.
 
 ### Running Locally
 
