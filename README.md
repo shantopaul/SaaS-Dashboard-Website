@@ -89,13 +89,35 @@ Designed and engineered with **React**, **TypeScript**, and **Tailwind CSS**, Fl
 
 ### 📊 Dashboard & Settings
 
-| Responsive Analytics Dashboard | Billing & Team Seats Manager |
-| --- | --- |
-| ![Dashboard Overview Placeholder](https://placehold.co/600x400/1e293b/ffffff?text=FlowPilot+Analytics+Dashboard) | ![Billing Page Placeholder](https://placehold.co/600x400/1e293b/ffffff?text=FlowPilot+Billing+Management) |
+#### Dashboard Overview (Light Mode)
+![Dashboard Overview Light](screenshots/DashboardPage/dashboard_light.jpg)
 
-| Account Settings & Theme Toggle | |
-| --- | --- |
-| ![Settings Page Placeholder](https://placehold.co/600x400/1e293b/ffffff?text=FlowPilot+Account+Settings) | |
+#### Dashboard Overview (Dark Mode)
+![Dashboard Overview Dark](screenshots/DashboardPage/dashboard_dark.jpg)
+
+#### Analytics Insights (Light Mode)
+![Analytics Insights Light](screenshots/AnalyticsPage/analytics_light.jpg)
+
+#### Analytics Insights (Dark Mode)
+![Analytics Insights Dark](screenshots/AnalyticsPage/analytics_dark.jpg)
+
+#### Billing & Subscription (Light Mode)
+![Billing Subscription Light](screenshots/BillingPage/billing_light.jpg)
+
+#### Billing & Subscription (Dark Mode)
+![Billing Subscription Dark](screenshots/BillingPage/billing_dark.jpg)
+
+#### Account Settings (Light Mode)
+![Account Settings Light](screenshots/SettingsPage/settings_light.jpg)
+
+#### Account Settings (Dark Mode)
+![Account Settings Dark](screenshots/SettingsPage/settings_dark.jpg)
+
+#### User Profile (Light Mode)
+![User Profile Light](screenshots/ProfilePage/profile_light.jpg)
+
+#### User Profile (Dark Mode)
+![User Profile Dark](screenshots/ProfilePage/profile_dark.jpg)
 
 ---
 
