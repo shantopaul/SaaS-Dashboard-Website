@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   CartesianGrid,
   Legend,
@@ -24,6 +25,19 @@ interface RevenueLineChartProps {
 export function RevenueLineChart({
   data = revenueData,
 }: RevenueLineChartProps) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const handle = requestAnimationFrame(() => {
+      setMounted(true);
+    });
+    return () => cancelAnimationFrame(handle);
+  }, []);
+
+  if (!mounted) {
+    return <div className="w-full h-full bg-transparent" />;
+  }
+
   return (
     <ResponsiveContainer width="100%" height="100%">
       <LineChart data={data} margin={chartMargins}>
