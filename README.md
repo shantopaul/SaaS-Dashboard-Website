@@ -8,12 +8,12 @@
 [![Zustand](https://img.shields.io/badge/Zustand-4.5-orange?style=flat-square)](#)
 [![Accessibility (a11y)](https://img.shields.io/badge/Accessibility-WCAG_2.1_AA-success?style=flat-square)](#)
 
-🔗 **Live Demo**: [saas-dashboard-forntend.shantopaul.com](https://saas-dashboard-forntend.shantopaul.com)  
-📂 **GitHub Repository**: [github.com/shantopaul/SaaS-Dashboard-Website](https://github.com/shantopaul/SaaS-Dashboard-Website)
-
 FlowPilot is a state-of-the-art, production-ready SaaS administration dashboard designed for modern product teams and high-growth organizations. It delivers a conversion-optimized marketing landing page, secure simulated authentication flows, and a high-density, beautifully styled analytics control center. Powered by lightweight global state management and custom responsive rendering, FlowPilot enables organizations to manage subscriptions, analyze traffic funnels, view financial ledger records, and coordinate team growth with zero friction.
 
 Engineered using **React 19**, **TypeScript**, and **Tailwind CSS**, the platform incorporates professional software engineering standards, including strict schema-driven form validation, semantic accessibility markers (WCAG 2.1 AA), persistent dark/light theme options, dynamic data visualizations, and robust search indexes.
+
+🔗 **Live Demo**: [saas-dashboard-forntend.shantopaul.com](https://saas-dashboard-forntend.shantopaul.com)  
+📂 **GitHub Repository**: [github.com/shantopaul/SaaS-Dashboard-Website](https://github.com/shantopaul/SaaS-Dashboard-Website)
 
 ---
 
